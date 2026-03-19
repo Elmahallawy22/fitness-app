@@ -6,10 +6,10 @@ function App() {
     <>
 <div className="p-10 text-center font-sans">
   <h1 className="text-6xl font-extrabold tracking-tight font-baloo">
-    YALLA <span className="text-primary">FITNESS</span>
+   test <span className="text-primary">FITNESS</span>
   </h1>
   <p className="text-xl mt-4 font-medium opacity-80">
-    جاهز تحرق دهون النهاردة؟ 🔥
+    test fonts
   </p>
 </div>
     </>
