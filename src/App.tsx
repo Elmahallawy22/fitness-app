@@ -4,9 +4,14 @@ function App() {
 
   return (
     <>
-     <h1 className=" font-bold underline text-4xl text-red-500 ">
-       Hello, Vite + React!
-     </h1>
+<div className="p-10 text-center font-sans">
+  <h1 className="text-6xl font-extrabold tracking-tight font-baloo">
+    YALLA <span className="text-primary">FITNESS</span>
+  </h1>
+  <p className="text-xl mt-4 font-medium opacity-80">
+    جاهز تحرق دهون النهاردة؟ 🔥
+  </p>
+</div>
     </>
   );
 }

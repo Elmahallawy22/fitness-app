@@ -1,16 +1,20 @@
 @import "tailwindcss";
 @import "@fontsource-variable/geist";
+@import "@fontsource/baloo-thambi-2/index.css";
+@import "@fontsource/rubik.css";
 
 @theme {
+  --font-rubik: "Rubik", sans-serif;
+  --font-baloo: "Baloo Thambi 2", system-ui;
   --color-background: white;
   --color-foreground: black;
-  --color-primary: #aa3bff; 
-  --font-sans: 'Geist Variable', sans-serif;
+  --color-primary: #FF4100; 
+ --font-rubik: var(--font-rubik);
 }
 
 @layer base {
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-rubik;
   }
 }
 

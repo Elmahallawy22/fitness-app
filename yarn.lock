@@ -384,6 +384,16 @@
   resolved "https://registry.yarnpkg.com/@fontsource-variable/geist/-/geist-5.2.8.tgz#7fe7b74934b5d680150ba5664ea147603d5a7c0c"
   integrity sha512-cJ6m9e+8MQ5dCYJsLylfZrgBh6KkG4bOLckB35Tr9J/EqdkEM6QllH5PxqP1dhTvFup+HtMRPuz9xOjxXJggxw==
 
+"@fontsource/baloo-thambi-2@^5.2.7":
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/baloo-thambi-2/-/baloo-thambi-2-5.2.7.tgz#d62cb6b275039ef8c914651305a4e2b4d2a4ffee"
+  integrity sha512-s3UjiOOT4oa2JqnQ+WY61vQ7g64h80lA0m3OlleSML3+BcLMzcUP7V8tU+XOjVbL0kvaBHdXwdept7wZ0v9GlQ==
+
+"@fontsource/rubik@^5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/rubik/-/rubik-5.2.8.tgz#68c4b9026327af02eff0f3f0199bb375c1f851c0"
+  integrity sha512-PIc8QR7FqWPcYhbdRiGff56vQlKqg/ytES1YqecSq1GkgxiH4TBshrFvDEOZ9JonUF9m1qQ+qXxJj7wD5zgXEw==
+
 "@hono/node-server@^1.19.9":
   version "1.19.11"
   resolved "https://registry.yarnpkg.com/@hono/node-server/-/node-server-1.19.11.tgz#dc419f0826dd2504e9fc86ad289d5636a0444e2f"
