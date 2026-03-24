@@ -1,7 +1,7 @@
-import * as React from "react"
-import { RadioGroup as RadioGroupPrimitive } from "radix-ui"
+import * as React from "react";
+import { RadioGroup as RadioGroupPrimitive } from "radix-ui";
 
-import { cn } from './../../lib/utils';
+import { cn } from "@/lib/utils/tailwind-merge";
 
 function RadioGroup({
   className,
@@ -13,7 +13,7 @@ function RadioGroup({
       className={cn("grid w-full gap-2", className)}
       {...props}
     />
-  )
+  );
 }
 
 function RadioGroupItem({
@@ -27,7 +27,7 @@ function RadioGroupItem({
         "group/radio-group-item peer relative flex aspect-square size-5 shrink-0 rounded-full border-2 outline-none transition-all",
         "border-foreground bg-transparent",
         " disabled:cursor-not-allowed disabled:opacity-50",
-        className
+        className,
       )}
       {...props}
     >
@@ -38,6 +38,6 @@ function RadioGroupItem({
         <span className="size-2 rounded-full bg-primary shadow-[0_0_1px_rgba(255,65,0,0.6)]" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
-  )
+  );
 }
-export { RadioGroup, RadioGroupItem }
+export { RadioGroup, RadioGroupItem };

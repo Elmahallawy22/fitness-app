@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <h1>About</h1>
-      <div onClick={() => localeNavigate("home")}>go home </div>
+      <div onClick={() => localeNavigate("/")}>go home </div>
     </>
   );
 }
