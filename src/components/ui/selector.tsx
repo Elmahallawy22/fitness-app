@@ -122,7 +122,6 @@ const NumberPicker = forwardRef<HTMLInputElement, NumberPickerProps>(
   className={cn(
     "flex w-full overflow-x-auto snap-x snap-mandatory py-2 touch-pan-x select-none",
     "gap-0.5", 
-    // التعديل هنا: الـ Padding بقى بيحسب نص عرض الـ Container بالظبط ناقص نص الـ Item
     "px-[calc(50%-33px)] cursor-grab active:cursor-grabbing", 
     "[&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
   )}
