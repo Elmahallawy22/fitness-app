@@ -1,16 +1,6 @@
-import "./App.css";
-import DesignSystemComponents from "./components/ui/design-sustem";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router.tsx";
 
-
-function App() {
-
-
- 
-  return (
-<>
-<DesignSystemComponents/>
-</>
-  );
+export default function App() {
+  return <RouterProvider router={router} />;
 }
-
-export default App;
