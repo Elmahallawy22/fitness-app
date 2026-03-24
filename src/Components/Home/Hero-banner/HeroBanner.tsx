@@ -1,16 +1,10 @@
+import { Button } from "../../ui/button";
+import arrow from "../../../assets/Images/arrow.png";
 import imgBanner from "../../../assets/Images/Theo Vance.png";
+
 export default function HeroBanner() {
   return (
     <>
-      {/* <div className="flex justify-between items-center bg-gradient-to-l from-[#abb1af_80%] to-[#ffffff_20%]  w-[`90rem`] h-[`62.5rem`] ">
-        <div>
-          <p> test test test</p>
-        </div>
-        <div>
-          <img src={imgBanner} alt="logo-banner" />
-        </div>
-      </div> */}
-
       <div
         className=" bg-gradient-to-br  from-white/10  via-[#abb1af] to-[#abb1af] 
               w-[`90rem`] h-[`62.5rem`]">
@@ -64,13 +58,29 @@ export default function HeroBanner() {
             </div>
 
             {/* buttons */}
-            <div className="mt-16">
-              <button className="w-36 h-12 text-base me-10 font-semibold leading-4 cursor-pointer rounded-full bg-orange-600 text-zinc-100 capitalize">
-                get started
-              </button>
-              <button className="w-36 h-12 cursor-pointer text-base font-semibold leading-4 rounded-full bg-transparent border border-orange-600 text-orange-600 capitalize  hover:bg-orange-600 hover:text-zinc-100">
-                explore more
-              </button>
+
+            <div className="mt-16  absolute flex justify-between gap-16 items-center ">
+              <div>
+                <img
+                  src={arrow}
+                  alt="img-button"
+                  className="relative left-32 top-9 border-2 border-white w-9 h-9 bg-orange-600 rounded-full"
+                />
+                <Button variant={`default`}>get started</Button>
+              </div>
+
+              <div className=" gap-2">
+                <img
+                  src={arrow}
+                  alt="img-button"
+                  className="relative left-32 top-9 border-2 border-white w-9 h-9 bg-orange-600 rounded-full"
+                />
+                <Button
+                  variant={"default"}
+                  className=" bg-transparent border border-orange-600 text-orange-600 ">
+                  explore more
+                </Button>
+              </div>
             </div>
           </div>
 
