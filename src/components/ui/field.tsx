@@ -92,8 +92,8 @@ function FieldLabel({
       data-slot="field-label"
       className={cn(
         "group/field-label relative flex w-full cursor-pointer items-center justify-between rounded-2xl border py-3 px-4 transition-all duration-200 outline-none",
-        "border-white/80 text-white backdrop-blur-sm ",
-        "has-data-[state=checked]:border-primary ",
+        "border-neutral-200 dark:border-white/80 text-neutral-900 dark:text-white backdrop-blur-sm", 
+        "has-data-[state=checked]:border-primary",
         "group-data-[disabled=true]/field:opacity-50",
         className
       )}
@@ -108,6 +108,7 @@ function FieldTitle({ className, ...props }: React.ComponentProps<"div">) {
       data-slot="field-label"
       className={cn(
         "flex w-fit items-center gap-2 leading-snug font-bold transition-colors",
+        "text-foreground", 
         "group-has-data-[state=checked]/field-label:text-primary",
         "group-data-[disabled=true]/field:opacity-50",
         className
@@ -130,18 +131,6 @@ function FieldContent({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
-// function FieldTitle({ className, ...props }: React.ComponentProps<"div">) {
-//   return (
-//     <div
-//       data-slot="field-label"
-//       className={cn(
-//         "flex w-fit items-center gap-2 text-sm leading-snug font-medium group-data-[disabled=true]/field:opacity-50",
-//         className
-//       )}
-//       {...props}
-//     />
-//   )
-// }
 
 function FieldDescription({ className, ...props }: React.ComponentProps<"p">) {
   return (

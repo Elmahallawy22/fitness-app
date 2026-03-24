@@ -25,7 +25,7 @@ function RadioGroupItem({
       data-slot="radio-group-item"
       className={cn(
         "group/radio-group-item peer relative flex aspect-square size-5 shrink-0 rounded-full border-2 outline-none transition-all",
-        "border-white bg-transparent",
+        "border-foreground bg-transparent",
         " disabled:cursor-not-allowed disabled:opacity-50",
         className
       )}

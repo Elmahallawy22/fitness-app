@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "./button";
 import { Input } from "./input";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "./input-otp";
@@ -7,7 +6,7 @@ import { PasswordInput } from "./password-input";
 import { User } from "lucide-react";
 import { RadioGroup, RadioGroupItem } from "./radio-group";
 import { Field, FieldContent, FieldLabel, FieldTitle } from "./field";
-import { NumberPicker } from "./selector";
+import { NumberPicker } from "./number-picker";
 import { useForm, Controller } from "react-hook-form";
 
 export default function DesignSystemComponents() {

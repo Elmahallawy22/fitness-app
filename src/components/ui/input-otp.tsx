@@ -51,7 +51,9 @@ function InputOTPSlot({
       className={cn(
         "relative flex h-8 w-12 items-center justify-center border-b-2 text-2xl font-medium transition-all outline-none",
         
-        (char || isActive) ? "border-primary text-primary" : "border-white/70 text-white",
+        (char || isActive) 
+          ? "border-primary text-primary" 
+          : "border-neutral-300 text-neutral-900 dark:border-white/70 dark:text-white",
         
         className
       )}
@@ -71,7 +73,7 @@ function InputOTPSeparator({ ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="input-otp-separator"
-      className="flex items-center text-white/50 [&_svg:not([class*='size-'])]:size-4"
+      className="flex items-center text-neutral-400 dark:text-white/50 [&_svg:not([class*='size-'])]:size-4"
       role="separator"
       {...props}
     >
