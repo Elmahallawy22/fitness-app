@@ -121,7 +121,7 @@ const NumberPicker = forwardRef<HTMLInputElement, NumberPickerProps>(
     };
 
     return (
-      <div
+      <div dir="ltr"
         className={cn(
           "flex flex-col items-center gap-2 w-105.5 mx-auto",
           className,
