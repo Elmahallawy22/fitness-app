@@ -28,9 +28,9 @@ export const PasswordInput = React.forwardRef<
         className="absolute w-fit top-1/2 right-3 -translate-y-1/2 p-1"
       >
         {show ? (
-          <EyeOff className="w-5 h-5 text-gray-300" />
+          <EyeOff className="w-5 h-5 text-foreground/70" />
         ) : (
-          <Eye className="w-5 h-5 text-gray-300" />
+          <Eye className="w-5 h-5 text-foreground/70" />
         )}
       </Button>
     </div>

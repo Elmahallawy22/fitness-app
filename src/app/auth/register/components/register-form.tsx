@@ -39,7 +39,7 @@ export default function RegisterForm({
   };
 
   return (
-    <div className="w-full">
+    <div className="flex flex-col justify-center items-center w-full">
       <header className="flex flex-col justify-between items-center gap-3 mb-4">
         <span className="text-lg">Hey There</span>
         <h1 className="text-4xl capitalize font-bold text-center">
@@ -58,15 +58,13 @@ export default function RegisterForm({
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <div className="relative focus-visible:ring-0">
-                    <User className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-[#808080]" />
-                    <Input
-                      {...field}
-                      type="text"
-                      placeholder="First Name"
-                      className="pl-10 h-12 pr-4 sm:pr-6 md:pr-10 rounded-2xl"
-                    />
-                  </div>
+                  <Input
+                    {...field}
+                    type="text"
+                    placeholder="First Name"
+                    icon={<User className="h-5 w-5 text-gray-400" />}
+                    className="h-12 rounded-2xl"
+                  />
                 </FormControl>
                 <FormMessage className="text-red-500 ms-2" />
               </FormItem>
@@ -80,15 +78,13 @@ export default function RegisterForm({
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <div className="relative">
-                    <User className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
-                    <Input
-                      {...field}
-                      type="text"
-                      placeholder="Last Name"
-                      className="pl-10 h-12 pr-4 sm:pr-6 md:pr-10 rounded-2xl"
-                    />
-                  </div>
+                  <Input
+                    {...field}
+                    type="text"
+                    placeholder="Last Name"
+                    icon={<User className="h-5 w-5 text-gray-400" />}
+                    className="h-12 rounded-2xl"
+                  />
                 </FormControl>
                 <FormMessage className="text-red-500 ms-2" />
               </FormItem>
@@ -102,15 +98,13 @@ export default function RegisterForm({
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
-                    <Input
-                      {...field}
-                      type="email"
-                      placeholder="Email"
-                      className="pl-10 h-12 pr-4 sm:pr-6 md:pr-10 rounded-2xl"
-                    />
-                  </div>
+                  <Input
+                    {...field}
+                    type="email"
+                    placeholder="Email"
+                    icon={<Mail className="h-5 w-5 text-gray-400" />}
+                    className="h-12 rounded-2xl"
+                  />
                 </FormControl>
                 <FormMessage className="text-red-500 ms-2" />
               </FormItem>
@@ -125,11 +119,11 @@ export default function RegisterForm({
               <FormItem>
                 <FormControl>
                   <div className="relative">
-                    <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
                     <PasswordInput
                       {...field}
                       placeholder="Password"
-                      className="pl-10 h-12 pr-4 sm:pr-6 md:pr-10 rounded-2xl"
+                      icon={<Lock className="h-5 w-5" />}
+                      className="h-12 rounded-2xl"
                     />
                   </div>
                 </FormControl>
@@ -146,11 +140,11 @@ export default function RegisterForm({
               <FormItem>
                 <FormControl>
                   <div className="relative">
-                    <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
                     <PasswordInput
                       {...field}
                       placeholder="Confirm Password"
-                      className="pl-10 h-12 pr-4 sm:pr-6 md:pr-10 rounded-2xl"
+                      icon={<Lock className="h-5 w-5" />}
+                      className="h-12 rounded-2xl"
                     />
                   </div>
                 </FormControl>
@@ -167,17 +161,18 @@ export default function RegisterForm({
             Forgot Password ?
           </Link>
 
+          {/* // social links */}
           <SocialLinks />
 
           {/* Submit Button */}
           <div className="flex justify-center items-center flex-col gap-3">
             <Button
               type="submit"
-              className="flex mx-auto rounded-3xl text-lg w-full py-5 cursor-pointer hover:bg-primary/80 transition-colors duration-300"
+              className="flex rounded-3xl text-lg w-full duration-300"
             >
               Register
             </Button>
-            <p className="mx-auto text-center">
+            <p className="text-center">
               Already have an account?{" "}
               <Link to="/login" className="text-primary font-bold underline">
                 Login

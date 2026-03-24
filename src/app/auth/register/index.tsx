@@ -7,7 +7,7 @@ import HeightStep from "./steps/height-step";
 import GoalStep from "./steps/goal-step";
 import ActivityLevelStep from "./steps/level-step";
 
-export default function RegisterPage() {
+export default function Register() {
   // States
   const [data, setData] = useState<RegisterState>({});
   const [currentStep, setCurrentStep] = useState(0);

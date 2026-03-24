@@ -1,7 +1,6 @@
 @import "tailwindcss";
-@import "@fontsource-variable/geist";
 @import "@fontsource/baloo-thambi-2/index.css";
-@import "@fontsource/rubik";
+@import "@fontsource/rubik/index.css";
 
 @theme {
   --font-rubik: "Rubik", sans-serif;
@@ -9,7 +8,6 @@
   --color-background: white;
   --color-foreground: black;
   --color-primary: #FF4100; 
- --font-rubik: var(--font-rubik);
 }
 
 @layer base {

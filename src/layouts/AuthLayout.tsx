@@ -6,7 +6,7 @@ export default function AuthLayout() {
       <aside className="w-1/2 flex justify-center items-center">
         auth sidebar
       </aside>
-      <main className="w-1/2 px-20 py-5">
+      <main className="w-1/2 px-20 py-5 bg-black">
         <Outlet />
       </main>
     </div>
