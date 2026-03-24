@@ -1,19 +1,39 @@
-import * as React from "react"
+import * as React from "react";
+import { cn } from "./../../lib/utils";
 
-import { cn } from "@/lib/utils"
-
-function Input({ className, type, ...props }: React.ComponentProps<"input">) {
-  return (
-    <input
-      type={type}
-      data-slot="input"
-      className={cn(
-        "h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40",
-        className
-      )}
-      {...props}
-    />
-  )
+// ضفنا الـ interface عشان نستقبل الأيقونة
+interface InputProps extends React.ComponentProps<"input"> {
+  icon?: React.ReactNode;
 }
 
-export { Input }
+function Input({ className, type, icon, ...props }: InputProps) {
+  return (
+    <div className="relative flex items-center w-full">
+      {icon && (
+        <div
+          className={cn(
+            "absolute left-4 flex items-center pointer-events-none text-white/70",
+            className,
+          )}
+        >
+          {/* icon */}
+          {icon}
+        </div>
+      )}
+      <input
+        type={type}
+        data-slot="input"
+        className={cn(
+          "h-12 w-full min-w-0 py-2 rounded-3xl border border-input bg-transparent text-base text-white border-white/80 transition-colors outline-none",
+          "placeholder:text-muted-foreground focus:border-white/90 disabled:pointer-events-none disabled:cursor-not-allowed",
+          "md:text-sm dark:bg-input/30",
+          icon ? "pl-12 pr-4" : "px-4",
+          className,
+        )}
+        {...props}
+      />
+    </div>
+  );
+}
+
+export { Input };
