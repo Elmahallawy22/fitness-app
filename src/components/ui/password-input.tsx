@@ -1,8 +1,7 @@
-"use client";
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { Input } from "./input";
-import { cn } from "../../lib/utils";
+import { cn } from "@/lib/utils/tailwind-merge";
 import { Button } from "./button";
 
 type PasswordInputProps = React.ComponentProps<typeof Input>;

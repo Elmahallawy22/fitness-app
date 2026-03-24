@@ -3863,8 +3863,10 @@ __metadata:
     react: "npm:^19.2.4"
     react-dom: "npm:^19.2.4"
     react-hook-form: "npm:^7.71.2"
+    react-icons: "npm:^5.6.0"
     react-router-dom: "npm:^7.13.1"
     shadcn: "npm:^4.0.8"
+    simple-icons: "npm:^16.12.0"
     tailwindcss: "npm:^4.2.1"
     typescript: "npm:~5.9.3"
     typescript-eslint: "npm:^8.56.1"
@@ -5695,6 +5697,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-icons@npm:^5.6.0":
+  version: 5.6.0
+  resolution: "react-icons@npm:5.6.0"
+  peerDependencies:
+    react: "*"
+  checksum: 10c0/addba1ebfd45cdf7f69291d0c93df64fca1271cfdb66df657abd223e3451c73356b035f50e75858627dd182b02129596c79eaaaa45d32eb52658e443a992645c
+  languageName: node
+  linkType: hard
+
 "react-remove-scroll-bar@npm:^2.3.7":
   version: 2.3.8
   resolution: "react-remove-scroll-bar@npm:2.3.8"
@@ -6122,6 +6133,13 @@ __metadata:
   version: 4.1.0
   resolution: "signal-exit@npm:4.1.0"
   checksum: 10c0/41602dce540e46d599edba9d9860193398d135f7ff72cab629db5171516cfae628d21e7bfccde1bbfdf11c48726bc2a6d1a8fb8701125852fbfda7cf19c6aa83
+  languageName: node
+  linkType: hard
+
+"simple-icons@npm:^16.12.0":
+  version: 16.12.0
+  resolution: "simple-icons@npm:16.12.0"
+  checksum: 10c0/ff8f280ae7f1e80b75201be2055edd1d6316c05f25128b9c27428e2bf5531dfdc841c2017fabfa8a6250981e51fd03ff323a7482f4f8dca78ccf5ce1a7c7d737
   languageName: node
   linkType: hard
 
