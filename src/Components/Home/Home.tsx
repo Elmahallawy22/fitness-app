@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       {/* chat bot */}
-      <div className=" fixed top-1/2 right-20 ">
+      <div className=" fixed top-1/2 right-20 z-50 ">
         <img src={emo} alt="img-button" className="w-24 h-24 " />
         <Button variant="default" className="w-32 p-1.5">
           Hey Ask Me
