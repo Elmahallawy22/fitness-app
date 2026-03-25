@@ -3,9 +3,9 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuLink,
-} from "../../ui/navigation-menu";
+} from "../../../Components/ui/navigation-menu";
 import logo from "../../../assets/Images/fit 1.png";
-import { Button } from "../../ui/button";
+import { Button } from "../../../Components/ui/button";
 import arrow from "../../../assets/Images/arrow.png";
 import { useState } from "react";
 

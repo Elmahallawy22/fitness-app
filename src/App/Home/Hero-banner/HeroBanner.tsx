@@ -1,4 +1,4 @@
-import { Button } from "../../ui/button";
+import { Button } from "../../../Components/ui/button";
 import arrow from "../../../assets/Images/arrow.png";
 import imgBanner from "../../../assets/Images/Theo Vance.png";
 import ScrollingTicker from "../ScrollingTicker/ScrollingTicker";

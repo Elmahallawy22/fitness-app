@@ -1,7 +1,7 @@
 import Footer from "./Footer/Footer";
 import HeroBanner from "./Hero-banner/HeroBanner";
 import Navbar from "./Navbar/Navbar";
-import { Button } from "../ui/button";
+import { Button } from "../../Components/ui/button";
 import emo from "../../assets/Images/emo.png";
 
 export default function Home() {
