@@ -1,7 +1,10 @@
 import logo from "../../../assets/Images/fit 1.png";
 import { Phone, Mail } from "lucide-react";
 import ScrollingTicker from "../ScrollingTicker/ScrollingTicker";
+import { useTranslations } from "use-intl";
 export default function Footer() {
+  // Translations
+  const t = useTranslations("Footer");
   return (
     <>
       <ScrollingTicker />
@@ -19,7 +22,7 @@ export default function Footer() {
         {/* contact */}
         <div>
           <h3 className="capitalize text-lg font-bold leading-7 mb-6  dark:text-zinc-100">
-            contact us
+            {t("contact-us")}
           </h3>
           {/* phone */}
           <div className="flex items-center  mb-2">
@@ -45,20 +48,20 @@ export default function Footer() {
         {/* timing */}
         <div>
           <h3 className="capitalize text-lg font-bold leading-7 mb-6 text-zinc-900 dark:text-zinc-100">
-            our gym timing
+            {t("timing")}
           </h3>
           <p className="leading-6 font-normal text-lg text-zinc-900 dark:text-zinc-100 mb-2">
-            Mon - Fri : 08:00 AM - 10:00 PM
+            {t("start-time")}
           </p>
           <p className="leading-6 font-normal text-lg text-zinc-900 dark:text-zinc-100">
-            Sat - Sun : 08:00 AM - 09:00 PM
+            {t("special-time")}
           </p>
         </div>
 
         {/* location */}
         <div>
           <h3 className="capitalize text-lg font-bold leading-7 mb-6 text-zinc-900 dark:text-zinc-100">
-            our location
+            {t("location")}
           </h3>
           <p className="leading-6 font-normal text-lg text-zinc-900 dark:text-zinc-100">
             2715 Ash Dr. San Jose, South Dakota 83475

@@ -2,8 +2,11 @@ import { Button } from "../../../Components/ui/button";
 import arrow from "../../../assets/Images/arrow.png";
 import imgBanner from "../../../assets/Images/Theo Vance.png";
 import ScrollingTicker from "../ScrollingTicker/ScrollingTicker";
+import { useTranslations } from "use-intl";
 
 export default function HeroBanner() {
+  //Translations
+  const t = useTranslations("Hero-banner");
   return (
     <>
       <div
@@ -16,16 +19,14 @@ export default function HeroBanner() {
           {/* content */}
           <div>
             <p className="font-bold text-zinc-900 uppercase text-6xl leading-[1.2] mb-6 dark:text-zinc-100">
-              Your body can <span className="text-orange-600"> stand </span>
-              <br /> <span className="text-orange-600"> almost </span> anything
+              {t("your body can")}{" "}
+              <span className="text-orange-600"> {t("stand")} </span>
+              <br /> <span className="text-orange-600">{t("almost")}</span>
+              {t("anything")}
             </p>
-            <p className="text-zinc-900 leading-7 text-lg font-normal border-l-4 border-orange-600 pt-1.5 ps-5 dark:text-zinc-100">
-              It's your mind that needs convincing. Push past your limits, stay
-              <br />
-              committed, and watch as your body transform into powerhouse of{" "}
-              <br />
-              strength and resilience. Start your journey today & truly capable
-              of!
+            <p className="text-zinc-900 leading-7 text-lg font-normal border-s-4 border-orange-600 pt-1.5 ps-5 dark:text-zinc-100">
+              {t("first-line")} <br /> {t("second-line")} <br />{" "}
+              {t("third-line")}
             </p>
 
             {/* counter */}
@@ -33,30 +34,30 @@ export default function HeroBanner() {
               {/* first counter */}
               <div>
                 <span className="font-bold text-4xl text-zinc-900 leading-7 mb-1.5 dark:text-zinc-100">
-                  1200+
+                  {t("num-members")}
                 </span>
                 <p className="text-lg font-normal leading-7 capitalize text-zinc-900 dark:text-zinc-100">
-                  active members
+                  {t("active-members")}
                 </p>
               </div>
 
               {/* second counrt */}
               <div>
                 <span className="font-bold text-4xl text-zinc-900 leading-7 mb-1.5 dark:text-zinc-100">
-                  12+
+                  {t("num-trainers")}
                 </span>
                 <p className="text-lg font-normal leading-7 capitalize text-zinc-900 dark:text-zinc-100">
-                  Certified Trainers
+                  {t("certified-trainers")}
                 </p>
               </div>
 
               {/* third counrt */}
               <div>
                 <span className="font-bold text-4xl text-zinc-900 leading-7 mb-1.5 dark:text-zinc-100">
-                  20+
+                  {t("num-years")}
                 </span>
                 <p className="text-lg font-normal leading-7 capitalize text-zinc-900 dark:text-zinc-100">
-                  Year Of Experience
+                  {t("year-of-experience")}
                 </p>
               </div>
             </div>
@@ -65,25 +66,25 @@ export default function HeroBanner() {
 
             <div className="mt-16 flex gap-16 items-center ">
               {/* get started */}
-              <div className="flex ">
-                <Button variant={`default`}>get started</Button>
+              <div className="flex flex-row ltr:flex-row rtl:flex-row-reverse">
+                <Button variant={`default`}> {t("get-started")} </Button>
                 <img
                   src={arrow}
                   alt="img-button"
-                  className=" -mx-2 border-2 border-white w-9 h-9 bg-orange-600 rounded-full"
+                  className=" -ms-2 border-2 border-white w-9 h-9 bg-orange-600 rounded-full"
                 />
               </div>
               {/* explore more */}
-              <div className=" flex">
+              <div className=" flex flex-row ltr:flex-row rtl:flex-row-reverse">
                 <Button
                   variant={"default"}
                   className=" bg-transparent border border-orange-600 text-orange-600 ">
-                  explore more
+                  {t("explore-more")}
                 </Button>
                 <img
                   src={arrow}
                   alt="img-button"
-                  className=" -mx-2 border-2 border-white w-9 h-9 bg-orange-600 rounded-full"
+                  className=" -ms-2 border-2 border-white w-9 h-9 bg-orange-600 rounded-full"
                 />
               </div>
             </div>

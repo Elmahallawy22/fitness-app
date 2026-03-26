@@ -8,17 +8,21 @@ import logo from "../../../assets/Images/fit 1.png";
 import { Button } from "../../../Components/ui/button";
 import arrow from "../../../assets/Images/arrow.png";
 import { useState } from "react";
+import { useTranslations } from "use-intl";
 
 export default function Navbar() {
   // useState Hook
   const [active, setActive] = useState("/");
 
+  // translations
+  const t = useTranslations("Navbar");
+
   //   TODO: THIS LINKS PATHES WILL BE CHANGE AFTER SETUP REACT-RPUTER-DOM
   const links = [
-    { name: "home", path: "/" },
-    { name: "about", path: "#about" },
-    { name: "classes", path: "#classes" },
-    { name: "healthy", path: "#healthy" },
+    { name: t("home"), path: "/" },
+    { name: t("about"), path: "#about" },
+    { name: t("classes"), path: "#classes" },
+    { name: t("healthy"), path: "#healthy" },
   ];
 
   return (
@@ -50,23 +54,23 @@ export default function Navbar() {
         {/* buttons */}
         <div className="auth gap-x-8 flex items-center ">
           {/* login */}
-          <div className="flex items-center">
-            <Button variant="default" className="w-16 h-11 px-8 py-2">
-              login
+          <div className="flex items-center flex-row ltr:flex-row rtl:flex-row-reverse">
+            <Button variant="default" className=" h-11 px-8 py-2">
+              {t("login")}
             </Button>
             <img
               src={arrow}
               alt="img-button"
-              className="border-2 -ms-2 border-white w-9 h-9 bg-orange-600 rounded-full"
+              className="border-2 -ms-2 border-white w-9 h-9 bg-orange-600 rounded-full order-last"
             />
           </div>
 
           {/* sign up */}
-          <div className="flex items-center">
+          <div className="flex items-center flex-row ltr:flex-row rtl:flex-row-reverse">
             <Button
               variant="default"
-              className={`w-16 h-11 px-8 py-2 bg-transparent border border-orange-600 text-orange-600`}>
-              sign up
+              className={` h-11 px-8 py-2 bg-transparent border border-orange-600 text-orange-600`}>
+              {t("sign up")}
             </Button>
             <img
               src={arrow}
