@@ -1,1 +1,84 @@
-{ "Index": { "title": "أهلاً" } }
+{
+  "Index": {
+    "title": "أهلاً"
+  },
+  "Register": {
+    "create-account": "إنشاء حساب",
+    "firstname": "الاسم الأول",
+    "hey-there": "مرحبًا بك",
+    "first-name": "الاسم الاول",
+    "last-name": "اسم العائلة",
+    "email": "البريد الالكترونى",
+    "password": "كلمة السر",
+    "confirm-password": "ـأكيد كلمة السر",
+    "next": "التالى",
+    "have-account": "بالفعل تمتلك حساب؟",
+    "login": "تسجيل الدخول",
+    "how-old-are-you": "كم عمرك ؟",
+    "step-header-paragraph": "هذا يساعدنا في إنشاء خطتك الشخصية",
+    "tell-us-about-yourself": "أخبرنا عن نفسك",
+    "we-need-to-know-your-gender": "نحن بحاجة إلى معرفة جنسك",
+    "male": "ذكر",
+    "female": "أنثى",
+    "what-is-your-goal": "ما هو هدفك؟",
+    "what-is-your-height": "ما هو طولك؟",
+    "level": "مستوى نشاطك البدني المعتاد؟",
+    "finish": "إنهاء",
+    "validation": {
+      "firstName": {
+        "required": "الاسم الأول مطلوب",
+        "tooLong": "الاسم الأول طويل جدًا"
+      },
+      "lastName": {
+        "required": "الاسم الأخير مطلوب",
+        "tooLong": "الاسم الأخير طويل جدًا"
+      },
+      "email": {
+        "invalid": "عنوان البريد الإلكتروني غير صالح"
+      },
+      "password": {
+        "strong": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل وتتضمن أحرفًا كبيرة وصغيرة ورقمًا وحرفًا خاصًا"
+      },
+      "rePassword": {
+        "required": "يرجى تأكيد كلمة المرور الخاصة بك"
+      },
+      "gender": {
+        "required": "الجنس مطلوب"
+      },
+      "age": {
+        "min": "يجب أن يكون عمرك 12 عامًا على الأقل",
+        "max": "يجب أن يكون عمرك 90 عامًا على الأكثر"
+      },
+      "weight": {
+        "min": "يجب أن لا يقل الوزن عن 40 كجم",
+        "max": "يجب أن لا يقل الوزن عن 180 كجم"
+      },
+      "height": {
+        "min": "يجب أن لا يقل الطول عن 120 سم",
+        "max": "يجب أن لا يقل الارتفاع عن 220 سم"
+      },
+      "goal": {
+        "required": "الهدف مطلوب"
+      },
+      "activityLevel": {
+        "required": "مستوى النشاط مطلوب"
+      },
+      "passwords": {
+        "notMatch": "كلمات المرور غير متطابقة"
+      }
+    },
+    "what-is-your-weight": "ما هو وزنك؟",
+    "rookie": "مبتدئ",
+    "beginner": "مبتدئ",
+    "intermediate": "متوسط",
+    "advanced": "متقدم",
+    "true-beast": "محترف",
+    "goal": {
+      "gain-weight": "زيادة الوزن",
+      "lose-weight": "فقدان الوزن",
+      "get-fitter": "تحسين اللياقة",
+      "gain-more-flexible": "زيادة المرونة",
+      "learn-the-basic": "تعلم الأساسيات"
+    }
+  }
+}

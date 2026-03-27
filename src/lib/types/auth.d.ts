@@ -17,8 +17,12 @@ declare type RegisterState = Partial<RegisterSchema> & {
     | "True Beast";
 };
 
+// declare type RegisterFormProps = {
+//   data: Partial<RegisterSchema>;
+//   setData: (value: Partial<RegisterSchema>) => void;
+//   nextStep: () => void;
+// };
+
 declare type RegisterFormProps = {
-  data: Partial<RegisterSchema>;
-  setData: (value: Partial<RegisterSchema>) => void;
-  nextStep: () => void;
+  nextStep?: () => void;
 };
