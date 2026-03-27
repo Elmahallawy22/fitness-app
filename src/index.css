@@ -17,6 +17,7 @@
 body {
   overflow-x: hidden;
 }
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
   --font-rubik: "Rubik", sans-serif;
   --font-baloo: "Baloo Thambi 2", system-ui;

@@ -5,19 +5,19 @@ import {
   NavigationMenuLink,
 } from "../../../Components/ui/navigation-menu";
 import logo from "../../../assets/Images/fit 1.png";
-import { Button } from "../../../Components/ui/button";
 import arrow from "../../../assets/Images/arrow.png";
 import { useState } from "react";
 import { useTranslations } from "use-intl";
+import ThemeToggle from "@/App/shared/theme-toggle/theme-toggle";
+import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
-  // useState Hook
+  // default active = Home
   const [active, setActive] = useState("/");
 
   // translations
   const t = useTranslations("Navbar");
 
-  //   TODO: THIS LINKS PATHES WILL BE CHANGE AFTER SETUP REACT-RPUTER-DOM
   const links = [
     { name: t("home"), path: "/" },
     { name: t("about"), path: "#about" },
@@ -26,7 +26,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="px-20 py-10  absolute top-0 left-0 right-0  z-50">
+    <nav className="px-20 py-10 absolute top-0 left-0 right-0 z-50">
       <div className="flex items-center justify-between">
         {/* logo */}
         <div className="logo">
@@ -34,7 +34,7 @@ export default function Navbar() {
         </div>
 
         {/* nav links */}
-        <div className="links ">
+        <div className="links">
           <NavigationMenu>
             <NavigationMenuList>
               {links.map((link) => (
@@ -42,7 +42,11 @@ export default function Navbar() {
                   <NavigationMenuLink
                     href={link.path}
                     onClick={() => setActive(link.path)}
-                    data-active={active === link.path}>
+                    className={
+                      active === link.path
+                        ? "px-4 py-2 rounded-md text-xl font-bold capitalize text-orange-600 dark:text-orange-400"
+                        : "px-4 py-2 rounded-md text-xl font-bold capitalize text-zinc-900 dark:text-zinc-100 hover:bg-orange-600 hover:text-white"
+                    }>
                     {link.name}
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -52,10 +56,10 @@ export default function Navbar() {
         </div>
 
         {/* buttons */}
-        <div className="auth gap-x-8 flex items-center ">
+        <div className="auth gap-x-8 flex items-center">
           {/* login */}
           <div className="flex items-center flex-row ltr:flex-row rtl:flex-row-reverse">
-            <Button variant="default" className=" h-11 px-8 py-2">
+            <Button variant="default" className="h-11 px-8 py-2">
               {t("login")}
             </Button>
             <img
@@ -69,7 +73,7 @@ export default function Navbar() {
           <div className="flex items-center flex-row ltr:flex-row rtl:flex-row-reverse">
             <Button
               variant="default"
-              className={` h-11 px-8 py-2 bg-transparent border border-orange-600 text-orange-600`}>
+              className="h-11 px-8 py-2 bg-transparent border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
               {t("sign up")}
             </Button>
             <img
@@ -78,6 +82,9 @@ export default function Navbar() {
               className="border-2 -ms-1 border-white w-9 h-9 bg-orange-600 rounded-full"
             />
           </div>
+
+          {/* theme toggle */}
+          <ThemeToggle />
         </div>
       </div>
     </nav>

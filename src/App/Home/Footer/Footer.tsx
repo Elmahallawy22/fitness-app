@@ -9,13 +9,13 @@ export default function Footer() {
     <>
       <ScrollingTicker />
       {/* dispaly footer */}
-      <div className="flex  justify-between items-start py-10 px-20 dark:bg-zinc-900 dark:text-zinc-100 ">
+      <div className="flex justify-between items-start py-10 px-20 bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100">
         {/* logo */}
         <div className="mb-2">
           <img src={logo} alt="logo" />
           <p className="leading-6 font-normal text-lg text-zinc-900 dark:text-zinc-100">
-            Push harder, go further. Your <br />
-            fitness journey starts today!
+            {t("first-line")} <br />
+            {t("second-line")}
           </p>
         </div>
 

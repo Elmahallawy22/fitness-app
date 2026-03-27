@@ -70,7 +70,7 @@ function NavigationMenuTrigger({
       {...props}>
       {children}{" "}
       <ChevronDownIcon
-        className="relative top-px ml-1 size-3 transition duration-300 group-data-popup-open/navigation-menu-trigger:rotate-180 group-data-open/navigation-menu-trigger:rotate-180"
+        className="relative  top-px ml-1 size-3 transition duration-300 group-data-popup-open/navigation-menu-trigger:rotate-180 group-data-open/navigation-menu-trigger:rotate-180"
         aria-hidden="true"
       />
     </NavigationMenuPrimitive.Trigger>
@@ -129,7 +129,7 @@ function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "flex items-center gap-2 rounded-lg p-2 text-xl font-bold text-zinc-900 capitalize transition-all outline-none dark:text-zinc-100 hover:bg-orange-600 hover:text-white focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1  data-active:text-orange-600  ",
+        "flex items-center gap-2 rounded-lg p-2 text-xl font-bold text-zinc-900 dark:text-zinc-100 capitalize transition-all outline-none  hover:text-orange-600 focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 data-active:text-orange-00",
         className,
       )}
       {...props}

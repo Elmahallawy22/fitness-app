@@ -12,7 +12,7 @@ import { Lock, Mail, User } from "lucide-react";
 import { registerSchema, type RegisterSchema } from "@/lib/schemas/auth.schema";
 import { PasswordInput } from "@/components/ui/password-input";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import SocialLinks from "./social-links";
 
 export default function RegisterForm({
