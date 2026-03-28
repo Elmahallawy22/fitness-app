@@ -1,15 +1,15 @@
 import { useMutation } from "@tanstack/react-query";
 import { registerUser } from "../services/register.service";
-import { toast } from "sonner";
+import { Toast } from "@/components/ui/toast";
 
 export const useRegister = () => {
   return useMutation({
     mutationFn: registerUser,
     onSuccess: () => {
-      toast.success("Account created successfully");
+      Toast.success("Account created successfully");
     },
     onError: (error) => {
-      toast.error(error.message || "Something went wrong");
+      Toast.error(error.message || "Something went wrong");
     },
   });
 };

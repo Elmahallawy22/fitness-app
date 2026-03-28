@@ -4,11 +4,18 @@ import { Controller, useFormContext } from "react-hook-form";
 import type { RegisterSchema } from "@/lib/schemas/auth.schema";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "use-intl";
+
 export default function HeightStep({ nextStep }: RegisterFormProps) {
+  // Translation
   const t = useTranslations("Register");
+
+  // Form context
   const form = useFormContext<RegisterSchema>();
+
+  // constants
   const height = form.watch("height");
 
+  // Handle next step
   const handleNext = async () => {
     const isValid = await form.trigger(["height"]);
 
@@ -39,7 +46,7 @@ export default function HeightStep({ nextStep }: RegisterFormProps) {
         )}
       />
 
-      <Button disabled={!height} onClick={handleNext} className="w-2/3">
+      <Button disabled={!height} onClick={handleNext} className="w-full">
         {t("next")}
       </Button>
     </div>

@@ -1,3 +1,7 @@
+import {
+  createRegisterSchema,
+  type RegisterSchema,
+} from "@/lib/schemas/auth.schema";
 import RegisterForm from "./components/register-form";
 import GenderStep from "./steps/gender-step";
 import AgeStep from "./steps/age-step";
@@ -6,17 +10,13 @@ import HeightStep from "./steps/height-step";
 import GoalStep from "./steps/goal-step";
 import ActivityLevelStep from "./steps/level-step";
 import CircularProgress from "./components/circular-progress";
-
 import { FormProvider, useForm, type SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useRegister } from "./hooks/use-register";
 import { useNavigate } from "react-router-dom";
-import {
-  createRegisterSchema,
-  type RegisterSchema,
-} from "@/lib/schemas/auth.schema";
 import { useTranslations } from "use-intl";
+import { useLocaleNavigation } from "@/lib/hooks/use-navigation";
 
 const STEP_FIELDS: Record<number, (keyof RegisterSchema)[]> = {
   0: ["firstName", "lastName", "email", "password", "rePassword"],
@@ -29,8 +29,19 @@ const STEP_FIELDS: Record<number, (keyof RegisterSchema)[]> = {
 };
 
 export default function Register() {
+  // Translation
   const t = useTranslations();
+
+  // states
+  const [currentStep, setCurrentStep] = useState(0);
+
+  // Navigation
   const navigate = useNavigate();
+
+  // Locale
+  const { currentLocale } = useLocaleNavigation();
+
+  // Form setup with zod validation
   const form = useForm<RegisterSchema>({
     resolver: zodResolver(createRegisterSchema(t)),
     mode: "onChange",
@@ -49,25 +60,28 @@ export default function Register() {
     },
   });
 
+  // Register mutation
   const { mutate, isPending } = useRegister();
-
-  const [currentStep, setCurrentStep] = useState(0);
 
   // Handle next step with validation
   const nextStep = async () => {
     const fields = STEP_FIELDS[currentStep] || [];
-
     const isValid = await form.trigger(fields);
-
     if (isValid) {
       setCurrentStep((s) => Math.min(s + 1, steps.length - 1));
     }
   };
 
-  // Final submit
+  // Submit handler
   const onSubmit: SubmitHandler<RegisterSchema> = (data) => {
     mutate(data, {
-      onSuccess: () => navigate("/login"),
+      onSuccess: () => navigate(`/${currentLocale}/login`),
+
+      onError: () => {
+        setTimeout(() => {
+          setCurrentStep(0);
+        }, 1500);
+      },
     });
   };
 

@@ -5,13 +5,13 @@ type StepHeaderProps = {
 
 export default function StepsHeader({ header, paragraph }: StepHeaderProps) {
   return (
-    <>
-      <h3 className="uppercase text-4xl font-extrabold text-black dark:text-white">
+    <div className="mb-4">
+      <h3 className="uppercase text-3xl font-extrabold text-black dark:text-white mx-auto mb-2">
         {header}
       </h3>
-      <p className="text-lg font-light -mt-7 text-black/70 dark:text-white/70">
+      <p className="text-base font-light mb-0 text-black/70 dark:text-white/90">
         {paragraph}
       </p>
-    </>
+    </div>
   );
 }
