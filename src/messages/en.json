@@ -22,7 +22,7 @@
     "female": "Female",
     "what-is-your-goal": "What is your Goal?",
     "what-is-your-height": "what is your height ?",
-    "level": "your regular physicalactivity level ?",
+    "level": "your regular physical activity level ?",
     "finish": "Finish",
     "what-is-your-weight": "what is your weight ?",
     "validation": {
@@ -79,6 +79,8 @@
       "get-fitter": "Get fitter",
       "gain-more-flexible": "Gain more flexible",
       "learn-the-basic": "Learn the basic"
-    }
+    },
+    "forgot-password": "Forget Password ?",
+    "register": "Register"
   }
 }

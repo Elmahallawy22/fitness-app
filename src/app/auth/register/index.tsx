@@ -18,6 +18,16 @@ import {
 } from "@/lib/schemas/auth.schema";
 import { useTranslations } from "use-intl";
 
+const STEP_FIELDS: Record<number, (keyof RegisterSchema)[]> = {
+  0: ["firstName", "lastName", "email", "password", "rePassword"],
+  1: ["gender"],
+  2: ["age"],
+  3: ["weight"],
+  4: ["height"],
+  5: ["goal"],
+  6: ["activityLevel"],
+};
+
 export default function Register() {
   const t = useTranslations();
   const navigate = useNavigate();
@@ -45,31 +55,7 @@ export default function Register() {
 
   // Handle next step with validation
   const nextStep = async () => {
-    let fields: (keyof RegisterSchema)[] = [];
-
-    switch (currentStep) {
-      case 0:
-        fields = ["firstName", "lastName", "email", "password", "rePassword"];
-        break;
-      case 1:
-        fields = ["gender"];
-        break;
-      case 2:
-        fields = ["age"];
-        break;
-      case 3:
-        fields = ["weight"];
-        break;
-      case 4:
-        fields = ["height"];
-        break;
-      case 5:
-        fields = ["goal"];
-        break;
-      case 6:
-        fields = ["activityLevel"];
-        break;
-    }
+    const fields = STEP_FIELDS[currentStep] || [];
 
     const isValid = await form.trigger(fields);
 
@@ -80,9 +66,8 @@ export default function Register() {
 
   // Final submit
   const onSubmit: SubmitHandler<RegisterSchema> = (data) => {
-    console.log("FINAL DATA:", data);
     mutate(data, {
-      onSuccess: () => navigate("/"),
+      onSuccess: () => navigate("/login"),
     });
   };
 

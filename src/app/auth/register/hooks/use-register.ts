@@ -8,8 +8,8 @@ export const useRegister = () => {
     onSuccess: () => {
       toast.success("Account created successfully");
     },
-    onError: () => {
-      toast.error("Something went wrong");
+    onError: (error) => {
+      toast.error(error.message || "Something went wrong");
     },
   });
 };

@@ -35,46 +35,17 @@ export default function GoalStep({ nextStep }: RegisterFormProps) {
         }
         className="flex flex-col gap-4 mt-6 w-full max-w-md mx-auto"
       >
-        {/* {GOALS.map((goal) => {
-          const id = goal.replace(/\s+/g, "-").toLowerCase();
-
-          return (
-            <FieldLabel htmlFor={`${id}-goal`} key={goal}>
-              <Field
-                orientation="horizontal"
-                className="
-                rounded-2xl px-2 py-1 transition-all
-                text-black dark:text-white
-                peer-data-[state=checked]:border-orange-500
-                peer-data-[state=checked]:text-primary"
-              >
-                <FieldContent>
-                  <FieldTitle>{goal}</FieldTitle>
-                </FieldContent>
-
-                <RadioGroupItem
-                  value={goal}
-                  id={`${id}-goal`}
-                  className="peer"
-                />
-              </Field>
-            </FieldLabel>
-          );
-        })} */}
         {GOALS.map((goal) => {
           const id = goal.replace(/\s+/g, "-").toLowerCase();
-          const goalLabel = t(`goal.${id}`); // use your JSON keys like "gain-weight"
+          const goalLabel = t(`goal.${id}`);
 
           return (
             <FieldLabel htmlFor={`${id}-goal`} key={goal}>
               <Field
                 orientation="horizontal"
-                className="
-          rounded-2xl px-2 py-1 transition-all
-          text-black dark:text-white
-          peer-data-[state=checked]:border-orange-500
-          peer-data-[state=checked]:text-primary
-        "
+                className="rounded-2xl px-2 py-1 transition-all text-black dark:text-white
+                peer-data-[state=checked]:border-orange-500
+                peer-data-[state=checked]:text-primary"
               >
                 <FieldContent>
                   <FieldTitle>{goalLabel}</FieldTitle>

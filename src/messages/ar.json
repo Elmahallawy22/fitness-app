@@ -79,6 +79,8 @@
       "get-fitter": "تحسين اللياقة",
       "gain-more-flexible": "زيادة المرونة",
       "learn-the-basic": "تعلم الأساسيات"
-    }
+    },
+    "forgot-password": "هل نسيت كلمة السر ؟",
+    "register": "إنشاء حساب"
   }
 }
