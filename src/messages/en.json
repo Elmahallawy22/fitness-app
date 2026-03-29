@@ -82,5 +82,30 @@
     },
     "forgot-password": "Forget Password ?",
     "register": "Register"
+  },
+  "forgot-password-step": {
+    "step-one-title": "Forgot Password",
+    "step-one-subtitle": "Enter Your Email",
+    "step-two-title": "OTP CODE",
+    "step-two-subtitle": "Enter the OTP you have received",
+    "step-three-title": "Create New Password",
+    "step-three-subtitle": "Make sure to create a strong password!.",
+    "email": "Email",
+    "sent-otp": "Sent OTP",
+    "email-validation": "Invalid email address",
+    "otp-required": "OTP is required",
+    "confirm": "Confirm",
+    "did-not-receive": "didn’t receive verification code?",
+    "resend": "Resend Code",
+    "new-password": "New Password",
+    "confirm-password": "Confirm New Password",
+    "password-required": "Please enter your password",
+    "password-length": "Password must be at least 8 characters long",
+    "password-uppercase": "Password must contain at least one uppercase letter",
+    "password-lowercase": "Password must contain at least one lowercase letter",
+    "password-special": "Password must contain at least one special character",
+    "re-password-required": "Please enter your password",
+    "re-password-valid": "Passwords do not match",
+    "create-new-password": "Create New Password"
   }
 }
