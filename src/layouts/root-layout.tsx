@@ -2,6 +2,7 @@ import { useParams, Outlet, Navigate } from "react-router-dom";
 import { IntlProvider } from "use-intl";
 import enMessages from "../messages/en.json";
 import arMessages from "../messages/ar.json";
+import Navbar from "../App/Home/Navbar/Navbar";
 
 const messagesMap: Record<string, any> = {
   ar: arMessages,
@@ -19,8 +20,8 @@ export default function RootLayout() {
     <IntlProvider messages={messagesMap[locale]} locale={locale}>
       <main
         className="min-h-screen w-full bg-background text-foreground"
-        dir={locale === "ar" ? "rtl" : "ltr"}
-      >
+        dir={locale === "ar" ? "rtl" : "ltr"}>
+        <Navbar />
         <Outlet />
       </main>
     </IntlProvider>

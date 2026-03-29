@@ -1,6 +1,6 @@
 import logo from "../../../assets/Images/fit 1.png";
 import { Phone, Mail } from "lucide-react";
-import ScrollingTicker from "../ScrollingTicker/ScrollingTicker";
+import ScrollingTicker from "../../shared/ScrollingTicker/ScrollingTicker";
 import { useTranslations } from "use-intl";
 export default function Footer() {
   // Translations
@@ -9,18 +9,20 @@ export default function Footer() {
     <>
       <ScrollingTicker />
       {/* dispaly footer */}
-      <div className="flex justify-between items-start py-10 px-20 bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100">
+      <div className="block lg:flex justify-between items-start py-10 px-4 lg:px-20 bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100">
         {/* logo */}
-        <div className="mb-2">
-          <img src={logo} alt="logo" />
+        <div className="mb-4 ">
+          <img src={logo} alt="logo" className="mb-2" />
+          <p className="leading-6 mb-2  font-normal text-lg text-zinc-900 dark:text-zinc-100">
+            {t("first-line")}
+          </p>
           <p className="leading-6 font-normal text-lg text-zinc-900 dark:text-zinc-100">
-            {t("first-line")} <br />
             {t("second-line")}
           </p>
         </div>
 
         {/* contact */}
-        <div>
+        <div className="mb-4">
           <h3 className="capitalize text-lg font-bold leading-7 mb-6  dark:text-zinc-100">
             {t("contact-us")}
           </h3>
@@ -46,7 +48,7 @@ export default function Footer() {
         </div>
 
         {/* timing */}
-        <div>
+        <div className="mb-4">
           <h3 className="capitalize text-lg font-bold leading-7 mb-6 text-zinc-900 dark:text-zinc-100">
             {t("timing")}
           </h3>

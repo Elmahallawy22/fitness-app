@@ -28,6 +28,11 @@
   "chat-boot": {
     "title": " مرحبا ,تحدث معي"
   },
+  "scrolling-ticker": {
+    "first-line": "التمارين المباشرة",
+    "second-line": "التدريب الشخصي",
+    "third-line": "التوجيه الغذائي"
+  },
   "Footer": {
     "contact-us": "تواصل معنا",
     "start-time": "الاثنين - الجمعه : 08:00 مساء - 10:00 صباحا",

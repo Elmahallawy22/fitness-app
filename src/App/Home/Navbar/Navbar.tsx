@@ -4,87 +4,138 @@ import {
   NavigationMenuList,
   NavigationMenuLink,
 } from "../../../Components/ui/navigation-menu";
+import { Sheet, SheetContent, SheetTrigger } from "@/Components/ui/sheet";
+import { Button } from "@/components/ui/button";
 import logo from "../../../assets/Images/fit 1.png";
-import arrow from "../../../assets/Images/arrow.png";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import { useTranslations } from "use-intl";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import ThemeToggle from "@/App/shared/theme-toggle/theme-toggle";
-import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
-  // default active = Home
-  const [active, setActive] = useState("/");
+  // Router
+  const navigate = useNavigate();
+  const { locale } = useParams();
+  const location = useLocation();
 
-  // translations
+  // state to track active link
+  const [active, setActive] = useState(location.pathname);
+
+  // Translations
   const t = useTranslations("Navbar");
 
+  // links data
   const links = [
-    { name: t("home"), path: "/" },
-    { name: t("about"), path: "#about" },
-    { name: t("classes"), path: "#classes" },
-    { name: t("healthy"), path: "#healthy" },
+    { name: t("home"), path: `/${locale}` },
+    { name: t("about"), path: `/${locale}/about` },
+    { name: t("classes"), path: `/${locale}/classes` },
+    { name: t("healthy"), path: `/${locale}/healthy` },
   ];
 
-  return (
-    <nav className="px-20 py-10 absolute top-0 left-0 right-0 z-50">
-      <div className="flex items-center justify-between">
-        {/* logo */}
-        <div className="logo">
-          <img src={logo} alt="Logo" />
-        </div>
+  const handleNavigate = (path: string) => {
+    navigate(path);
+    setActive(path);
+  };
 
-        {/* nav links */}
-        <div className="links">
+  return (
+    <nav className="px-6 lg:px-20 py-6 lg:py-10 absolute top-0 left-0 right-0 z-50">
+      <div className="flex items-center justify-between">
+        {/* Logo */}
+        <img
+          src={logo}
+          alt="Logo"
+          className="cursor-pointer"
+          onClick={() => handleNavigate(`/${locale}`)}
+        />
+
+        {/* Desktop */}
+        <div className="hidden lg:flex items-center gap-10">
           <NavigationMenu>
             <NavigationMenuList>
               {links.map((link) => (
                 <NavigationMenuItem key={link.path}>
                   <NavigationMenuLink
-                    href={link.path}
-                    onClick={() => setActive(link.path)}
-                    className={
+                    onClick={() => handleNavigate(link.path)}
+                    className={`px-4 py-2 text-xl font-bold capitalize cursor-pointer transition ${
                       active === link.path
-                        ? "px-4 py-2 rounded-md text-xl font-bold capitalize text-orange-600 dark:text-orange-400"
-                        : "px-4 py-2 rounded-md text-xl font-bold capitalize text-zinc-900 dark:text-zinc-100 hover:bg-orange-600 hover:text-white"
-                    }>
+                        ? "text-orange-600 dark:text-orange-400"
+                        : "text-zinc-900 dark:text-zinc-100 hover:text-orange-600"
+                    }`}>
                     {link.name}
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-        </div>
 
-        {/* buttons */}
-        <div className="auth gap-x-8 flex items-center">
-          {/* login */}
-          <div className="flex items-center flex-row ltr:flex-row rtl:flex-row-reverse">
-            <Button variant="default" className="h-11 px-8 py-2">
+          {/* Buttons */}
+          <div className="flex items-center gap-6">
+            <Button onClick={() => navigate(`/${locale}/login`)}>
               {t("login")}
             </Button>
-            <img
-              src={arrow}
-              alt="img-button"
-              className="border-2 -ms-2 border-white w-9 h-9 bg-orange-600 rounded-full order-last"
-            />
-          </div>
 
-          {/* sign up */}
-          <div className="flex items-center flex-row ltr:flex-row rtl:flex-row-reverse">
             <Button
-              variant="default"
-              className="h-11 px-8 py-2 bg-transparent border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
+              variant="outline"
+              className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
+              onClick={() => navigate(`/${locale}/register`)}>
               {t("sign up")}
             </Button>
-            <img
-              src={arrow}
-              alt="img-button"
-              className="border-2 -ms-1 border-white w-9 h-9 bg-orange-600 rounded-full"
-            />
-          </div>
 
-          {/* theme toggle */}
-          <ThemeToggle />
+            <ThemeToggle />
+          </div>
+        </div>
+
+        {/* Mobile   */}
+        <div className="lg:hidden">
+          <Sheet>
+            {/* Burger */}
+            <SheetTrigger asChild>
+              <button className="bg-orange-600 rounded-full p-2">
+                <Menu size={28} />
+              </button>
+            </SheetTrigger>
+
+            {/* Drawer */}
+            <SheetContent
+              side={locale === "ar" ? "left" : "right"}
+              className="w-[80%] p-6 flex flex-col">
+              {/* Links */}
+              <div className="flex flex-col gap-4 mt-6">
+                {links.map((link) => (
+                  <button
+                    key={link.path}
+                    onClick={() => handleNavigate(link.path)}
+                    className={`text-lg font-semibold text-left capitalize transition ${
+                      active === link.path
+                        ? "text-orange-600"
+                        : "text-zinc-900 dark:text-zinc-100"
+                    }`}>
+                    {link.name}
+                  </button>
+                ))}
+              </div>
+
+              {/* Buttons */}
+              <div className="flex flex-col gap-4 mt-6">
+                <Button onClick={() => navigate(`/${locale}/login`)}>
+                  {t("login")}
+                </Button>
+
+                <Button
+                  variant="outline"
+                  className="border-orange-600 text-orange-600"
+                  onClick={() => navigate(`/${locale}/register`)}>
+                  {t("sign up")}
+                </Button>
+              </div>
+
+              {/* Theme Toggle */}
+              <div className="mt-auto">
+                <ThemeToggle />
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </nav>

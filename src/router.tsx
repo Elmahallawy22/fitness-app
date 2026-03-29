@@ -5,6 +5,9 @@ import AuthLayout from "./layouts/auth-layout";
 import Register from "./App/auth/register";
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import NotFound from "./App/not-found";
+import Classes from "./App/classes/classes";
+import Healthy from "./App/healthy/Healthy";
+import Login from "./App/auth/login/Login";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +18,8 @@ export const router = createBrowserRouter([
         children: [
           { index: true, element: <Home /> },
           { path: "about", element: <About /> },
+          { path: "classes", element: <Classes /> },
+          { path: "healthy", element: <Healthy /> },
         ],
       },
 
@@ -22,7 +27,7 @@ export const router = createBrowserRouter([
         element: <AuthLayout />,
         children: [
           { path: "register", element: <Register /> },
-          // { path: "login", element: <Login /> },
+          { path: "login", element: <Login /> },
           // { path: "forgot-password", element: <ForgotPassword /> },
         ],
       },

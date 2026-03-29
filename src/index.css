@@ -3,7 +3,7 @@
 @import "@fontsource/rubik/index.css";
 
 /* Scrolling ticker: right → left, seamless loop (reappears from right) */
-@keyframes marquee {
+/* @keyframes marquee {
   from {
     transform: translateX(120%);
   }
@@ -13,6 +13,32 @@
 }
 .animate-marquee {
   animation: marquee 15s linear infinite;
+} */
+
+@keyframes marquee-ltr {
+  from {
+    transform: translateX(120%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-rtl {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.animate-marquee-ltr {
+  animation: marquee-ltr 15s linear infinite;
+}
+
+.animate-marquee-rtl {
+  animation: marquee-rtl 15s linear infinite;
 }
 body {
   overflow-x: hidden;

@@ -1,12 +1,13 @@
-import { Button } from "../../../Components/ui/button";
+import { Button } from "@/components/ui/button";
 import arrow from "../../../assets/Images/arrow.png";
 import imgBanner from "../../../assets/Images/Theo Vance.png";
-import ScrollingTicker from "../ScrollingTicker/ScrollingTicker";
+import ScrollingTicker from "../../shared/ScrollingTicker/ScrollingTicker";
 import { useTranslations } from "use-intl";
 
 export default function HeroBanner() {
   //Translations
   const t = useTranslations("Hero-banner");
+
   return (
     <>
       <div
@@ -15,24 +16,29 @@ export default function HeroBanner() {
                  dark:via-[#242424]/80
                   dark:to-[#242424]/60
                   w-[`90rem`] h-[`62.5rem`]">
-        <div className="content  w-screen flex justify-between items-start pt-52 px-20">
+        <div className="content  w-screen block lg:flex justify-between items-start pt-52 px-4 lg:px-20">
           {/* content */}
+          {/* heading */}
           <div>
-            <p className="font-bold text-zinc-900 uppercase text-6xl leading-[1.2] mb-6 dark:text-zinc-100">
-              {t("your body can")}{" "}
+            <p className="font-bold text-zinc-900 uppercase text-2xl lg:text-6xl leading-[1.2] mb-6 dark:text-zinc-100">
+              {t("your body can")}
               <span className="text-orange-600"> {t("stand")} </span>
-              <br /> <span className="text-orange-600">{t("almost")}</span>
+              <br className="hidden lg:block" />
+
+              <span className="text-orange-600">{t("almost")}</span>
+              <br className="block lg:hidden" />
               {t("anything")}
             </p>
+            {/* body */}
             <p className="text-zinc-900 leading-7 text-lg font-normal border-s-4 border-orange-600 pt-1.5 ps-5 dark:text-zinc-100">
-              {t("first-line")} <br /> {t("second-line")} <br />{" "}
+              {t("first-line")} <br /> {t("second-line")} <br />
               {t("third-line")}
             </p>
 
             {/* counter */}
-            <div className="w-[`38rem`] flex justify-between items-start mt-16">
+            <div className="w-[`38rem`] block lg:flex justify-between items-start mt-16">
               {/* first counter */}
-              <div>
+              <div className="mb-4">
                 <span className="font-bold text-4xl text-zinc-900 leading-7 mb-1.5 dark:text-zinc-100">
                   {t("num-members")}
                 </span>
@@ -42,7 +48,7 @@ export default function HeroBanner() {
               </div>
 
               {/* second counrt */}
-              <div>
+              <div className="mb-4">
                 <span className="font-bold text-4xl text-zinc-900 leading-7 mb-1.5 dark:text-zinc-100">
                   {t("num-trainers")}
                 </span>
@@ -52,7 +58,7 @@ export default function HeroBanner() {
               </div>
 
               {/* third counrt */}
-              <div>
+              <div className="mb-4">
                 <span className="font-bold text-4xl text-zinc-900 leading-7 mb-1.5 dark:text-zinc-100">
                   {t("num-years")}
                 </span>
@@ -63,8 +69,7 @@ export default function HeroBanner() {
             </div>
 
             {/* buttons */}
-
-            <div className="mt-16 flex gap-16 items-center ">
+            <div className="mt-4 lg:mt-16 flex gap-16 items-center ">
               {/* get started */}
               <div className="flex flex-row ltr:flex-row rtl:flex-row-reverse">
                 <Button variant={`default`}> {t("get-started")} </Button>
@@ -74,6 +79,7 @@ export default function HeroBanner() {
                   className=" -ms-2 border-2 border-white w-9 h-9 bg-orange-600 rounded-full"
                 />
               </div>
+
               {/* explore more */}
               <div className=" flex flex-row ltr:flex-row rtl:flex-row-reverse">
                 <Button
