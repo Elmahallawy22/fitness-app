@@ -7,9 +7,16 @@ import StepsHeader from "../components/steps-header";
 import { useTranslations } from "use-intl";
 
 export default function GenderStep({ nextStep }: RegisterFormProps) {
+  // Translation
   const t = useTranslations("Register");
+
+  // Form context
   const form = useFormContext<RegisterSchema>();
+
+  // constants
   const gender = form.watch("gender") ?? "";
+
+  // Handle next step
   const handleNext = async () => {
     const isValid = await form.trigger(["gender"]);
     if (isValid) {

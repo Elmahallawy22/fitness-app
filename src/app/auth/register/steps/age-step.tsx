@@ -6,13 +6,18 @@ import { Button } from "@/components/ui/button";
 import { useTranslations } from "use-intl";
 
 export default function AgeStep({ nextStep }: RegisterFormProps) {
+  // Translation
   const t = useTranslations("Register");
+
+  // Form context
   const form = useFormContext<RegisterSchema>();
+
+  // constants
   const age = form.watch("age");
 
+  // Handle next step
   const handleNext = async () => {
     const isValid = await form.trigger(["age"]);
-
     if (isValid) {
       nextStep?.();
     }

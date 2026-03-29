@@ -12,10 +12,16 @@ import {
 import { useTranslations } from "use-intl";
 
 export default function GoalStep({ nextStep }: RegisterFormProps) {
+  // Translation
   const t = useTranslations("Register");
+
+  // Form context
   const form = useFormContext<RegisterSchema>();
+
+  // constants
   const selectedGoal = form.watch("goal") ?? "";
 
+  // Handle next step
   const handleNext = async () => {
     const isValid = await form.trigger(["goal"]);
     if (isValid) nextStep?.();
@@ -62,7 +68,7 @@ export default function GoalStep({ nextStep }: RegisterFormProps) {
         })}
       </RadioGroup>
 
-      <Button onClick={handleNext} disabled={!selectedGoal} className="w-2/3">
+      <Button onClick={handleNext} disabled={!selectedGoal} className="w-full">
         {t("next")}
       </Button>
     </div>

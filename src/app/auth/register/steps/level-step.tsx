@@ -1,14 +1,14 @@
-import StepsHeader from "../components/steps-header";
-import { useFormContext } from "react-hook-form";
-import { type RegisterSchema } from "@/lib/schemas/auth.schema";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Button } from "@/components/ui/button";
 import {
   Field,
   FieldContent,
   FieldLabel,
   FieldTitle,
 } from "@/components/ui/field";
+import StepsHeader from "../components/steps-header";
+import { useFormContext } from "react-hook-form";
+import { type RegisterSchema } from "@/lib/schemas/auth.schema";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/ui/spinner";
 import { useTranslations } from "use-intl";
 
@@ -17,7 +17,13 @@ export default function ActivityLevelStep({
 }: {
   isPending: boolean;
 }) {
+  // Translation
   const t = useTranslations("Register");
+
+  // Form context
+  const form = useFormContext<RegisterSchema>();
+
+  // Constants
   const LEVELS = [
     { label: t("rookie"), value: "level1" },
     { label: t("beginner"), value: "level2" },
@@ -25,7 +31,7 @@ export default function ActivityLevelStep({
     { label: t("advanced"), value: "level4" },
     { label: t("true-beast"), value: "level5" },
   ] as const;
-  const form = useFormContext<RegisterSchema>();
+
   const activityLevel = form.watch("activityLevel") ?? "";
 
   return (
@@ -67,7 +73,7 @@ export default function ActivityLevelStep({
         })}
       </RadioGroup>
 
-      <Button type="submit" disabled={!activityLevel} className="w-2/3 h-fit">
+      <Button type="submit" disabled={!activityLevel} className="w-9/12">
         {isPending ? <Spinner /> : t("finish")}
       </Button>
     </div>

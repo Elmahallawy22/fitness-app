@@ -4,14 +4,20 @@ import { Controller, useFormContext } from "react-hook-form";
 import type { RegisterSchema } from "@/lib/schemas/auth.schema";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "use-intl";
+
 export default function WeightStep({ nextStep }: RegisterFormProps) {
+  // Translation
   const t = useTranslations("Register");
+
+  // Form context
   const form = useFormContext<RegisterSchema>();
+
+  // constants
   const weight = form.watch("weight");
 
+  // Handle next step
   const handleNext = async () => {
     const isValid = await form.trigger(["weight"]);
-
     if (isValid) {
       nextStep?.();
     }
