@@ -1,1 +1,14 @@
-{ "Index": { "title": "Hello" } }
+{
+  "Index": { "title": "Hello" },
+  "Chat": {
+    "initialMessage": "Hello, How can I assist you today?",
+    "openButton": "Hey Ask Me",
+    "closeButton": "Tap To Close",
+    "header": "Smart Coach",
+    "placeholder": "Ask Me Anything",
+    "loading": "Smart Coach is thinking...",
+    "errorMessage": "Sorry, something went wrong. Please try again.",
+    "previousConversations": "Previous Conversations",
+    "menuLabel": "Chat menu"
+  }
+}

@@ -8,11 +8,23 @@
   --color-background: white;
   --color-foreground: black;
   --color-primary: #FF4100; 
+  --background-image-chat: url('@/../public/bot-bg.jpg');
 }
 
 @layer base {
   body {
     @apply bg-background text-foreground font-rubik;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
   }
 }
 
