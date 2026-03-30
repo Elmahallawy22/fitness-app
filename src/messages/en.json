@@ -107,5 +107,19 @@
     "re-password-required": "Please enter your password",
     "re-password-valid": "Passwords do not match",
     "create-new-password": "Create New Password"
+  },
+  "about": {
+    "title": "About Us",
+    "sub-title": "EMPOWERING YOU TO ACHIEVE <span>YOUR FITNESS</span> GOALS",
+    "description": "We believe fitness is more than just a workout—it's a lifestyle. With top-of-the-line facilities, certified trainers, and a supportive community, we're here to inspire and guide you every step of the way.",
+    "info-one-title": "Personal Trainer",
+    "info-one-description": "Achieve your fitness goals with the guidance of our certified trainers.",
+    "info-two-title": "Personal Trainer",
+    "info-two-description": "Achieve your fitness goals with the guidance of our certified trainers.",
+    "info-three-title": "Personal Trainer",
+    "info-three-description": "Achieve your fitness goals with the guidance of our certified trainers.",
+    "info-four-title": "Personal Trainer",
+    "info-four-description": "Achieve your fitness goals with the guidance of our certified trainers.",
+    "get-started": "Personal Trainer"
   }
 }
