@@ -7,7 +7,9 @@ import LocaleLayout from "./layouts/local-layout";
 import RootLayout from "./layouts/root-layout";
 import NotFound from "./app/not-found";
 import ForgotPassword from "./app/auth/forgot-password";
-import Login from "./app/auth/login";
+import Classes from "./app/classes/classes";
+import Healthy from "./app/healthy/Healthy";
+import Login from "./app/auth/login/Login";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +21,8 @@ export const router = createBrowserRouter([
         children: [
           { index: true, element: <Home /> },
           { path: "about", element: <About /> },
+          { path: "classes", element: <Classes /> },
+          { path: "healthy", element: <Healthy /> },
         ],
       },
 
@@ -26,8 +30,8 @@ export const router = createBrowserRouter([
         element: <AuthLayout />,
         children: [
           { path: "register", element: <Register /> },
-          { path: "forgot-password", element: <ForgotPassword /> },
           { path: "login", element: <Login /> },
+          { path: "forgot-password", element: <ForgotPassword /> },
         ],
       },
 

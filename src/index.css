@@ -2,12 +2,41 @@
 @import "@fontsource/baloo-thambi-2/index.css";
 @import "@fontsource/rubik/index.css";
 
+@keyframes marquee-ltr {
+  from {
+    transform: translateX(120%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-rtl {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.animate-marquee-ltr {
+  animation: marquee-ltr 15s linear infinite;
+}
+
+.animate-marquee-rtl {
+  animation: marquee-rtl 15s linear infinite;
+}
+body {
+  overflow-x: hidden;
+}
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
   --font-rubik: "Rubik", sans-serif;
   --font-baloo: "Baloo Thambi 2", system-ui;
   --color-background: white;
   --color-foreground: black;
-  --color-primary: #FF4100; 
+  --color-primary: #ff4100;
 }
 
 @layer base {

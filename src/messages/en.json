@@ -103,5 +103,48 @@
     "re-password-required": "Please confirm your password",
     "re-password-valid": "Passwords do not match",
     "create-new-password": "Create New Password"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "classes": "Classes",
+    "healthy": "Healthy",
+    "login": "Login",
+    "sign up": "Sign up"
+  },
+  "Hero-banner": {
+    "your body can": "Your body can",
+    "stand": "stand",
+    "almost": "almost",
+    "anything": "anything",
+    "first-line": "It's your mind that needs convincing,push past your limits,stay ",
+    "second-line": "committed, and watch as your body transform into powerhouse of",
+    "third-line": "strength and resilience.Start your journey today & truly capable of!",
+    "active-members": "active members",
+    "certified-trainers": "certified trainers",
+    "year-of-experience": "year of experience",
+    "num-years": "+20",
+    "num-trainers": "+12",
+    "num-members": "+1200",
+    "get-started": "Get started",
+    "explore-more": "Explore more"
+  },
+  "chat-boot": {
+    "title": "hey , ask me"
+  },
+  "scrolling-ticker": {
+    "first-line": "Live Classes",
+    "second-line": "Personal Training",
+    "third-line": "Nutrition Guidance"
+  },
+  "Footer": {
+    "contact-us": "Contact us",
+    "start-time": "Mon - Fri : 08:00 AM - 10:00 PM",
+    "special-time": "Sat - Sun : 08:00 AM - 09:00 PM",
+    "timing": "our gym timing",
+    "location": "our location",
+    "first-line": "Push harder, go further. Your",
+    "second-line": "fitness journey starts today!"
   }
 }

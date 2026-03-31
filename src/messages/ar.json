@@ -102,5 +102,48 @@
     "re-password-required": "يرجى تأكيد كلمة المرور",
     "re-password-valid": "كلمتا المرور غير متطابقتين",
     "create-new-password": "إنشاء كلمة مرور جديدة"
+  },
+
+  "Navbar": {
+    "home": "الرئيسية",
+    "about": "عن النادي",
+    "classes": "التمارين",
+    "healthy": "الطعام الصحي",
+    "login": "تسجيل الدخول",
+    "sign up": "تسجيل الإنضمام"
+  },
+  "Hero-banner": {
+    "your body can": "يمكن لجسمك أن ",
+    "stand": "يتحمل",
+    "almost": "تقريبا ",
+    "anything": "أي شيء",
+    "first-line": "هو عقلك الذي يحتاج إلى الاقناع,تجاوز حدودك,ابقي ",
+    "second-line": "ملتزما وشاهد كيف يتحول جسمك إلى ",
+    "third-line": "قوة قوية ومتينة.ابدأ رحلتك اليوم & حقا قادر علي ذلك!",
+    "active-members": "أعضاء نشطة",
+    "certified-trainers": "مدربين معتمدين",
+    "year-of-experience": "سنوات الخبرة",
+    "num-years": "+20",
+    "num-trainers": "+12",
+    "num-members": "+1200",
+    "get-started": "ابدأ الآن",
+    "explore-more": "استكشف المزيد"
+  },
+  "chat-boot": {
+    "title": " مرحبا ,تحدث معي"
+  },
+  "scrolling-ticker": {
+    "first-line": "التمارين المباشرة",
+    "second-line": "التدريب الشخصي",
+    "third-line": "التوجيه الغذائي"
+  },
+  "Footer": {
+    "contact-us": "تواصل معنا",
+    "start-time": "الاثنين - الجمعه : 08:00 مساء - 10:00 صباحا",
+    "special-time": "السبت - الاحد : 08:00 مساء - 09:00 صباحا",
+    "timing": "وقت العمل",
+    "location": " الموقع الجغرافي",
+    "first-line": " ادفع نفسك أكثر، وتقدّم أبعد",
+    "second-line": "رحلتك نحو اللياقة تبدأ اليوم!"
   }
 }

@@ -1,15 +1,33 @@
-import { Outlet } from "react-router-dom";
+import { useParams, Outlet, Navigate } from "react-router-dom";
+import { IntlProvider } from "use-intl";
+import enMessages from "../messages/en.json";
+import arMessages from "../messages/ar.json";
+import Navbar from "../app/Home/Navbar/Navbar";
+import ChatBoot from "@/App/shared/chat-boot/chat-boot";
+
+const messagesMap: Record<string, any> = {
+  ar: arMessages,
+  en: enMessages,
+};
 
 export default function RootLayout() {
-  return (
-    <main className="min-h-screen bg-background text-foreground">
-      <nav className="p-4 border-b flex justify-between items-center">
-        <span>Fitness App</span>
-      </nav>
+  const { locale } = useParams();
 
-      <div className="container mx-auto py-8">
-        <Outlet />
-      </div>
-    </main>
+  if (!locale || !messagesMap[locale]) {
+    return <Navigate to="/en" replace />;
+  }
+  return (
+    <IntlProvider messages={messagesMap[locale]} locale={locale}>
+      <main
+        className="min-h-screen w-full bg-background text-foreground"
+        dir={locale === "ar" ? "rtl" : "ltr"}>
+        
+        <div className="py-8">
+          <ChatBoot />
+          <Navbar />
+          <Outlet />
+        </div>
+      </main>
+    </IntlProvider>
   );
 }
