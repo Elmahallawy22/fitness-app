@@ -2,19 +2,6 @@
 @import "@fontsource/baloo-thambi-2/index.css";
 @import "@fontsource/rubik/index.css";
 
-/* Scrolling ticker: right → left, seamless loop (reappears from right) */
-/* @keyframes marquee {
-  from {
-    transform: translateX(120%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-.animate-marquee {
-  animation: marquee 15s linear infinite;
-} */
-
 @keyframes marquee-ltr {
   from {
     transform: translateX(120%);

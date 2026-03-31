@@ -1,13 +1,13 @@
-import Home from "./App/Home/page";
+import Home from "./app/Home/page";
 import RootLayout from "./layouts/root-layout";
-import About from "./App/about/page";
+import About from "./app/about/page";
 import AuthLayout from "./layouts/auth-layout";
-import Register from "./App/auth/register";
+import Register from "./app/auth/register";
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import NotFound from "./App/not-found";
-import Classes from "./App/classes/classes";
-import Healthy from "./App/healthy/Healthy";
-import Login from "./App/auth/login/Login";
+import NotFound from "./app/not-found";
+import Classes from "./app/classes/classes";
+import Healthy from "./app/healthy/Healthy";
+import Login from "./app/auth/login/Login";
 
 export const router = createBrowserRouter([
   {

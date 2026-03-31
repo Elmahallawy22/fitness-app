@@ -1,3 +1,3 @@
 export default function Healthy() {
-  return <div>Healthy</div>;
+  return <div>Healthy </div>;
 }
