@@ -82,5 +82,25 @@
     },
     "forgot-password": "هل نسيت كلمة السر ؟",
     "register": "إنشاء حساب"
+  },
+  "forgot-password-step": {
+    "step-one-title": "نسيت كلمة المرور",
+    "step-one-subtitle": "أدخل بريدك الإلكتروني",
+    "step-two-title": "رمز التحقق",
+    "step-two-subtitle": "أدخل رمز التحقق الذي تم إرساله إليك",
+    "step-three-title": "إنشاء كلمة مرور جديدة",
+    "step-three-subtitle": "تأكد من إنشاء كلمة مرور قوية!",
+    "email": "البريد الإلكتروني",
+    "sent-otp": "إرسال رمز التحقق",
+    "email-validation": "بريد إلكتروني غير صالح",
+    "otp-required": "رمز التحقق مطلوب",
+    "confirm": "تأكيد",
+    "did-not-receive": "لم تستلم رمز التحقق؟",
+    "resend": "إعادة إرسال الرمز",
+    "new-password": "كلمة المرور الجديدة",
+    "password-required": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل وتحتوي على حرف كبير وحرف صغير ورقم ورمز خاص",
+    "re-password-required": "يرجى تأكيد كلمة المرور",
+    "re-password-valid": "كلمتا المرور غير متطابقتين",
+    "create-new-password": "إنشاء كلمة مرور جديدة"
   }
 }

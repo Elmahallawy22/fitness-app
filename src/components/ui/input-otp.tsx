@@ -1,6 +1,5 @@
 import * as React from "react";
 import { OTPInput, OTPInputContext } from "input-otp";
-
 import { cn } from "@/lib/utils/tailwind-merge";
 import { MinusIcon } from "lucide-react";
 
@@ -29,7 +28,7 @@ function InputOTPGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="input-otp-group"
-      className={cn("flex m-auto items-center gap-7", className)}
+      className={cn("flex m-auto items-center gap-5", className)}
       {...props}
     />
   );
