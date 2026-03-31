@@ -67,12 +67,9 @@ export const otpStepSchema = (t: ReturnType<typeof import("use-intl").useTransla
 export const resetPasswordStepSchema = (t: ReturnType<typeof import("use-intl").useTranslations>) =>
   z
     .object({
-      password: z
-        .string(t("password-required"))
-        .min(8, t("password-length"))
-        .regex(/[A-Z]/, t("password-uppercase"))
-        .regex(/[a-z]/, t("password-lowercase"))
-        .regex(/[@$!%#*?&]/, t("password-special")),
+      password: z.string().regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/, {
+        message: t("password-required"),
+      }),
       rePassword: z.string().min(1, { message: t("re-password-required") }),
     })
     .refine((values) => values.password === values.rePassword, {

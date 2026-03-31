@@ -99,12 +99,8 @@
     "resend": "Resend Code",
     "new-password": "New Password",
     "confirm-password": "Confirm New Password",
-    "password-required": "Please enter your password",
-    "password-length": "Password must be at least 8 characters long",
-    "password-uppercase": "Password must contain at least one uppercase letter",
-    "password-lowercase": "Password must contain at least one lowercase letter",
-    "password-special": "Password must contain at least one special character",
-    "re-password-required": "Please enter your password",
+    "password-required": "Password must be at least 8 characters and include uppercase, lowercase, number, and special character",
+    "re-password-required": "Please confirm your password",
     "re-password-valid": "Passwords do not match",
     "create-new-password": "Create New Password"
   }
