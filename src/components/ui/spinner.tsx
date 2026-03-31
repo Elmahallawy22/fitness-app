@@ -6,7 +6,7 @@ function Spinner({ className, ...props }: React.ComponentProps<"svg">) {
     <Loader2Icon
       role="status"
       aria-label="Loading"
-      className={cn("text-primary m-auto mt-16 size-4 animate-spin", className)}
+      className={cn("text-primary size-4 animate-spin", className)}
       {...props}
     />
   );
