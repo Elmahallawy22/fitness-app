@@ -1,3 +1,8 @@
+declare type ApiErrorResponse = {
+  message?: string;
+  error?: string;
+};
+
 declare type RegisterState = Partial<RegisterSchema> & {
   gender?: "male" | "female";
   age?: number;
@@ -18,7 +23,5 @@ declare type RegisterState = Partial<RegisterSchema> & {
 };
 
 declare type RegisterFormProps = {
-  data: Partial<RegisterSchema>;
-  setData: (value: Partial<RegisterSchema>) => void;
-  nextStep: () => void;
+  nextStep?: () => void;
 };

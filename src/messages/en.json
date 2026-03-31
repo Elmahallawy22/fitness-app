@@ -1,5 +1,110 @@
 {
-  "Index": { "title": "Hello" },
+  "Index": {
+    "title": "Hello"
+  },
+  "Register": {
+    "create-account": "Create an account",
+    "firstname": "firstName",
+    "hey-there": "Hey There",
+    "first-name": "First Name",
+    "last-name": "Last Name",
+    "email": "Email",
+    "password": "Password",
+    "confirm-password": "Confirm Password",
+    "next": "Next",
+    "have-account": "Already have an account?",
+    "login": "Login",
+    "how-old-are-you": "How Old Are you ?",
+    "step-header-paragraph": "this helps us create Your personalized plan",
+    "tell-us-about-yourself": "Tell us about yourself",
+    "we-need-to-know-your-gender": "We need to know your gender",
+    "male": "Male",
+    "female": "Female",
+    "what-is-your-goal": "What is your Goal?",
+    "what-is-your-height": "what is your height ?",
+    "level": "your regular physical activity level ?",
+    "finish": "Finish",
+    "what-is-your-weight": "what is your weight ?",
+    "validation": {
+      "firstName": {
+        "required": "First name is required",
+        "tooLong": "First name is too long"
+      },
+      "lastName": {
+        "required": "Last name is required",
+        "tooLong": "Last name is too long"
+      },
+      "email": {
+        "invalid": "Invalid email address"
+      },
+      "password": {
+        "strong": "Password must be at least 8 characters and include uppercase, lowercase, number, and special character"
+      },
+      "rePassword": {
+        "required": "Please confirm your password"
+      },
+      "passwords": {
+        "notMatch": "Passwords do not match"
+      },
+      "gender": {
+        "required": "Gender is required"
+      },
+      "age": {
+        "min": "You should be at least 12 years old",
+        "max": "You should be at most 90 years old"
+      },
+      "weight": {
+        "min": "Weight must be at least 40kg",
+        "max": "Weight must be at most 180kg"
+      },
+      "height": {
+        "min": "Height must be at least 120cm",
+        "max": "Height must be at most 220cm"
+      },
+      "goal": {
+        "required": "Goal is required"
+      },
+      "activityLevel": {
+        "required": "Activity level is required"
+      }
+    },
+    "rookie": "Rookie",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "true-beast": "True beast",
+    "goal": {
+      "gain-weight": "Gain weight",
+      "lose-weight": "Lose weight",
+      "get-fitter": "Get fitter",
+      "gain-more-flexible": "Gain more flexible",
+      "learn-the-basic": "Learn the basic"
+    },
+    "forgot-password": "Forget Password ?",
+    "register": "Register"
+  },
+  "forgot-password-step": {
+    "step-one-title": "Forgot Password",
+    "step-one-subtitle": "Enter Your Email",
+    "step-two-title": "OTP CODE",
+    "step-two-subtitle": "Enter the OTP you have received",
+    "step-three-title": "Create New Password",
+    "step-three-subtitle": "Make sure to create a strong password!.",
+    "email": "Email",
+    "sent-otp": "Sent OTP",
+    "email-validation": "Invalid email address",
+    "otp-required": "OTP is required",
+    "confirm": "Confirm",
+    "did-not-receive": "didn’t receive verification code?",
+    "resend": "Resend Code",
+    "new-password": "New Password",
+    "confirm-password": "Confirm New Password",
+    "password-required": "Password must be at least 8 characters and include uppercase, lowercase, number, and special character",
+    "re-password-required": "Please confirm your password",
+    "re-password-valid": "Passwords do not match",
+    "create-new-password": "Create New Password"
+  },
+
   "Navbar": {
     "home": "Home",
     "about": "About",

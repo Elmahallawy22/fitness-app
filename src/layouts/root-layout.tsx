@@ -16,15 +16,17 @@ export default function RootLayout() {
   if (!locale || !messagesMap[locale]) {
     return <Navigate to="/en" replace />;
   }
-
   return (
     <IntlProvider messages={messagesMap[locale]} locale={locale}>
       <main
         className="min-h-screen w-full bg-background text-foreground"
         dir={locale === "ar" ? "rtl" : "ltr"}>
-        <ChatBoot />
-        <Navbar />
-        <Outlet />
+        
+        <div className="py-8">
+          <ChatBoot />
+          <Navbar />
+          <Outlet />
+        </div>
       </main>
     </IntlProvider>
   );
