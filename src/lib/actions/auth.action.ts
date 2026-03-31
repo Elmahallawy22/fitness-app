@@ -12,6 +12,12 @@ export async function sendOtpAction(fields: EmailStepFields) {
 
   const payload = await response.json();
 
+  // if response is not ok throw error
+  if (!response.ok) {
+    const errorMessage = payload?.error || "Something went wrong";
+    throw new Error(errorMessage);
+  }
+
   return payload;
 }
 
@@ -27,12 +33,18 @@ export async function verifyOtpAction(fields: OtpStepFields) {
     },
   });
 
-  const payload= await response.json();
+  const payload = await response.json();
+
+  // if response is not ok throw error
+  if (!response.ok) {
+    const errorMessage = payload?.error || "Something went wrong";
+    throw new Error(errorMessage);
+  }
 
   return payload;
 }
 
-// reset nuw password
+// reset new password
 export async function resetPasswordAction(fields: { email: string; newPassword: string }) {
   const response = await fetch("https://fitness.elevateegy.com/api/v1/auth/resetPassword", {
     method: "PUT",
@@ -43,6 +55,12 @@ export async function resetPasswordAction(fields: { email: string; newPassword: 
   });
 
   const payload = await response.json();
+
+  // if response is not ok throw error
+  if (!response.ok) {
+    const errorMessage = payload?.error || "Something went wrong";
+    throw new Error(errorMessage);
+  }
 
   return payload;
 }

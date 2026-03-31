@@ -11,7 +11,7 @@ import { Mail } from "lucide-react";
 import { FORGOT_PASSWORD_STEPS } from "@/lib/constants/auth.constant";
 import type { EmailStepFields } from "@/lib/types/forgot-password";
 import useSendOtp from "@/lib/hooks/use-send-opt";
-import Feedback from "@/components/shared/feadback";
+import Feedback from "@/components/shared/feedback";
 
 // props type
 type EmailStepProps = {
@@ -71,7 +71,7 @@ export default function EmailStep({ email, setStep, setEmail }: EmailStepProps) 
         {/* feedback */}
         <Feedback className="mt-3">{error?.message}</Feedback>
         {/* submit button */}
-        <Button disabled={isPending || (!form.formState.isValid && form.formState.isSubmitted)} className="w-80">
+        <Button disabled={isPending || form.formState.isSubmitting} className="w-80">
           {t("sent-otp")}
         </Button>
       </form>

@@ -1,4 +1,3 @@
-
 import { useMutation } from "@tanstack/react-query";
 import type { EmailStepFields } from "../types/forgot-password";
 import { sendOtpAction } from "../actions/auth.action";
@@ -9,8 +8,8 @@ export default function useSendOtp() {
     mutationFn: async (fields: EmailStepFields) => {
       const payload = await sendOtpAction(fields);
 
-      if ("code" in payload) {
-        throw new Error(payload.message);
+      if ("error" in payload) {
+        throw new Error(payload.error);
       }
 
       return payload;

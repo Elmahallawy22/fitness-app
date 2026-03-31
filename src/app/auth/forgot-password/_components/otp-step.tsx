@@ -11,7 +11,7 @@ import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp
 import useVerifyOtp from "@/lib/hooks/use-verify-opt";
 import { FORGOT_PASSWORD_STEPS } from "@/lib/constants/auth.constant";
 import { Link } from "react-router-dom";
-import Feedback from "@/components/shared/feadback";
+import Feadback from "@/components/shared/feedback";
 
 type OtpStepProps = {
   setStep: Dispatch<SetStateAction<ForgotPasswordSteps>>;
@@ -68,9 +68,9 @@ export default function OtpStep({ setStep }: OtpStepProps) {
           )}
         />
         {/* feedback */}
-        <Feedback className="mt-3">{error?.message}</Feedback>
+        <Feadback className="mt-3">{error?.message}</Feadback>
         {/* submit button */}
-        <Button disabled={isPending || (!form.formState.isValid && form.formState.isSubmitted)} className="w-full">
+        <Button disabled={isPending || form.formState.isSubmitting} className="w-full">
           {t("confirm")}
         </Button>
         <div className="flex flex-col items-center">
