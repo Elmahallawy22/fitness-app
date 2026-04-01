@@ -43,6 +43,7 @@ body {
   --color-background: #ffffff;
   --color-foreground: #000000;
   --color-primary: #ff4100;
+  --color-main: #242424;
 }
 
 /* dark theme (controlled by next-themes) */
