@@ -39,7 +39,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="px-3 sm:px-6 lg:px-20 py-4 sm:py-6 overflow-x-hidden lg:py-10 absolute top-0 left-0 right-0 z-50 w-full">
+    <nav className="px-3 sm:px-6 lg:px-20 bg-transparent sm:py-6 overflow-x-hidden lg:py-10 absolute top-0 left-0 right-0 z-50 w-full">
       <div className="flex items-center justify-between gap-2 sm:gap-4">
         {/*  Logo */}
         <img

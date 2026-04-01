@@ -27,27 +27,38 @@
 .animate-marquee-rtl {
   animation: marquee-rtl 15s linear infinite;
 }
+
 body {
   overflow-x: hidden;
 }
+
+/* enable dark mode variant */
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* light theme (default) */
 @theme {
   --font-rubik: "Rubik", sans-serif;
   --font-baloo: "Baloo Thambi 2", system-ui;
-  --color-background: white;
-  --color-foreground: black;
+
+  --color-background: #ffffff;
+  --color-foreground: #000000;
   --color-primary: #ff4100;
 }
 
+/* dark theme (controlled by next-themes) */
+.dark {
+  --color-background: #16171d;
+  --color-foreground: #f3f4f6;
+}
+
+/* base styles */
 @layer base {
   body {
     @apply bg-background text-foreground font-rubik;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #16171d;
-    --color-foreground: #f3f4f6;
-  }
+/* optional: improve native UI (scrollbars, inputs, etc.) */
+:root {
+  color-scheme: light dark;
 }
