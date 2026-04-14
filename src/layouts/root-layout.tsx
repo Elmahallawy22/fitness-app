@@ -3,7 +3,7 @@ import { IntlProvider } from "use-intl";
 import enMessages from "../messages/en.json";
 import arMessages from "../messages/ar.json";
 import Navbar from "../app/Home/Navbar/Navbar";
-import ChatBoot from "@/app/shared/chat-boot/chat-boot";
+import ChatBoot from "@/Components/shared/chat-boot/chat-boot";
 
 const messagesMap: Record<string, any> = {
   ar: arMessages,

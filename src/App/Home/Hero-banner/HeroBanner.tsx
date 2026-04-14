@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import arrow from "../../../assets/Images/arrow.png";
 import imgBanner from "../../../assets/Images/Theo Vance.png";
-import ScrollingTicker from "../../shared/ScrollingTicker/ScrollingTicker";
+import ScrollingTicker from "../../../Components/shared/ScrollingTicker/ScrollingTicker";
 import { useTranslations } from "use-intl";
 
 export default function HeroBanner() {
