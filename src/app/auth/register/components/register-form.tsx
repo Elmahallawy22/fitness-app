@@ -145,8 +145,7 @@ export default function RegisterForm({ nextStep }: RegisterFormProps) {
         {/* Forgot Password link */}
         <Link
           to="/forgot-password"
-          className="text-base font-semibold text-primary underline  self-end "
-        >
+          className="text-base font-semibold text-primary underline  self-end ">
           {t("forgot-password")}
         </Link>
 
@@ -158,8 +157,7 @@ export default function RegisterForm({ nextStep }: RegisterFormProps) {
           <Button
             type="button"
             onClick={handleNext}
-            className="rounded-3xl text-lg w-full"
-          >
+            className="rounded-3xl text-lg w-full">
             {t("register")}
           </Button>
 
