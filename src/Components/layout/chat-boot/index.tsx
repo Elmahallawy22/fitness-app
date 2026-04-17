@@ -9,8 +9,8 @@ export default function ChatBoot() {
   return (
     <>
       {/* chat bot */}
-      <div className="fixed top-[80vh] lg:top-1/2 end-5 lg:end-20 z-50 ">
-        <img src={emo} alt="img-button" className=" h-24 mx-auto" />
+      <div className="fixed right-10 bottom-10 z-50 ">
+        <img src={emo} alt="img-button" className="h-24 mx-auto" />
         <Button variant="default" className="w-32 p-1.5">
           {t("title")}
         </Button>

@@ -2,8 +2,8 @@ import { useParams, Outlet, Navigate } from "react-router-dom";
 import { IntlProvider } from "use-intl";
 import enMessages from "../messages/en.json";
 import arMessages from "../messages/ar.json";
-import ChatBoot from "@/app/shared/chat-boot/chat-boot";
-import Navbar from "@/app/home/Navbar/Navbar";
+import ChatBoot from "@/components/layout/chat-boot";
+import Navbar from "@/components/layout/navbar";
 
 const messagesMap: Record<string, any> = {
   ar: arMessages,
@@ -18,13 +18,15 @@ export default function RootLayout() {
   }
   return (
     <IntlProvider messages={messagesMap[locale]} locale={locale}>
+      <header className="mb-[82.56px]">
+        <Navbar />
+      </header>
       <main
         className="min-h-screen w-full bg-background text-foreground"
         dir={locale === "ar" ? "rtl" : "ltr"}
       >
-        <div className="py-8">
+        <div>
           <ChatBoot />
-          <Navbar />
           <Outlet />
         </div>
       </main>

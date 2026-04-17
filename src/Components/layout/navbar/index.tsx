@@ -1,17 +1,17 @@
-import { useState } from "react";
-import { useNavigate, useParams, useLocation } from "react-router-dom";
-import { useTranslations } from "use-intl";
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuList,
   NavigationMenuLink,
-} from "../../../Components/ui/navigation-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/Components/ui/sheet";
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu";
+import { useState } from "react";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
+import { useTranslations } from "use-intl";
 import { Button } from "@/components/ui/button";
-import ThemeToggle from "@/app/shared/theme-toggle/theme-toggle";
+import ThemeToggle from "@/components/layout/navbar/theme-toggle";
 import logo from "../../../assets/Images/fit 1.png";
 import { Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Navbar() {
   // Router
@@ -39,7 +39,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="px-3 sm:px-6 lg:px-20 py-4 sm:py-6 overflow-x-hidden lg:py-10 absolute top-0 left-0 right-0 z-50 w-full">
+    <nav className="bg-background fixed overflow-x-hidden py-4 px-8 top-0 left-0 right-0 z-50 w-full">
       <div className="flex items-center justify-between gap-2 sm:gap-4">
         {/*  Logo */}
         <img
@@ -63,7 +63,8 @@ export default function Navbar() {
                         active === link.path
                           ? "text-orange-600 dark:text-orange-400"
                           : "text-zinc-900 dark:text-zinc-100 hover:text-orange-600"
-                      }`}>
+                      }`}
+                    >
                       {link.name}
                     </NavigationMenuLink>
                   </NavigationMenuItem>
@@ -81,7 +82,8 @@ export default function Navbar() {
             <Button
               variant="outline"
               className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
-              onClick={() => navigate(`/${locale}/register`)}>
+              onClick={() => navigate(`/${locale}/register`)}
+            >
               {t("sign up")}
             </Button>
 
@@ -100,18 +102,20 @@ export default function Navbar() {
 
             <SheetContent
               side={locale === "ar" ? "left" : "right"}
-              className="w-[80vw] sm:w-[70vw] md:w-[60vw] p-4 sm:p-6 flex flex-col max-w-xs">
+              className="w-[80vw] sm:w-[70vw] md:w-[60vw] p-4 sm:p-6 flex flex-col max-w-xs"
+            >
               {/* Links */}
               <div className="flex flex-col gap-3 mt-6">
                 {links.map((link) => (
                   <button
                     key={link.path}
                     onClick={() => handleNavigate(link.path)}
-                    className={`text-base sm:text-lg font-semibold text-left capitalize break-words ${
+                    className={`text-base sm:text-lg font-semibold text-left capitalize wrap-break-word ${
                       active === link.path
                         ? "text-orange-600"
                         : "text-zinc-900 dark:text-zinc-100"
-                    }`}>
+                    }`}
+                  >
                     {link.name}
                   </button>
                 ))}
@@ -121,14 +125,16 @@ export default function Navbar() {
               <div className="flex flex-col gap-3 mt-6 w-full">
                 <Button
                   onClick={() => navigate(`/${locale}/login`)}
-                  className="w-full text-sm sm:text-base">
+                  className="w-full text-sm sm:text-base"
+                >
                   {t("login")}
                 </Button>
 
                 <Button
                   variant="outline"
                   className="w-full border-orange-600 text-orange-600 text-sm sm:text-base"
-                  onClick={() => navigate(`/${locale}/register`)}>
+                  onClick={() => navigate(`/${locale}/register`)}
+                >
                   {t("sign up")}
                 </Button>
               </div>

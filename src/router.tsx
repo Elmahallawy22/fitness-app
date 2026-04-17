@@ -8,8 +8,8 @@ import RootLayout from "./layouts/root-layout";
 import NotFound from "./app/not-found";
 import ForgotPassword from "./app/auth/forgot-password";
 import Classes from "./app/classes/classes";
-import Healthy from "./app/healthy/Healthy";
 import Login from "./app/auth/login/Login";
+import Healthy from "./app/healthy/healthy";
 
 export const router = createBrowserRouter([
   {
