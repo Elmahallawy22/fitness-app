@@ -9,7 +9,7 @@ import {
 } from "../../../Components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/Components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import ThemeToggle from "@/app/shared/theme-toggle/theme-toggle";
+import ThemeToggle from "@/Components/shared/theme-toggle/theme-toggle";
 import logo from "../../../assets/Images/fit 1.png";
 import { Menu } from "lucide-react";
 

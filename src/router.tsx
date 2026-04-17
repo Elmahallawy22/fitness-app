@@ -7,7 +7,7 @@ import LocaleLayout from "./layouts/local-layout";
 import RootLayout from "./layouts/root-layout";
 import NotFound from "./app/not-found";
 import ForgotPassword from "./app/auth/forgot-password";
-import Classes from "./app/classes/classes";
+import Classes from "./app/classes/components/classes";
 import Healthy from "./app/healthy/Healthy";
 import Login from "./app/auth/login/Login";
 
