@@ -1,5 +1,5 @@
 import HealthySection from "./healthy";
-import HeroBanner from "./hero-banner/hero-banner";
+import HeroBanner from "./hero-banner";
 import WhyUsSection from "./why-us";
 
 export default function Home() {

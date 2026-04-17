@@ -5,9 +5,19 @@ import { useForm, type SubmitHandler } from "react-hook-form";
 import { useTranslations } from "use-intl";
 import type { ForgotPasswordSteps } from "./forgot-password-flow";
 import type { OtpStepFields } from "@/lib/types/forgot-password";
-import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
-import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSlot,
+} from "@/components/ui/input-otp";
 import useVerifyOtp from "@/lib/hooks/use-verify-opt";
 import { FORGOT_PASSWORD_STEPS } from "@/lib/constants/auth.constant";
 import { Link } from "react-router-dom";
@@ -42,7 +52,10 @@ export default function OtpStep({ setStep }: OtpStepProps) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-6 items-center w-96 py-6 px-4">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex flex-col gap-6 items-center w-96 py-6 px-4"
+      >
         {/* otp */}
         <FormField
           control={form.control}
@@ -70,12 +83,18 @@ export default function OtpStep({ setStep }: OtpStepProps) {
         {/* feedback */}
         <Feadback className="mt-3">{error?.message}</Feadback>
         {/* submit button */}
-        <Button disabled={isPending || form.formState.isSubmitting} className="w-full">
+        <Button
+          disabled={isPending || form.formState.isSubmitting}
+          className="w-full"
+        >
           {t("confirm")}
         </Button>
         <div className="flex flex-col items-center">
           <p>{t("did-not-receive")}</p>
-          <Link to={""} className="text-sm m-0 underline font-bold text-primary">
+          <Link
+            to={""}
+            className="text-sm m-0 underline font-bold text-primary"
+          >
             {t("resend")}
           </Link>
         </div>
