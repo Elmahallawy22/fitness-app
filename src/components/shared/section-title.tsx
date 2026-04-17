@@ -13,7 +13,12 @@ export default function SectionTitle({ title, background }: SectionTitleProps) {
 
       {/* Title */}
       <div className="relative top-3 flex items-center gap-2">
-        <img src="/images/Dumbbell.png" alt="icon" width={30} height={30} />
+        <img
+          src="src/assets/images/Dumbbell.png"
+          alt="icon"
+          width={30}
+          height={30}
+        />
         <span className="text-primary font-semibold text-lg">{title}</span>
       </div>
     </div>

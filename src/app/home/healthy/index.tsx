@@ -11,19 +11,19 @@ export default function HealthySection() {
   // Constants
   const cards = [
     {
-      image: "/public/images/healthy1.jpg",
+      image: "/src/assets/images/healthy1.jpg",
       title: t("cards.breakfast.title"),
       buttonText: t("cards.breakfast.buttonText"),
       index: 1,
     },
     {
-      image: "/public/images/healthy2.jpg",
+      image: "/src/assets/images/healthy2.jpg",
       title: t("cards.lunch.title"),
       buttonText: t("cards.lunch.buttonText"),
       index: 2,
     },
     {
-      image: "/public/images/healthy3.jpg",
+      image: "/src/assets/images/healthy3.jpg",
       title: t("cards.dinner.title"),
       buttonText: t("cards.dinner.buttonText"),
       index: 3,

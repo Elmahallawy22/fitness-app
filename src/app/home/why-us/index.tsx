@@ -6,10 +6,10 @@ export default function WhyUsSection() {
   const t = useTranslations("WhyUs");
 
   const images = [
-    "/images/hero2.png",
-    "/images/hero1.jpg",
-    "/images/hero3.jpg",
-    "/images/hero4.png",
+    "src/assets/images/hero2.png",
+    "src/assets/images/hero1.jpg",
+    "src/assets/images/hero3.jpg",
+    "src/assets/images/hero4.png",
   ];
 
   const whyUsData = [

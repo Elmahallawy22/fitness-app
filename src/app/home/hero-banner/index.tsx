@@ -1,8 +1,6 @@
 import { useTranslations } from "use-intl";
-
 import { Button } from "@/components/ui/button";
 import ScrollingTicker from "@/components/shared/scrolling-ticker";
-
 import arrow from "@/assets/Images/arrow.png";
 import imgBanner from "@/assets/Images/Theo Vance.png";
 
