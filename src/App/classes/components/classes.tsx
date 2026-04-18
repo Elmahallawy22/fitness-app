@@ -19,8 +19,8 @@ import {
 } from "@/Components/ui/carousel";
 import type { EmblaCarouselType } from "embla-carousel";
 // images
-// import vector from "../../../assets/Images/Vector.png";
-// import dumble from "../../../assets/Images/dumble.png";
+import vector from "../../../assets/Images/Vector.png";
+import dumble from "../../../assets/Images/dumble.png";
 import { useTranslations, useLocale } from "use-intl";
 
 export default function Muscles() {
@@ -30,7 +30,9 @@ export default function Muscles() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [api, setApi] = useState<EmblaCarouselType | undefined>(undefined);
   // translations
-  const t = useTranslations("meal-page");
+  const t = useTranslations("workout-page");
+  const b = useTranslations("slide-button");
+
   // locale
   const locale = useLocale();
 
@@ -48,7 +50,7 @@ export default function Muscles() {
   // load Muscles
   useEffect(() => {
     async function loadMuscles() {
-      const data = await getMuscles();
+      const data = await getMuscles(locale);
       setMuscles(data);
       if (data.length > 0) {
         setSelectedCategory(data[0].idMuscles);
@@ -56,54 +58,60 @@ export default function Muscles() {
     }
 
     loadMuscles();
-  }, []);
+  }, [locale]);
 
   // load meals
   useEffect(() => {
     if (!selectedCategory) return;
     async function loadWorkout() {
-      const data = await getMusclesById(selectedCategory);
+      const data = await getMusclesById(selectedCategory, locale);
       setWorkout(data);
     }
 
     loadWorkout();
-  }, [selectedCategory]);
+  }, [selectedCategory, locale]);
 
   return (
-    <div className="w-full mt-48 bg-gradient-to-b from-main/20 via-main/5 to-main/90">
-      {/* healthy LAYER */}
+    <div className=" absolute z-0  w-full mt-48 bg-gradient-to-b from-main/80 via-main/60 to-main/90">
+      {/* workout LAYER */}
       <h2
-        className={`relative inline-block text-center -z-1 text-6xl font-bold bg-gradient-to-b from-white to-[#232425] bg-clip-text text-transparent ${
+        className={` relative -z-10 inline-block w-full bg-red-200 text-center  text-6xl font-bold bg-gradient-to-b from-white to-[#232425] bg-clip-text text-transparent ${
           locale === "ar"
             ? "right-1/2 translate-x-1/2 bottom-16"
-            : "left-1/2 -translate-x-1/2 bottom-12"
+            : "left-1/2 -translate-x-1/2 -top-11"
         }`}>
-        {t("title")}
+        {t("workout-title")}
       </h2>
 
       {/* header */}
       <div>
         <div className="flex justify-center items-center max-w-5xl mx-auto px-4 gap-2 mb-4">
-          {/* <img src={dumble} alt="img-dumble" className="w-9" /> */}
-          <h4 className="text-orange-600">{t("small-title")}</h4>
+          <img src={dumble} alt="img-dumble" className="w-9" />
+          <h4 className="text-orange-600">{t("workout-small-title")}</h4>
         </div>
 
         <h2 className="text-4xl text-center font-bold uppercase leading-16 mb-10">
-          <p> {t("first-line")} </p>
+          <p> {t("workout-first-line")} </p>
           <p>
-            {t("customized")}
-            <span className="text-orange-600"> {t("special-meal")} </span>
-            {t("for-you")}
+            {t("workout-second-line")}
+            <span className="text-orange-600">
+              {t("workout-special-workout")}
+            </span>
           </p>
         </h2>
       </div>
 
       <div className="p-6">
-        <Carousel setApi={setApi} className="w-full lg:w-1/2 mx-auto">
+        <Carousel
+          setApi={setApi}
+          className="w-full lg:w-1/2 mx-auto"
+          opts={{
+            direction: locale === "ar" ? "rtl" : "ltr",
+          }}>
           <CarouselContent>
             {chunkedCategories.map((group, index) => (
               <CarouselItem key={index}>
-                {/* categories */}
+                {/* muscles */}
                 <div className="mb-8 flex justify-center gap-6">
                   {group.map((cat) => (
                     <button
@@ -135,13 +143,16 @@ export default function Muscles() {
                         </h3>
 
                         <div className="flex">
-                          <button className="text-orange-600">Explore</button>
+                          {/* TODO: wating for exrcies path to intiate */}
+                          <button className="text-orange-600">
+                            {b("buttton-title")}
+                          </button>
                           <div className="p-2 w-6 h-6 ms-2 bg-orange-600 rounded-full">
-                            {/* <img
+                            <img
                               src={vector}
                               alt="img-button"
                               className="w-full h-full"
-                            /> */}
+                            />
                           </div>
                         </div>
                       </div>

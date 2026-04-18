@@ -137,6 +137,16 @@
     "second-line": "التدريب الشخصي",
     "third-line": "التوجيه الغذائي"
   },
+  "workout-page": {
+    "workout-title": " تمارين رياضيه",
+    "workout-small-title": "تمارين لياقه بدنيه",
+    "workout-first-line": "حول جسمك معنا  ",
+    "workout-second-line": "تماريننا الديناميكيه ",
+    "workout-special-workout": "القادمه"
+  },
+  "slide-button": {
+    "buttton-title": "استكشف"
+  },
   "Footer": {
     "contact-us": "تواصل معنا",
     "start-time": "الاثنين - الجمعه : 08:00 مساء - 10:00 صباحا",

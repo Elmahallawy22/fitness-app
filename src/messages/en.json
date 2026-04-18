@@ -138,6 +138,18 @@
     "second-line": "Personal Training",
     "third-line": "Nutrition Guidance"
   },
+  "workout-page": {
+    "workout-title": "workout",
+    "workout-small-title": "fitness class",
+    "workout-first-line": "Transform Your Body with Our",
+    "workout-second-line": "Dynamic ",
+    "workout-special-workout": "Upcoming Workouts"
+  },
+
+  "slide-button": {
+    "buttton-title": "Explore"
+  },
+
   "Footer": {
     "contact-us": "Contact us",
     "start-time": "Mon - Fri : 08:00 AM - 10:00 PM",
