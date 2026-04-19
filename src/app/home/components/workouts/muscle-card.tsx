@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 type Props = {
   name: string;
@@ -23,13 +24,16 @@ export default function MuscleCard({ name, image }: Props) {
       </p>
 
       <div>
-        <span className="text-primary ps-4 mt-2 block">
+        <Link
+          to={`workouts/${name.toLocaleLowerCase().trim().replace(/\s+/g, "-")}`}
+          className="text-primary ps-4 mt-2 block"
+        >
           Explore{" "}
           <ArrowUpRight
             className="inline bg-primary text-black rounded-full p-1"
             size={20}
           />
-        </span>
+        </Link>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import { useMuscleGroups } from "../../hooks/use-muscle-groups";
 import { useTranslations } from "use-intl";
 import { TabsSkeleton } from "./skeletons/taabs-skeletons";
 import { CarouselSkeleton } from "./skeletons/carousel-skeleton";
+import SectionTitle from "@/components/shared/section-title";
 
 export default function WorkoutSection() {
   const t = useTranslations("home.workouts");
@@ -33,8 +34,8 @@ export default function WorkoutSection() {
   } = useMusclesByGroup(effectiveSelectedGroup);
 
   return (
-    <section className="absolute space-y-8 h-fit md:h-175 w-full  mx-auto px-4">
-      {/* 🔥 Background Image */}
+    <section className="absolute space-y-8 h-fit md:h-175 w-full  px-4">
+      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -42,14 +43,16 @@ export default function WorkoutSection() {
         }}
       />
 
-      {/* 🔥 Overlay */}
+      {/* Overlay */}
       <div className="absolute  h-3/5 left-0 right-0 top-1/12  bg-white/60 dark:bg-black/30  backdrop-blur-xl" />
       {/* Content */}
       <div className="relative z-10">
         {/* Header */}
-        <h3 className="text-5xl text-center text-primary font-bold">
-          {/* TODO: change to the reusable header */}
-          WorkOuts
+        <h3 className="flex items-center justify-center mt-6">
+          <SectionTitle
+            background={t("title-text")}
+            title={t("title-background")}
+          />
         </h3>
 
         <p className="text-xl md:text-[2.5rem] mb-2 text-start md:text-center space-y-2 mt-10 font-bold  text-black dark:text-white leading-tight">
