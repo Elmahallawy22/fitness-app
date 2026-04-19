@@ -1,12 +1,13 @@
 import { useState, useMemo } from "react";
 import MuscleTabs from "./muscle-tabs";
 import MuscleCarousel from "./masule-carousel";
-import { useMusclesByGroup } from "../../hooks/use-muscles-by-group";
-import { useMuscleGroups } from "../../hooks/use-muscle-groups";
+
 import { useTranslations } from "use-intl";
 import { TabsSkeleton } from "./skeletons/taabs-skeletons";
 import { CarouselSkeleton } from "./skeletons/carousel-skeleton";
 import SectionTitle from "@/components/shared/section-title";
+import { useMuscleGroups } from "@/lib/hooks/use-muscle-groups";
+import { useMusclesByGroup } from "@/lib/hooks/use-muscles-by-group";
 
 export default function WorkoutSection() {
   const t = useTranslations("home.workouts");
@@ -34,7 +35,7 @@ export default function WorkoutSection() {
   } = useMusclesByGroup(effectiveSelectedGroup);
 
   return (
-    <section className="absolute space-y-8 h-fit md:h-175 w-full  px-4">
+    <section className="relative space-y-8 w-full px-6 pb-10">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"

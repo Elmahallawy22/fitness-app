@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { getMuscleGroups } from "../services/workouts.service";
 import { useLocale } from "use-intl";
+import { getMuscleGroups } from "../services/workouts.service";
 
 export const useMuscleGroups = () => {
   const local = useLocale();

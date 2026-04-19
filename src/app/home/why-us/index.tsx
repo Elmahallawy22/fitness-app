@@ -31,7 +31,7 @@ export default function WhyUsSection() {
   ];
 
   return (
-    <section className="w-full py-12 px-6 md:px-16">
+    <section className="w-full py-10 px-6 md:px-16">
       <div className="flex flex-col lg:flex-row gap-12 w-full">
         {/* Left Content */}
         <div className="lg:w-1/2 flex flex-col gap-8 text-white">

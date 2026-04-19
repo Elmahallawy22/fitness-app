@@ -31,7 +31,7 @@ export default function HealthySection() {
   ];
 
   return (
-    <section className="relative bg-[url('/images/healthy-background.jpg')] bg-cover pt-5 pb-10 px-6 md:px-16">
+    <section className="relative bg-[url('/images/healthy-background.jpg')] bg-cover pb-10 px-6 md:px-16">
       {/* Section Header  */}
       <header className="flex flex-col justify-center items-center gap-4 py-3 mb-3">
         <SectionTitle title={t("title")} background={t("background")} />

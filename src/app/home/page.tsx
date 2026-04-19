@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <HeroBanner />
+      <WorkoutsSection />
       <HealthySection />
       <WhyUsSection />
-      <WorkoutsSection />
     </div>
   );
 }
