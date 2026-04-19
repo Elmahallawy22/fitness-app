@@ -2,6 +2,11 @@
   "Index": {
     "title": "Hello"
   },
+  "home": {
+    "workouts": {
+      "title": "Transform Your Body with Our <br></br> Dynamic <highlight>Upcoming Workouts</highlight>"
+    }
+  },
   "Register": {
     "create-account": "Create an account",
     "firstname": "firstName",
