@@ -1,6 +1,7 @@
 import HealthySection from "./healthy";
 import HeroBanner from "./hero-banner";
 import WhyUsSection from "./why-us";
+import WorkoutsSection from "./components/workouts/workouts-section";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroBanner />
       <HealthySection />
       <WhyUsSection />
+      <WorkoutsSection />
     </div>
   );
 }

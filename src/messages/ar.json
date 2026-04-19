@@ -2,6 +2,13 @@
   "Index": {
     "title": "أهلاً"
   },
+  "home": {
+    "workouts": {
+      "title": "حوّل جسمك مع <br></br> تماريننا <highlight>الديناميكية القادمة</highlight>",
+      "title-background": "لياقة بدنية",
+      "title-text": "التدريبات"
+    }
+  },
   "Register": {
     "create-account": "إنشاء حساب",
     "firstname": "الاسم الأول",
