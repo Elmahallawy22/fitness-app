@@ -189,6 +189,16 @@
     "second-line": "التدريب الشخصي",
     "third-line": "التوجيه الغذائي"
   },
+  "workout-page": {
+    "workout-title": " تمارين رياضيه",
+    "workout-small-title": "تمارين لياقه بدنيه",
+    "workout-first-line": "حول جسمك معنا  ",
+    "workout-second-line": "تماريننا الديناميكيه ",
+    "workout-special-workout": "القادمه"
+  },
+  "slide-button": {
+    "buttton-title": "استكشف"
+  },
   "meal-page": {
     "title": "وجبات صحية",
     "small-title": "التغذية الصحية",
