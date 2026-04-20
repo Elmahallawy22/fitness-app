@@ -190,7 +190,6 @@
     "second-line": "Personal Training",
     "third-line": "Nutrition Guidance"
   },
-<<<<<<< HEAD
   "workout-page": {
     "workout-title": "workout",
     "workout-small-title": "fitness class",
@@ -201,7 +200,7 @@
 
   "slide-button": {
     "buttton-title": "Explore"
-=======
+  },
 
   "meal-page": {
     "title": "HEALTHY",
@@ -210,7 +209,6 @@
     "customized": "customized",
     "special-meal": "Meal Plans",
     "for-you": "for you"
->>>>>>> e18c7c465dfcbb81da5cc1932dce819f193aedfd
   },
 
   "Footer": {

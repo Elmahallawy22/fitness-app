@@ -9,7 +9,7 @@ import { getCategories } from "../../../lib/services/categories.service";
 import type { Category, Meal } from "../../../lib/types/meals";
 
 // components
-import CarouselDots from "./CarouselDots";
+import CarouselDots from "./carousel-dots";
 
 // ui carousel
 import {
@@ -95,7 +95,12 @@ export default function Healthy() {
       </div>
 
       <div className="p-6">
-        <Carousel setApi={setApi} className="w-full lg:w-1/2 mx-auto">
+        <Carousel
+          setApi={setApi}
+          className="w-full lg:w-1/2 mx-auto"
+          opts={{
+            direction: locale === "en" ? "ltr" : "rtl",
+          }}>
           <CarouselContent>
             {chunkedCategories.map((group, index) => (
               <CarouselItem key={index}>

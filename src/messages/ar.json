@@ -189,7 +189,6 @@
     "second-line": "التدريب الشخصي",
     "third-line": "التوجيه الغذائي"
   },
-<<<<<<< HEAD
   "workout-page": {
     "workout-title": " تمارين رياضيه",
     "workout-small-title": "تمارين لياقه بدنيه",
@@ -199,7 +198,7 @@
   },
   "slide-button": {
     "buttton-title": "استكشف"
-=======
+  },
   "meal-page": {
     "title": "وجبات صحية",
     "small-title": "التغذية الصحية",
@@ -207,7 +206,6 @@
     "customized": "تخصيص",
     "special-meal": "الخطط الغذائية",
     "for-you": "المخصصة لك"
->>>>>>> e18c7c465dfcbb81da5cc1932dce819f193aedfd
   },
   "Footer": {
     "contact-us": "تواصل معنا",
