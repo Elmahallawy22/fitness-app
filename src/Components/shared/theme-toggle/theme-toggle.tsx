@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import { useTheme } from "next-themes";
 // import { Moon, Sun } from "lucide-react";
 // import { useEffect, useState } from "react";
@@ -34,6 +35,8 @@
 //   );
 // }
 
+=======
+>>>>>>> e18c7c465dfcbb81da5cc1932dce819f193aedfd
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";

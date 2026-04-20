@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { WorkoutResponse, Workout } from "../Types/muscle";
+import type { WorkoutResponse, Workout } from "../types/muscle";
 
 export async function getMusclesById(
   muscle: string,

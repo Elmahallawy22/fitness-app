@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { MusclesResponse, Muscles } from "../Types/muscle";
+import type { MusclesResponse, Muscles } from "../../../lib/types/muscle";
 
 export async function getMuscles(locale: string = "en"): Promise<Muscles[]> {
   const { data } = await axios.get<MusclesResponse>(

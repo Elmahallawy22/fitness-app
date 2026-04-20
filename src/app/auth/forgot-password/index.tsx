@@ -5,5 +5,5 @@ export default function ForgotPassword() {
     <section className="flex justify-center items-center h-full">
       <ForgotPasswordFlow />
     </section>
-  )
+  );
 }

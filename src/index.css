@@ -27,18 +27,32 @@
 .animate-marquee-rtl {
   animation: marquee-rtl 15s linear infinite;
 }
+
 body {
   overflow-x: hidden;
 }
+
+/* enable dark mode variant */
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* light theme (default) */
 @theme {
   --font-rubik: "Rubik", sans-serif;
   --font-baloo: "Baloo Thambi 2", system-ui;
-  --color-background: white;
-  --color-foreground: black;
+
+  --color-background: #ffffff;
+  --color-foreground: #000000;
   --color-primary: #ff4100;
+  --color-main: #242424;
 }
 
+/* dark theme (controlled by next-themes) */
+.dark {
+  --color-background: #16171d;
+  --color-foreground: #f3f4f6;
+}
+
+/* base styles */
 @layer base {
   body {
     @apply bg-background text-foreground font-rubik;
@@ -47,7 +61,16 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #16171d;
+    --color-background: #242424f2;
     --color-foreground: #f3f4f6;
   }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
