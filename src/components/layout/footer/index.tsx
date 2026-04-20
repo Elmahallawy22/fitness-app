@@ -1,7 +1,7 @@
 import logo from "@/assets/Images/fit 1.png";
 import { Phone, Mail } from "lucide-react";
 import { useTranslations } from "use-intl";
-import ScrollingTicker from "../../shared/scrolling-ticker";
+import ScrollingTicker from "../../shared/ScrollingTicker/ScrollingTicker";
 export default function Footer() {
   // Translations
   const t = useTranslations("Footer");

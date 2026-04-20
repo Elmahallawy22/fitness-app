@@ -8,7 +8,7 @@ import { useState } from "react";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { useTranslations } from "use-intl";
 import { Button } from "@/components/ui/button";
-import ThemeToggle from "@/components/layout/navbar/theme-toggle";
+import ThemeToggle from "@/Components/shared/theme-toggle/theme-toggle";
 import logo from "../../../assets/Images/fit 1.png";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -63,8 +63,7 @@ export default function Navbar() {
                         active === link.path
                           ? "text-orange-600 dark:text-orange-400"
                           : "text-zinc-900 dark:text-zinc-100 hover:text-orange-600"
-                      }`}
-                    >
+                      }`}>
                       {link.name}
                     </NavigationMenuLink>
                   </NavigationMenuItem>
@@ -82,8 +81,7 @@ export default function Navbar() {
             <Button
               variant="outline"
               className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white"
-              onClick={() => navigate(`/${locale}/register`)}
-            >
+              onClick={() => navigate(`/${locale}/register`)}>
               {t("sign up")}
             </Button>
 
@@ -102,8 +100,7 @@ export default function Navbar() {
 
             <SheetContent
               side={locale === "ar" ? "left" : "right"}
-              className="w-[80vw] sm:w-[70vw] md:w-[60vw] p-4 sm:p-6 flex flex-col max-w-xs"
-            >
+              className="w-[80vw] sm:w-[70vw] md:w-[60vw] p-4 sm:p-6 flex flex-col max-w-xs">
               {/* Links */}
               <div className="flex flex-col gap-3 mt-6">
                 {links.map((link) => (
@@ -114,8 +111,7 @@ export default function Navbar() {
                       active === link.path
                         ? "text-orange-600"
                         : "text-zinc-900 dark:text-zinc-100"
-                    }`}
-                  >
+                    }`}>
                     {link.name}
                   </button>
                 ))}
@@ -125,16 +121,14 @@ export default function Navbar() {
               <div className="flex flex-col gap-3 mt-6 w-full">
                 <Button
                   onClick={() => navigate(`/${locale}/login`)}
-                  className="w-full text-sm sm:text-base"
-                >
+                  className="w-full text-sm sm:text-base">
                   {t("login")}
                 </Button>
 
                 <Button
                   variant="outline"
                   className="w-full border-orange-600 text-orange-600 text-sm sm:text-base"
-                  onClick={() => navigate(`/${locale}/register`)}
-                >
+                  onClick={() => navigate(`/${locale}/register`)}>
                   {t("sign up")}
                 </Button>
               </div>
