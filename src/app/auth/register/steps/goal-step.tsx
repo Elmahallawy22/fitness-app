@@ -11,20 +11,32 @@ import {
 } from "@/components/ui/field";
 import { useTranslations } from "use-intl";
 
-export default function GoalStep({ nextStep }: RegisterFormProps) {
-  // Translation
-  const t = useTranslations("Register");
+type Props = {
+  nextStep?: () => void;
+  onSubmit?: (value: RegisterSchema["goal"]) => void;
+  isEdit?: boolean;
+};
 
-  // Form context
+export default function GoalStep({
+  nextStep,
+  onSubmit,
+  isEdit = false,
+}: Props) {
+  const t = useTranslations("Register");
   const form = useFormContext<RegisterSchema>();
 
-  // constants
   const selectedGoal = form.watch("goal") ?? "";
 
-  // Handle next step
-  const handleNext = async () => {
+  const handleAction = async () => {
     const isValid = await form.trigger(["goal"]);
-    if (isValid) nextStep?.();
+    if (!isValid) return;
+
+    if (isEdit && onSubmit) {
+      const value = form.getValues("goal");
+      onSubmit(value);
+    } else {
+      nextStep?.();
+    }
   };
 
   return (
@@ -68,8 +80,12 @@ export default function GoalStep({ nextStep }: RegisterFormProps) {
         })}
       </RadioGroup>
 
-      <Button onClick={handleNext} disabled={!selectedGoal} className="w-full">
-        {t("next")}
+      <Button
+        onClick={handleAction}
+        disabled={!selectedGoal}
+        className="w-full"
+      >
+        {isEdit ? t("save") : t("next")}
       </Button>
     </div>
   );

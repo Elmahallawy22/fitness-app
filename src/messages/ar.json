@@ -88,7 +88,8 @@
       "learn-the-basic": "تعلم الأساسيات"
     },
     "forgot-password": "هل نسيت كلمة السر ؟",
-    "register": "إنشاء حساب"
+    "register": "إنشاء حساب",
+    "save": "تعديل"
   },
   "WhyUs": {
     "title": "لماذا نحن؟",
@@ -197,5 +198,22 @@
     "location": " الموقع الجغرافي",
     "first-line": " ادفع نفسك أكثر، وتقدّم أبعد",
     "second-line": "رحلتك نحو اللياقة تبدأ اليوم!"
+  },
+  "account": {
+    "change-password": "تغيير كلمة المرور",
+    "select-language": "اختر اللغة",
+    "arabic": "عربي",
+    "english": "إنجليزي",
+    "mode": "وضع",
+    "help": "يساعد",
+    "privacy": "خصوصية",
+    "security": "حماية",
+    "logout": "تسجيل الخروج",
+    "tap-to-change": "انقر للتغيير",
+    "weight": "وزن",
+    "your-goal": "هدفك",
+    "level": "مستوى",
+    "light": "ضوء",
+    "dark": "مظلم"
   }
 }

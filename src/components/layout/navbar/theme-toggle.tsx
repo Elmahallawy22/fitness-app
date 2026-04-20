@@ -19,7 +19,7 @@ export default function ThemeToggle() {
     <button
       onClick={toggleTheme}
       className={`w-14 h-8 flex items-center rounded-full p-1 transition-colors duration-300
-        ${isDark ? "bg-gray-800" : "bg-yellow-400"}`}
+        ${isDark ? "bg-primary" : "bg-gray-800"}`}
     >
       <div
         className={`w-6 h-6 flex items-center justify-center rounded-full bg-white shadow-md
@@ -29,9 +29,9 @@ export default function ThemeToggle() {
         ${isDark ? "ltr:translate-x-6 rtl:-translate-x-6" : "translate-x-0"}`}
       >
         {isDark ? (
-          <Moon className="w-4 h-4 text-gray-800" />
+          <Moon className="w-4 h-4 text-primary" />
         ) : (
-          <Sun className="w-4 h-4 text-yellow-500" />
+          <Sun className="w-4 h-4 text-gray-800" />
         )}
       </div>
     </button>

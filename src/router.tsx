@@ -10,6 +10,8 @@ import ForgotPassword from "./app/auth/forgot-password";
 import Classes from "./app/classes/page";
 import Healthy from "./app/healthy/page";
 import Login from "./app/auth/login/Login";
+import Account from "./app/account/page";
+import AccountLayout from "./layouts/account-layout";
 
 export const router = createBrowserRouter([
   {
@@ -34,7 +36,10 @@ export const router = createBrowserRouter([
           { path: "forgot-password", element: <ForgotPassword /> },
         ],
       },
-
+      {
+        element: <AccountLayout />,
+        children: [{ path: "account", element: <Account /> }],
+      },
       {
         path: "*",
         element: <NotFound />,

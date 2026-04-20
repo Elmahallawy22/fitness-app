@@ -8,6 +8,7 @@ export const registerUser = async (data: RegisterSchema) => {
       data,
     );
 
+    localStorage.setItem("token", response.data.token);
     return response.data;
   } catch (error) {
     const axiosError = error as AxiosError<ApiErrorResponse>;
