@@ -2,11 +2,11 @@
 import { useEffect, useState } from "react";
 
 // services
-import { getMealsByCategory } from "../Servcies/meals.service";
-import { getCategories } from "../Servcies/categories.service";
+import { getMealsByCategory } from "../../../lib/services/meals.service";
+import { getCategories } from "../../../lib/services/categories.service";
 
 // types
-import type { Category, Meal } from "../Types/meals";
+import type { Category, Meal } from "../../../lib/types/meals";
 
 // components
 import CarouselDots from "./CarouselDots";

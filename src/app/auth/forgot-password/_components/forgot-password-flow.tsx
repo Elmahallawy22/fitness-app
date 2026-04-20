@@ -5,12 +5,15 @@ import OtpStep from "./otp-step";
 import NewPasswordStep from "./new-password-step";
 import { useTranslations } from "use-intl";
 
-export type ForgotPasswordSteps = (typeof FORGOT_PASSWORD_STEPS)[keyof typeof FORGOT_PASSWORD_STEPS];
+export type ForgotPasswordSteps =
+  (typeof FORGOT_PASSWORD_STEPS)[keyof typeof FORGOT_PASSWORD_STEPS];
 
 export default function ForgotPasswordFlow() {
   const t = useTranslations("forgot-password-step");
 
-  const [step, setStep] = useState<ForgotPasswordSteps>(FORGOT_PASSWORD_STEPS.EMAIL);
+  const [step, setStep] = useState<ForgotPasswordSteps>(
+    FORGOT_PASSWORD_STEPS.EMAIL,
+  );
   const [email, setEmail] = useState<string>("");
 
   // variables
@@ -34,7 +37,9 @@ export default function ForgotPasswordFlow() {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold mb-4 text-center">{steps[step].title}</h1>
+      <h1 className="text-5xl font-bold mb-4 text-center">
+        {steps[step].title}
+      </h1>
       <div className="py-10 px-11 border border-gray-100 rounded-[50px] flex flex-col items-center justify-center gap-2">
         {/* Subtitle */}
         <p className="text-white text-2xl">{steps[step].subTitle}</p>

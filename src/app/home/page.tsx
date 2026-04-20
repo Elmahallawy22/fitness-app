@@ -1,8 +1,15 @@
-import Home from "./Home.tsx";
-export default function HomePage() {
+import HealthySection from "./healthy";
+import HeroBanner from "./hero-banner";
+import WhyUsSection from "./why-us";
+import WorkoutsSection from "./components/workouts/workouts-section";
+
+export default function Home() {
   return (
-    <div>
-      <Home />
+    <div className="flex flex-col">
+      <HeroBanner />
+      <WorkoutsSection />
+      <HealthySection />
+      <WhyUsSection />
     </div>
   );
 }

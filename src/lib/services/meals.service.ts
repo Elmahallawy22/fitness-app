@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { MealsResponse, Meal } from "../Types/meals";
+import type { MealsResponse, Meal } from "../../lib/types/meals";
 
 export async function getMealsByCategory(category: string): Promise<Meal[]> {
   const { data } = await axios.get<MealsResponse>(
