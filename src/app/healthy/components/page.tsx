@@ -12,15 +12,16 @@ import type { Category, Meal } from "../../../lib/types/meals";
 import CarouselDots from "./carousel-dots";
 
 // ui carousel
+import type { EmblaCarouselType } from "embla-carousel";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "@/Components/ui/carousel";
-import type { EmblaCarouselType } from "embla-carousel";
+} from "@/components/ui/carousel";
+
 // images
-import vector from "../../../assets/Images/Vector.png";
-import dumble from "../../../assets/Images/dumble.png";
+import vector from "../../../assets/images/Vector.png";
+import dumble from "../../../assets/images/dumble.png";
 import { useTranslations, useLocale } from "use-intl";
 
 export default function Healthy() {
@@ -28,7 +29,7 @@ export default function Healthy() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [meals, setMeals] = useState<Meal[]>([]);
   const [selectedCategory, setSelectedCategory] = useState("Beef");
-  const [api, setApi] = useState<EmblaCarouselType | null>(null);
+  const [api, setApi] = useState<EmblaCarouselType | undefined>(undefined);
   // translations
   const t = useTranslations("meal-page");
   // locale
@@ -73,7 +74,8 @@ export default function Healthy() {
           locale === "ar"
             ? "right-1/2 translate-x-1/2 bottom-16"
             : "left-1/2 -translate-x-1/2 bottom-12"
-        }`}>
+        }`}
+      >
         {t("title")}
       </h2>
 
@@ -100,7 +102,8 @@ export default function Healthy() {
           className="w-full lg:w-1/2 mx-auto"
           opts={{
             direction: locale === "en" ? "ltr" : "rtl",
-          }}>
+          }}
+        >
           <CarouselContent>
             {chunkedCategories.map((group, index) => (
               <CarouselItem key={index}>
@@ -114,7 +117,8 @@ export default function Healthy() {
                         selectedCategory === cat.strCategory
                           ? "text-orange-600"
                           : "text-gray-500"
-                      }`}>
+                      }`}
+                    >
                       {cat.strCategory}
                     </button>
                   ))}

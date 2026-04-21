@@ -1,27 +1,29 @@
 // states
 import { useEffect, useState } from "react";
+import { useTranslations, useLocale } from "use-intl";
 
 // services
-import { getMuscles } from "../../../lib/services/muscle.service";
-import { getMusclesById } from "../../../lib/services/exercises.service";
+import { getMuscles } from "@/lib/services/muscle.service";
+import { getMusclesById } from "@/lib/services/exercises.service";
 
 // types
-import type { Muscles, Workout } from "../../../lib/types/muscle";
+import type { Muscles, Workout } from "@/lib/types/muscle";
 
 // components
-import CarouselDots from "../../healthy/components/carousel-dots";
+import CarouselDots from "../healthy/components/carousel-dots";
 
 // ui carousel
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "@/Components/ui/carousel";
+} from "@/components/ui/carousel";
+
 import type { EmblaCarouselType } from "embla-carousel";
+
 // images
-import vector from "../../../assets/Images/Vector.png";
-import dumble from "../../../assets/Images/dumble.png";
-import { useTranslations, useLocale } from "use-intl";
+import vector from "@/assets/Images/Vector.png";
+import dumble from "@/assets/Images/dumble.png";
 
 export default function Muscles() {
   // states
@@ -79,7 +81,8 @@ export default function Muscles() {
           locale === "ar"
             ? "right-1/2 translate-x-1/2 bottom-16"
             : "left-1/2 -translate-x-1/2 -top-11"
-        }`}>
+        }`}
+      >
         {t("workout-title")}
       </h2>
 
@@ -107,7 +110,8 @@ export default function Muscles() {
           className="w-full lg:w-1/2 mx-auto"
           opts={{
             direction: locale === "ar" ? "rtl" : "ltr",
-          }}>
+          }}
+        >
           <CarouselContent>
             {chunkedCategories.map((group, index) => (
               <CarouselItem key={index}>
@@ -121,7 +125,8 @@ export default function Muscles() {
                         selectedCategory === cat.idMuscles
                           ? "text-orange-600"
                           : "text-gray-500"
-                      }`}>
+                      }`}
+                    >
                       {cat.strMuscles}
                     </button>
                   ))}

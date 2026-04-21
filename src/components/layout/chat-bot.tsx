@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import emo from "@/assets/Images/emo.png";
+import emo from "@/assets/images/emo.png";
 import { useTranslations } from "use-intl";
 
 export default function ChatBoot() {
