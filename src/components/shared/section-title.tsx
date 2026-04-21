@@ -1,3 +1,5 @@
+import DumbbellIcon from "@/assets/images/Dumbbell.png";
+
 type SectionTitleProps = {
   title: string;
   background: string;
@@ -13,12 +15,7 @@ export default function SectionTitle({ title, background }: SectionTitleProps) {
 
       {/* Title */}
       <div className="absolute inset-0 flex items-center justify-center gap-2">
-        <img
-          src="src/assets/images/Dumbbell.png"
-          alt="icon"
-          width={30}
-          height={30}
-        />
+        <img src={DumbbellIcon} alt="icon" width={30} height={30} />
         <span className="text-primary font-semibold text-lg whitespace-nowrap">
           {title}
         </span>

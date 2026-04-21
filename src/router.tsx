@@ -22,6 +22,7 @@ export const router = createBrowserRouter([
           { index: true, element: <Home /> },
           { path: "about", element: <About /> },
           { path: "classes", element: <Classes /> },
+          { path: "classes/:muscleGroupId", element: <Classes /> },
           { path: "healthy", element: <Healthy /> },
         ],
       },
