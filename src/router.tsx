@@ -7,9 +7,9 @@ import LocaleLayout from "./layouts/local-layout";
 import RootLayout from "./layouts/root-layout";
 import NotFound from "./app/not-found";
 import ForgotPassword from "./app/auth/forgot-password";
+import Healthy from "./app/healthy/components/page";
+import Login from "./app/auth/login";
 import Classes from "./app/classes/page";
-import Healthy from "./app/healthy/page";
-import Login from "./app/auth/login/Login";
 import MuscleExercisesPage from "./app/classes/exercises/page";
 
 export const router = createBrowserRouter([

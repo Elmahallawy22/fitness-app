@@ -1,4 +1,4 @@
-import Satr from "@/assets/Images/star.png";
+import Satr from "@/assets/images/star.png";
 import { useParams } from "react-router-dom";
 import { useTranslations } from "use-intl";
 

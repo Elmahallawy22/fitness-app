@@ -1,8 +1,8 @@
 import { useTranslations } from "use-intl";
 import { Button } from "@/components/ui/button";
 import ScrollingTicker from "@/components/shared/scrolling-ticker";
-import arrow from "@/assets/Images/arrow.png";
-import imgBanner from "@/assets/Images/Theo Vance.png";
+import arrow from "@/assets/images/arrow.png";
+import imgBanner from "@/assets/images/Theo Vance.png";
 
 export default function HeroBanner() {
   const t = useTranslations("Hero-banner");

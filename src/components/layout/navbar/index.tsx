@@ -9,7 +9,7 @@ import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { useTranslations } from "use-intl";
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "@/components/layout/navbar/theme-toggle";
-import logo from "../../../assets/Images/fit 1.png";
+import logo from "../../../assets/images/fit 1.png";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
