@@ -10,6 +10,7 @@ import ForgotPassword from "./app/auth/forgot-password";
 import Healthy from "./app/healthy/components/page";
 import Login from "./app/auth/login";
 import Classes from "./app/classes/page";
+import Meal from "./app/healthy/meals/[mealId]/page";
 import MuscleExercisesPage from "./app/classes/exercises/page";
 
 export const router = createBrowserRouter([
@@ -28,7 +29,13 @@ export const router = createBrowserRouter([
             path: "classes/:muscleGroupId/muscles/:primeMoverMuscleId",
             element: <MuscleExercisesPage />,
           },
-          { path: "healthy", element: <Healthy /> },
+          {
+            path: "healthy",
+            children: [
+              { index: true, element: <Healthy /> },
+              { path: "meals/:mealId", element: <Meal /> },
+            ],
+          },
         ],
       },
 

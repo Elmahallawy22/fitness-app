@@ -75,3 +75,16 @@ body {
   scrollbar-width: none;
 }
 
+::-webkit-scrollbar {
+  height: 6px;
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d2d2d;
+  border-radius: 10px;
+}
