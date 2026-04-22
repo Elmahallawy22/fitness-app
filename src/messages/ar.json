@@ -197,5 +197,34 @@
     "location": " الموقع الجغرافي",
     "first-line": " ادفع نفسك أكثر، وتقدّم أبعد",
     "second-line": "رحلتك نحو اللياقة تبدأ اليوم!"
+  },
+    "classes-home": {
+    "workouts": {
+      "titleLineOne": "حوّل جسمك مع تماريننا",
+      "titleLineTwo": "الديناميكية القادمة",
+      "title-text": "التدريبات",
+      "title-background": "لياقة بدنية"
+    }
+  },
+  "ExerciseDetails": {
+    "preview": {
+      "movement": "الحركة",
+      "posture": "الوضعية",
+      "laterality": "الجانبية",
+      "general": "عام",
+      "playVideo": "تشغيل {exercise}"
+    },
+    "content": {
+      "chooseLevel": "اختر مستوى لعرض التمارين.",
+      "noExercises": "لا توجد تمارين لهذا المستوى.",
+      "recommendationTitle": "اقتراحات لك"
+    },
+    "sidebar": {
+      "noExercises": "لا توجد تمارين لهذا المستوى.",
+      "bodyweight": "وزن الجسم",
+      "exercise": "تمرين",
+      "general": "عام",
+      "watchOnYoutube": "شاهد {exercise} على يوتيوب"
+    }
   }
 }

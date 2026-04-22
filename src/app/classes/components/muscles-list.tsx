@@ -9,6 +9,7 @@ type Props = {
 };
 
 export default function MusclesList({ locale, muscleGroupId }: Props) {
+  // Queries
   const {
     data: muscles,
     isLoading,
@@ -45,7 +46,10 @@ export default function MusclesList({ locale, muscleGroupId }: Props) {
   return (
     <div className="mt-8 grid grid-cols-1 gap-4 px-5 md:px-7 md:grid-cols-2 lg:grid-cols-3 lg:px-10">
       {muscles.map((muscle) => (
-        <Link key={muscle._id} to="">
+        <Link
+          key={muscle._id}
+          to={`/${locale}/classes/${muscleGroupId}/muscles/${muscle._id}`}
+        >
           <Card
             image={muscle.image || ""}
             title={muscle.name}

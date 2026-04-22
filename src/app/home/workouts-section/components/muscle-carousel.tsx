@@ -1,9 +1,9 @@
+import Card from "@/components/shared/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import MuscleCard from "./muscle-card";
 
 type Props = {
   muscles: {
@@ -19,7 +19,11 @@ export default function MuscleCarousel({ muscles }: Props) {
       <CarouselContent>
         {muscles.map((muscle) => (
           <CarouselItem key={muscle._id} className="md:basis-1/2 lg:basis-1/3">
-            <MuscleCard name={muscle.name} image={muscle.image} />
+            <Card
+              title={muscle.name}
+              image={muscle.image}
+              buttonText="Explore"
+            />
           </CarouselItem>
         ))}
       </CarouselContent>

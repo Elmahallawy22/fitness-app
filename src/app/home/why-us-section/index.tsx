@@ -5,6 +5,7 @@ export default function WhyUsSection() {
   // Translation
   const t = useTranslations("WhyUs");
 
+  // Variables
   const images = [
     "src/assets/images/hero2.png",
     "src/assets/images/hero1.jpg",

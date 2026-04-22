@@ -8,6 +8,7 @@ type Props = {
 };
 
 export default function MuscleGroupsTabs({ locale, muscleGroupId }: Props) {
+  // Queries
   const {
     data: muscleGroups = [],
     isLoading,
@@ -15,6 +16,7 @@ export default function MuscleGroupsTabs({ locale, muscleGroupId }: Props) {
     error,
   } = useMusclesGroup(locale);
 
+  // Variables
   const visibleTabs = muscleGroups.slice(0, 8);
 
   if (isLoading) return <TabsSkeleton />;
@@ -28,7 +30,7 @@ export default function MuscleGroupsTabs({ locale, muscleGroupId }: Props) {
   }
 
   return (
-    <div className="my-6 flex flex-wrap items-center justify-center gap-2">
+    <div className="font-bold my-6 flex flex-wrap items-center justify-center gap-1">
       {visibleTabs.map((group) => {
         const isActive = muscleGroupId === group._id;
         return (

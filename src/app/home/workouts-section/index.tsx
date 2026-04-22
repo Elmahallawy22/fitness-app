@@ -1,13 +1,13 @@
 import { useState, useMemo } from "react";
-import MuscleTabs from "./muscle-tabs";
-import MuscleCarousel from "./masule-carousel";
-
+import MuscleTabs from "./components/muscle-tabs";
 import { useTranslations } from "use-intl";
-import { TabsSkeleton } from "./skeletons/taabs-skeletons";
-import { CarouselSkeleton } from "./skeletons/carousel-skeleton";
+import { CarouselSkeleton } from "./components/skeletons/carousel-skeleton";
 import SectionTitle from "@/components/shared/section-title";
 import { useMuscleGroups } from "@/lib/hooks/use-muscle-groups";
 import { useMusclesByGroup } from "@/lib/hooks/use-muscles-by-group";
+import workoutsImg from "@/assets/images/workouts.jpg";
+import { TabsSkeleton } from "./components/skeletons/tabs-skeletons";
+import MuscleCarousel from "./components/muscle-carousel";
 
 export default function WorkoutSection() {
   const t = useTranslations("home.workouts");
@@ -40,7 +40,7 @@ export default function WorkoutSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('../../../../../assets/images/workouts.jpg')",
+          backgroundImage: `url(${workoutsImg})`,
         }}
       />
 
@@ -49,14 +49,14 @@ export default function WorkoutSection() {
       {/* Content */}
       <div className="relative z-10">
         {/* Header */}
-        <h3 className="flex items-center justify-center mt-6">
+        <h3 className="flex items-center justify-center mt-2">
           <SectionTitle
             background={t("title-text")}
             title={t("title-background")}
           />
         </h3>
 
-        <p className="text-xl md:text-[2.5rem] mb-2 text-start md:text-center space-y-2 mt-10 font-bold  text-black dark:text-white leading-tight">
+        <p className="text-xl md:text-[2.5rem] mb-2 text-start md:text-center space-y-2 mt-3 font-bold  text-black dark:text-white leading-tight">
           {t.rich("title", {
             br: () => <br />,
             highlight: (chunks) => (

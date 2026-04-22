@@ -198,5 +198,34 @@
     "location": "our location",
     "first-line": "Push harder, go further. Your",
     "second-line": "fitness journey starts today!"
+  },
+   "classes-home": {
+    "workouts": {
+      "titleLineOne": "Transform Your Body with Our",
+      "titleLineTwo": "Dynamic Upcoming Workouts",
+      "title-text": "Workouts",
+      "title-background": "Fitness Class"
+    }
+  },
+  "ExerciseDetails": {
+    "preview": {
+      "movement": "Movement",
+      "posture": "Posture",
+      "laterality": "Laterality",
+      "general": "General",
+      "playVideo": "Play {exercise}"
+    },
+    "content": {
+      "chooseLevel": "Choose a level to display exercises.",
+      "noExercises": "No exercises found for this level.",
+      "recommendationTitle": "Recommendation For You"
+    },
+    "sidebar": {
+      "noExercises": "No exercises found for this level.",
+      "bodyweight": "Bodyweight",
+      "exercise": "Exercise",
+      "general": "General",
+      "watchOnYoutube": "Watch {exercise} on YouTube"
+    }
   }
 }
