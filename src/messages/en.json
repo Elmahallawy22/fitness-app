@@ -197,11 +197,9 @@
     "workout-second-line": "Dynamic ",
     "workout-special-workout": "Upcoming Workouts"
   },
-
   "slide-button": {
     "buttton-title": "Explore"
   },
-
   "meal-page": {
     "title": "HEALTHY",
     "small-title": "Healthy Nutritions",
@@ -210,7 +208,6 @@
     "special-meal": "Meal Plans",
     "for-you": "for you"
   },
-
   "Footer": {
     "contact-us": "Contact us",
     "start-time": "Mon - Fri : 08:00 AM - 10:00 PM",
@@ -219,5 +216,13 @@
     "location": "our location",
     "first-line": "Push harder, go further. Your",
     "second-line": "fitness journey starts today!"
+  },
+  "meal-details": {
+    "title": "Healthy",
+    "energy": "Energy",
+    "protein": "Protein",
+    "carbs": "Carbs",
+    "fat": "Fat",
+    "ingredients": "ingredients "
   }
 }

@@ -10,6 +10,7 @@ import ForgotPassword from "./app/auth/forgot-password";
 import Healthy from "./app/healthy/components/page";
 import Login from "./app/auth/login";
 import Classes from "./app/classes/page";
+import Meal from "./app/healthy/meals/[mealId]/page";
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +23,13 @@ export const router = createBrowserRouter([
           { index: true, element: <Home /> },
           { path: "about", element: <About /> },
           { path: "classes", element: <Classes /> },
-          { path: "healthy", element: <Healthy /> },
+          {
+            path: "healthy",
+            children: [
+              { index: true, element: <Healthy /> },
+              { path: "meals/:mealId", element: <Meal /> },
+            ],
+          },
         ],
       },
 
