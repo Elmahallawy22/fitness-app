@@ -8,7 +8,7 @@ interface HealthyCardProps {
 
 export default function Card({ image, title, buttonText }: HealthyCardProps) {
   return (
-    <div className=" rounded-xl overflow-hidden shadow-lg bg-gray-900/10 backdrop-blur-sm w-full h-90">
+    <div className="relative  rounded-xl overflow-hidden shadow-lg bg-gray-900/10 backdrop-blur-sm w-full h-90">
       {/* Card Image */}
       <img
         src={image}

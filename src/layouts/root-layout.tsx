@@ -2,8 +2,9 @@ import { useParams, Outlet, Navigate } from "react-router-dom";
 import { IntlProvider } from "use-intl";
 import enMessages from "../messages/en.json";
 import arMessages from "../messages/ar.json";
-import ChatBoot from "../components/layout/chat-bot";
-import Navbar from "../components/layout/navbar";
+import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
+import ChatBoot from "@/components/layout/chat-bot";
 
 const messagesMap: Record<string, any> = {
   ar: arMessages,
@@ -30,6 +31,9 @@ export default function RootLayout() {
           <Outlet />
         </div>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </IntlProvider>
   );
 }

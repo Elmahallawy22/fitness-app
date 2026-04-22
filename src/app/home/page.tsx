@@ -2,7 +2,6 @@ import HealthySection from "./healthy-section";
 import HeroBanner from "./hero-banner-section";
 import WhyUsSection from "./why-us-section";
 import WorkoutsSection from "./workouts-section";
-import Footer from "@/components/layout/footer";
 
 export default function Home() {
   return (
@@ -11,7 +10,6 @@ export default function Home() {
       <WorkoutsSection />
       <WhyUsSection />
       <HealthySection />
-      <Footer />
     </div>
   );
 }

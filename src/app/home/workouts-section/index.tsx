@@ -1,13 +1,13 @@
 import { useState, useMemo } from "react";
 import MuscleTabs from "./components/muscle-tabs";
-import MuscleCarousel from "./components/muscle-carousel";
 import { useTranslations } from "use-intl";
-import { TabsSkeleton } from "./components/skeletons/tabs-skeletons";
 import { CarouselSkeleton } from "./components/skeletons/carousel-skeleton";
 import SectionTitle from "@/components/shared/section-title";
 import { useMuscleGroups } from "@/lib/hooks/use-muscle-groups";
 import { useMusclesByGroup } from "@/lib/hooks/use-muscles-by-group";
 import workoutsImg from "@/assets/images/workouts.jpg";
+import { TabsSkeleton } from "./components/skeletons/tabs-skeletons";
+import MuscleCarousel from "./components/muscle-carousel";
 
 export default function WorkoutSection() {
   const t = useTranslations("home.workouts");

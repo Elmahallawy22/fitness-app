@@ -1,176 +1,67 @@
-// states
-import { useEffect, useState } from "react";
-import { useTranslations, useLocale } from "use-intl";
+import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import SectionTitle from "@/components/shared/section-title";
+import MuscleGroupsTabs from "./components/muscle-groups-tabs";
+import MusclesList from "./components/muscles-list";
+import { useMusclesGroup } from "@/lib/hooks/use-muscles-group";
+import { useTranslations } from "use-intl";
 
-// services
-import { getMuscles } from "@/lib/services/muscle.service";
-import { getMusclesById } from "@/lib/services/exercises.service";
+export default function Classes() {
+  // Translation
+  const t = useTranslations("classes-home.workouts");
 
-// types
-import type { Muscles, Workout } from "@/lib/types/muscle";
+  // Navigation
+  const navigate = useNavigate();
 
-// components
-import CarouselDots from "../healthy/components/carousel-dots";
+  // Hooks
+  const { locale, muscleGroupId } = useParams();
 
-// ui carousel
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+  // Queries
+  const {
+    data: muscleGroups = [],
+    isLoading: isLoadingGroups,
+    isError: isGroupsError,
+    error: groupsError,
+  } = useMusclesGroup(locale);
 
-import type { EmblaCarouselType } from "embla-carousel";
-
-// images
-import vector from "@/assets/Images/Vector.png";
-import dumble from "@/assets/Images/dumble.png";
-
-export default function Muscles() {
-  // states
-  const [muscles, setMuscles] = useState<Muscles[]>([]);
-  const [workout, setWorkout] = useState<Workout[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [api, setApi] = useState<EmblaCarouselType | undefined>(undefined);
-  // translations
-  const t = useTranslations("workout-page");
-  const b = useTranslations("slide-button");
-
-  // locale
-  const locale = useLocale();
-
-  // split categories
-  function chunkArray(array: Muscles[], size: number): Muscles[][] {
-    const result: Muscles[][] = [];
-    for (let i = 0; i < array.length; i += size) {
-      result.push(array.slice(i, i + size));
+  // Redirects to the first muscle group as a default
+  useEffect(() => {
+    if (!muscleGroupId && muscleGroups.length > 0) {
+      navigate(`/${locale}/classes/${muscleGroups[0]._id}`, {
+        replace: true,
+      });
     }
-    return result;
+  }, [muscleGroupId, muscleGroups, navigate, locale]);
+
+  if (isGroupsError) {
+    return (
+      <main className="flex flex-col items-center justify-center px-12 py-5">
+        <p className="text-red-500">{groupsError.message}</p>
+      </main>
+    );
   }
 
-  const chunkedCategories = chunkArray(muscles, 3);
-
-  // load Muscles
-  useEffect(() => {
-    async function loadMuscles() {
-      const data = await getMuscles(locale);
-      setMuscles(data);
-      if (data.length > 0) {
-        setSelectedCategory(data[0].idMuscles);
-      }
-    }
-
-    loadMuscles();
-  }, [locale]);
-
-  // load meals
-  useEffect(() => {
-    if (!selectedCategory) return;
-    async function loadWorkout() {
-      const data = await getMusclesById(selectedCategory, locale);
-      setWorkout(data);
-    }
-
-    loadWorkout();
-  }, [selectedCategory, locale]);
-
   return (
-    <div className=" absolute z-0  w-full mt-48 bg-gradient-to-b from-main/80 via-main/60 to-main/90">
-      {/* workout LAYER */}
-      <h2
-        className={` relative -z-10 inline-block w-full bg-red-200 text-center  text-6xl font-bold bg-gradient-to-b from-white to-[#232425] bg-clip-text text-transparent ${
-          locale === "ar"
-            ? "right-1/2 translate-x-1/2 bottom-16"
-            : "left-1/2 -translate-x-1/2 -top-11"
-        }`}
-      >
-        {t("workout-title")}
-      </h2>
+    <main className="flex flex-col items-center px-12 py-5">
+      {/* Page title and Description  */}
+      <header className="flex flex-col items-center justify-center">
+        <SectionTitle
+          background={t("title-text")}
+          title={t("title-background")}
+        />
+        <p className="font-bold font-baloo text-center text-xl md:text-3xl lg:text-5xl">
+          <span className="block">{t("titleLineOne")}</span>
+          <span className="text-primary block">{t("titleLineTwo")}</span>
+        </p>
+      </header>
 
-      {/* header */}
-      <div>
-        <div className="flex justify-center items-center max-w-5xl mx-auto px-4 gap-2 mb-4">
-          <img src={dumble} alt="img-dumble" className="w-9" />
-          <h4 className="text-orange-600">{t("workout-small-title")}</h4>
-        </div>
-
-        <h2 className="text-4xl text-center font-bold uppercase leading-16 mb-10">
-          <p> {t("workout-first-line")} </p>
-          <p>
-            {t("workout-second-line")}
-            <span className="text-orange-600">
-              {t("workout-special-workout")}
-            </span>
-          </p>
-        </h2>
-      </div>
-
-      <div className="p-6">
-        <Carousel
-          setApi={setApi}
-          className="w-full lg:w-1/2 mx-auto"
-          opts={{
-            direction: locale === "ar" ? "rtl" : "ltr",
-          }}
-        >
-          <CarouselContent>
-            {chunkedCategories.map((group, index) => (
-              <CarouselItem key={index}>
-                {/* muscles */}
-                <div className="mb-8 flex justify-center gap-6">
-                  {group.map((cat) => (
-                    <button
-                      key={cat.idMuscles}
-                      onClick={() => setSelectedCategory(cat.idMuscles)}
-                      className={`text-lg font-medium transition ${
-                        selectedCategory === cat.idMuscles
-                          ? "text-orange-600"
-                          : "text-gray-500"
-                      }`}
-                    >
-                      {cat.strMuscles}
-                    </button>
-                  ))}
-                </div>
-
-                {/* Workout */}
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {workout.map((exrcise) => (
-                    <div key={exrcise.idWorkout} className="border p-1">
-                      <img
-                        src={exrcise.strWorkoutThumb}
-                        alt={exrcise.strWorkout}
-                        className="w-full rounded-md object-cover"
-                      />
-
-                      <div className="relative bg-gradient-to-r from-[#171E2E00] via-[#171E2E80] to-[#171E2ECC] backdrop-blur-[3.75rem] p-4">
-                        <h3 className="mb-2 text-main dark:text-zinc-100 text-xl font-bold uppercase tracking-[0.14rem] leading-8">
-                          {exrcise.strWorkout}
-                        </h3>
-
-                        <div className="flex">
-                          {/* TODO: wating for exrcies path to intiate */}
-                          <button className="text-orange-600">
-                            {b("buttton-title")}
-                          </button>
-                          <div className="p-2 w-6 h-6 ms-2 bg-orange-600 rounded-full">
-                            <img
-                              src={vector}
-                              alt="img-button"
-                              className="w-full h-full"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-
-        <CarouselDots api={api} count={chunkedCategories.length} />
-      </div>
-    </div>
+      {/* Muscles Tabs & List  */}
+      <section className="w-full">
+        <MuscleGroupsTabs locale={locale} muscleGroupId={muscleGroupId} />
+        {!isLoadingGroups && muscleGroupId && (
+          <MusclesList locale={locale} muscleGroupId={muscleGroupId} />
+        )}
+      </section>
+    </main>
   );
 }
