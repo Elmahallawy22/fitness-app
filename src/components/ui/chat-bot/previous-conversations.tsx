@@ -1,108 +1,73 @@
+import { useEffect, useState } from "react";
 import { useTranslations } from "use-intl";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Plus } from "lucide-react";
+import { getSessions, type ChatSession } from "@/lib/storage";
 
 /**
- * PreviousConversations Component - Dropdown list of past conversations
- *
- * Displays a scrollable list of previous chat conversations with
- * static data positioned at top-left of the chat modal.
- *
- * @component
- * @example
- * <PreviousConversations />
+ * @param onLoadSession Load previous chat by ID
+ * @param onNewChat Start a new chat session
  */
-
-// Static conversation data - Replace with API call later
-const PREVIOUS_CONVERSATIONS = [
-  {
-    id: "1",
-    preview: "Lorem 123t",
-  },
-  {
-    id: "2",
-    preview: "Lorem ipsum adfdsg dolor sit amet",
-  },
-  {
-    id: "3",
-    preview: "Lorem ipsum d5234444234olor sit amet",
-  },
-  {
-    id: "4",
-    preview: "Lorem i3or sit amet",
-  },
-  {
-    id: "5",
-    preview: "Lorem ipsum234r sit amet",
-  },
-  {
-    id: "6",
-    preview: "Lorem ifgr sit amet",
-  },
-  {
-    id: "7",
-    preview: "Lorem ipsum dolor wqeqwe sit amet",
-  },
-  {
-    id: "8",
-    preview: "Lorem ipsum dolorfff f wqwd sit amet",
-  },
-  {
-    id: "9",
-    preview: "Lorem ipsum doloasf  fsar sit amet",
-  },
-  {
-    id: "10",
-    preview: "Lorem ipsum dolor sit amet",
-  },
-];
-
-type ConversationItem = (typeof PREVIOUS_CONVERSATIONS)[0];
-
-/**
- * Individual conversation item renderer
- */
-function ConversationItem({
-  conversation,
-}: {
-  conversation: ConversationItem;
+export default function PreviousConversations({ 
+  onLoadSession, 
+  onNewChat 
+}: { 
+  onLoadSession: (id: string) => void,
+  onNewChat: () => void 
 }) {
-  return (
-    <button
-      className="w-full flex items-center justify-between  py-3 hover:bg-white/5 transition-colors  group cursor-pointer"
-      aria-label={`Load conversation: ${conversation.preview}`}
-    >
-      <div className="flex-1 text-start">
-        <p className="text-white/80 text-xs group-hover:text-white transition-colors">
-          {conversation.preview}
-        </p>
-      </div>
-
-      <ChevronRight
-        size={18}
-        className="text-primary/60 group-hover:text-primary transition-colors ml-3 shrink-0"
-      />
-    </button>
-  );
-}
-
-//  Main PreviousConversations component
-export default function PreviousConversations() {
   const t = useTranslations("Chat");
+  const [conversations, setConversations] = useState<ChatSession[]>([]);
+
+  // Load sessions on mount
+  useEffect(() => {
+    const load = () => setConversations(getSessions());
+    load();
+    
+    // Auto-update list on new message
+    window.addEventListener("chat_sessions_updated", load);
+    return () => window.removeEventListener("chat_sessions_updated", load);
+  }, []);
 
   return (
     <div className="bg-linear-to-b from-white/5 w-65.75 h-71 py-6 px-4 to-white/0 rounded-2xl border border-white/10 backdrop-blur-xl  flex flex-col ">
       {/* Header */}
-      <div className=" pb-6 ">
-        <h3 className="text-white font-semibold text-xl font-baloo text-center tracking-tight">
+      <div className="pb-4 flex justify-between items-center border-b border-white/10 mb-4">
+        <h3 className="text-white font-semibold text-xl font-baloo tracking-tight">
           {t("previousConversations")}
         </h3>
+        {/* New Chat Button */}
+        <button 
+          onClick={onNewChat}
+          className="text-white/60 hover:text-primary transition-colors cursor-pointer"
+          title="New Chat"
+        >
+          <Plus size={20} />
+        </button>
       </div>
 
-      {/* Conversations List  */}
+      {/* Conversations List */}
       <div className="flex-1 overflow-y-auto divide-y divide-white/5 scrollbar-hidden">
-        {PREVIOUS_CONVERSATIONS.map((conversation) => (
-          <ConversationItem key={conversation.id} conversation={conversation} />
-        ))}
+        {conversations.length === 0 ? (
+          <p className="text-white/40 text-xs text-center mt-6">No previous conversations</p>
+        ) : (
+          conversations.map((conversation) => (
+            <button
+              key={conversation.id}
+              onClick={() => onLoadSession(conversation.id)}
+              className="w-full flex items-center justify-between py-3 hover:bg-white/5 transition-colors group cursor-pointer text-left"
+            >
+              <div className="flex-1 truncate pr-2">
+                <p className="text-white/80 text-xs group-hover:text-white transition-colors truncate">
+                  {conversation.preview}
+                </p>
+              </div>
+
+              <ChevronRight
+                size={18}
+                className="text-primary/60 group-hover:text-primary transition-colors shrink-0"
+              />
+            </button>
+          ))
+        )}
       </div>
     </div>
   );

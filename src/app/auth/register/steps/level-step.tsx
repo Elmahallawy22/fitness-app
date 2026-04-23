@@ -34,7 +34,6 @@ export default function ActivityLevelStep({
       onSubmit(form.getValues("activityLevel"));
     }
   };
-
   return (
     <div className="text-center space-y-6">
       <StepsHeader header={t("level")} paragraph={t("step-header-paragraph")} />
@@ -72,8 +71,8 @@ export default function ActivityLevelStep({
       </RadioGroup>
 
       <Button
-        type={!isEdit ? `submit` : "button"}
-        onClick={isEdit ? handleAction : null}
+        type={!isEdit ? "submit" : "button"}
+        onClick={isEdit ? handleAction : undefined}
         disabled={!activityLevel}
         className="w-9/12"
       >

@@ -4,7 +4,6 @@ import type { Dispatch, SetStateAction } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { useTranslations } from "use-intl";
 import type { ForgotPasswordSteps } from "./forgot-password-flow";
-import type { OtpStepFields } from "@/lib/types/forgot-password";
 import {
   Form,
   FormControl,

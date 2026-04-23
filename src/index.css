@@ -68,6 +68,12 @@ body {
   .scrollbar-hidden::-webkit-scrollbar {
     display: none;
   }
+
+  .bg-chat {
+    background-image: url('/public/bot-bg.jpg');
+    background-size: cover;
+    background-position: 70% center;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
