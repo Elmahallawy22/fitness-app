@@ -1,6 +1,9 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { ForgotPasswordSteps } from "./forgot-password-flow";
 import { useTranslations } from "use-intl";
+import { useForm, type SubmitHandler } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { emailStepSchema } from "@/lib/schemas/auth.schema";
 import {
   Form,
   FormControl,
@@ -17,6 +20,12 @@ import useSendOtp from "@/lib/hooks/use-send-opt";
 import Feedback from "@/components/shared/feedback";
 
 // props type
+type EmailStepProps = {
+  email: string;
+  setEmail: Dispatch<SetStateAction<string>>;
+  setStep: Dispatch<SetStateAction<ForgotPasswordSteps>>;
+};
+
 export default function EmailStep({
   email,
   setStep,

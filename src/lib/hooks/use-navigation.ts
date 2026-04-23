@@ -5,7 +5,7 @@ export function useLocaleNavigation() {
   const navigate = useNavigate();
 
   const localizePath = (path: string) => {
-    const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+    const cleanPath = path.startsWith("/") ? path.substring(1) : path;
     return `/${locale}/${cleanPath}`;
   };
 

@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useSearchParams } from "react-router-dom";
-import { useLevels } from "@/lib/hooks/use-levels";
 import clsx from "clsx";
 import { Button } from "@/components/ui/button";
+import { useLevels } from "@/lib/hooks/use-levels";
 
 type Props = {
   locale?: string;

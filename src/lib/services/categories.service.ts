@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { CategoriesResponse, Category } from "../Types/meals";
+import type { CategoriesResponse, Category } from "../types/meals";
 
 export async function getCategories(): Promise<Category[]> {
   const { data } = await axios.get<CategoriesResponse>(

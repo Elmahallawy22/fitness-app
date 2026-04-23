@@ -266,7 +266,8 @@
       "carbs": "الكربوهيدرات",
       "fat": "الدهون",
       "ingredients": "المكونات"
-    },
+    }
+  },
     "classes-home": {
       "workouts": {
         "titleLineOne": "حوّل جسمك مع تماريننا",
@@ -295,6 +296,6 @@
         "general": "عام",
         "watchOnYoutube": "شاهد {exercise} على يوتيوب"
       }
-    }
   }
 }
+

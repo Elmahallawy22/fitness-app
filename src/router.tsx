@@ -1,19 +1,19 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import About from "./app/about/page";
-import Register from "./app/auth/register";
+import Register from "./app/auth/register/page";
 import Home from "./app/home/page";
 import AuthLayout from "./layouts/auth-layout";
 import LocaleLayout from "./layouts/local-layout";
 import RootLayout from "./layouts/root-layout";
-import NotFound from "./app/not-found";
-import ForgotPassword from "./app/auth/forgot-password";
+import NotFound from "./app/not-found/page";
+import ForgotPassword from "./app/auth/forgot-password/page";
 import Healthy from "./app/healthy/components/page";
-import Login from "./app/auth/login";
 import Classes from "./app/classes/page";
 import Account from "./app/account/page";
 import AccountLayout from "./layouts/account-layout";
 import Meal from "./app/healthy/meals/[mealId]/page";
 import MuscleExercisesPage from "./app/classes/exercises/page";
+import Login from "./app/auth/login/page";
 
 export const router = createBrowserRouter([
   {

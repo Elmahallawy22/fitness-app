@@ -1,4 +1,4 @@
-import AboutUs from "@/components/shared/about-us";
+import AboutUs from "../home/about-us-section";
 
 export default function About() {
   return (

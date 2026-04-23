@@ -26,7 +26,8 @@ export default function ThemeToggle() {
         transform transition-transform duration-300
 
         /* rtl and ltr */
-        ${isDark ? "ltr:translate-x-6 rtl:-translate-x-6" : "translate-x-0"}`}>
+        ${isDark ? "ltr:translate-x-6 rtl:-translate-x-6" : "translate-x-0"}`}
+      >
         {isDark ? (
           <Moon className="w-4 h-4 text-primary" />
         ) : (

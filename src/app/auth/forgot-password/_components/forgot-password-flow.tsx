@@ -1,4 +1,10 @@
 import { FORGOT_PASSWORD_STEPS } from "@/lib/constants/auth.constant";
+import { useState } from "react";
+import EmailStep from "./email-step";
+import OtpStep from "./otp-step";
+import NewPasswordStep from "./new-password-step";
+import { useTranslations } from "use-intl";
+
 export type ForgotPasswordSteps =
   (typeof FORGOT_PASSWORD_STEPS)[keyof typeof FORGOT_PASSWORD_STEPS];
 

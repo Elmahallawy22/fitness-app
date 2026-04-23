@@ -5,7 +5,7 @@ import SectionTitle from "@/components/shared/section-title";
 import { useTranslations } from "use-intl";
 import { HealthyCards } from "./healthy-cards";
 import { Link, useParams } from "react-router-dom";
-import Background from "@/assets/Images/healthy-background.jpg";
+import Background from "@/assets/images/healthy-background.jpg";
 
 export default function HealthySection() {
   // Translation

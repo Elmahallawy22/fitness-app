@@ -48,7 +48,10 @@ export async function verifyOtpAction(fields: OtpStepFields) {
 }
 
 // reset new password
-export async function resetPasswordAction(fields: { email: string; newPassword: string }) {
+export async function resetPasswordAction(fields: {
+  email: string;
+  newPassword: string;
+}) {
   const response = await fetch(`${apiUrl}/auth/resetPassword`, {
     method: "PUT",
     body: JSON.stringify(fields),

@@ -13,7 +13,11 @@ import CarouselDots from "./carousel-dots";
 
 // ui carousel
 import type { EmblaCarouselType } from "embla-carousel";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 // images
 import vector from "../../../assets/images/Vector.png";
@@ -70,7 +74,9 @@ export default function Healthy() {
       {/* healthy LAYER */}
       <h2
         className={`relative inline-block text-center -z-1 text-6xl font-bold bg-gradient-to-b from-white to-[#232425] bg-clip-text text-transparent ${
-          locale === "ar" ? "right-1/2 translate-x-1/2 bottom-16" : "left-1/2 -translate-x-1/2 bottom-12"
+          locale === "ar"
+            ? "right-1/2 translate-x-1/2 bottom-16"
+            : "left-1/2 -translate-x-1/2 bottom-12"
         }`}
       >
         {t("title")}
@@ -111,7 +117,9 @@ export default function Healthy() {
                       key={cat.idCategory}
                       onClick={() => setSelectedCategory(cat.strCategory)}
                       className={`text-lg font-medium transition ${
-                        selectedCategory === cat.strCategory ? "text-orange-600" : "text-gray-500"
+                        selectedCategory === cat.strCategory
+                          ? "text-orange-600"
+                          : "text-gray-500"
                       }`}
                     >
                       {cat.strCategory}
@@ -123,7 +131,11 @@ export default function Healthy() {
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {meals.map((meal) => (
                     <div key={meal.idMeal} className="border p-1">
-                      <img src={meal.strMealThumb} alt={meal.strMeal} className="w-full rounded-md object-cover" />
+                      <img
+                        src={meal.strMealThumb}
+                        alt={meal.strMeal}
+                        className="w-full rounded-md object-cover"
+                      />
 
                       <div className="relative bg-gradient-to-r from-[#171E2E00] via-[#171E2E80] to-[#171E2ECC] backdrop-blur-[3.75rem] p-4">
                         <h3 className="mb-2 text-main dark:text-zinc-100 text-xl font-bold uppercase tracking-[0.14rem] leading-8">
@@ -131,11 +143,22 @@ export default function Healthy() {
                         </h3>
 
                         <div className="flex">
-                          <button onClick={() => navigate(`/${locale}/healthy/meals/${meal.idMeal}`)} className="text-orange-600">
+                          <button
+                            onClick={() =>
+                              navigate(
+                                `/${locale}/healthy/meals/${meal.idMeal}`,
+                              )
+                            }
+                            className="text-orange-600"
+                          >
                             Explore
                           </button>
                           <div className="p-2 w-6 h-6 ms-2 bg-orange-600 rounded-full">
-                            <img src={vector} alt="img-button" className="w-full h-full" />
+                            <img
+                              src={vector}
+                              alt="img-button"
+                              className="w-full h-full"
+                            />
                           </div>
                         </div>
                       </div>

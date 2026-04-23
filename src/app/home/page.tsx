@@ -1,4 +1,4 @@
-import AboutUs from "@/components/shared/about-us";
+import AboutUs from "./about-us-section";
 import HealthySection from "./healthy-section";
 import HeroBanner from "./hero-banner-section";
 import WhyUsSection from "./why-us-section";

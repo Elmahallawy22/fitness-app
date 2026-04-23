@@ -5,7 +5,10 @@ type SubSectionTitleProps = {
   subTitle: string;
 };
 
-export default function SubSectionTitle({ assetSrc, subTitle }: SubSectionTitleProps) {
+export default function SubSectionTitle({
+  assetSrc,
+  subTitle,
+}: SubSectionTitleProps) {
   // translations
   const t = useTranslations();
 

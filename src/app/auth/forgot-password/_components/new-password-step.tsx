@@ -1,3 +1,5 @@
+import Feedback from "@/components/shared/feedback";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -40,7 +42,6 @@ export default function NewPasswordStep({ email }: { email: string }) {
         onSubmit={form.handleSubmit(onSubmit)}
         className="flex flex-col gap-2 w-80 mt-2"
       >
->>>>>>> 0271e946ae1495d44fab907382d28a568a3932c8
         {/* new password */}
         <FormField
           control={form.control}

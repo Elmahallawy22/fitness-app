@@ -267,7 +267,8 @@
       "carbs": "Carbs",
       "fat": "Fat",
       "ingredients": "ingredients "
-    },
+    }
+  },
     "classes-home": {
       "workouts": {
         "titleLineOne": "Transform Your Body with Our",
@@ -297,5 +298,5 @@
         "watchOnYoutube": "Watch {exercise} on YouTube"
       }
     }
-  }
 }
+

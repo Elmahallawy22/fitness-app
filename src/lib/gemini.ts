@@ -9,12 +9,20 @@ const ai = new GoogleGenAI({ apiKey });
 const INITIAL_HISTORY = [
   {
     role: "user",
-    parts: [{ text: "Context: You are a Smart Fitness Coach. Answer briefly and motivationally. and nicely don't answer on things out of fitness topics" }]
+    parts: [
+      {
+        text: "Context: You are a Smart Fitness Coach. Answer briefly and motivationally. and nicely don't answer on things out of fitness topics",
+      },
+    ],
   },
   {
     role: "model",
-    parts: [{ text: "Understood! I am your Smart Fitness Coach. How can I help you today?" }]
-  }
+    parts: [
+      {
+        text: "Understood! I am your Smart Fitness Coach. How can I help you today?",
+      },
+    ],
+  },
 ];
 
 let chatHistory: any[] = [...INITIAL_HISTORY];
@@ -24,7 +32,7 @@ export const sendFitnessMessage = async (message: string): Promise<string> => {
     chatHistory.push({ role: "user", parts: [{ text: message }] });
 
     const response = await ai.models.generateContent({
-      model: "gemini-3-flash-preview", 
+      model: "gemini-3-flash-preview",
       contents: chatHistory,
     });
 
@@ -37,7 +45,6 @@ export const sendFitnessMessage = async (message: string): Promise<string> => {
     throw error;
   }
 };
-
 
 export const getGeminiHistory = () => chatHistory;
 

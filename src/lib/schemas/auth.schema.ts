@@ -1,8 +1,16 @@
 import { z } from "zod";
 
-export const GOALS = ["Gain weight", "Lose weight", "Get fitter", "Gain more Flexible", "Learn the basic"] as const;
+export const GOALS = [
+  "Gain weight",
+  "Lose weight",
+  "Get fitter",
+  "Gain more Flexible",
+  "Learn the basic",
+] as const;
 
-export const createRegisterSchema = (t: ReturnType<typeof import("use-intl").useTranslations>) =>
+export const createRegisterSchema = (
+  t: ReturnType<typeof import("use-intl").useTranslations>,
+) =>
   z
     .object({
       firstName: z
@@ -13,11 +21,17 @@ export const createRegisterSchema = (t: ReturnType<typeof import("use-intl").use
         .string()
         .min(2, { message: t("Register.validation.lastName.required") })
         .max(50, { message: t("Register.validation.lastName.tooLong") }),
-      email: z.string().email({ message: t("Register.validation.email.invalid") }),
-      password: z.string().regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/, {
-        message: t("Register.validation.password.strong"),
-      }),
-      rePassword: z.string().min(1, { message: t("Register.validation.rePassword.required") }),
+      email: z
+        .string()
+        .email({ message: t("Register.validation.email.invalid") }),
+      password: z
+        .string()
+        .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/, {
+          message: t("Register.validation.password.strong"),
+        }),
+      rePassword: z
+        .string()
+        .min(1, { message: t("Register.validation.rePassword.required") }),
 
       gender: z.enum(["male", "female"] as const).refine(() => true, {
         message: t("Register.validation.gender.required"),
@@ -39,9 +53,11 @@ export const createRegisterSchema = (t: ReturnType<typeof import("use-intl").use
         message: t("Register.validation.goal.required"),
       }),
 
-      activityLevel: z.enum(["level1", "level2", "level3", "level4", "level5"] as const).refine(() => true, {
-        message: t("Register.validation.activityLevel.required"),
-      }),
+      activityLevel: z
+        .enum(["level1", "level2", "level3", "level4", "level5"] as const)
+        .refine(() => true, {
+          message: t("Register.validation.activityLevel.required"),
+        }),
     })
     .refine((data) => data.password === data.rePassword, {
       message: t("Register.validation.passwords.notMatch"),
@@ -52,24 +68,32 @@ export const createRegisterSchema = (t: ReturnType<typeof import("use-intl").use
 export type RegisterSchema = z.infer<ReturnType<typeof createRegisterSchema>>;
 
 // send otp for email schema
-export const emailStepSchema = (t: ReturnType<typeof import("use-intl").useTranslations>) =>
+export const emailStepSchema = (
+  t: ReturnType<typeof import("use-intl").useTranslations>,
+) =>
   z.object({
     email: z.string().email({ message: t("email-validation") }),
   });
 
 // verify otp schema
-export const otpStepSchema = (t: ReturnType<typeof import("use-intl").useTranslations>) =>
+export const otpStepSchema = (
+  t: ReturnType<typeof import("use-intl").useTranslations>,
+) =>
   z.object({
     otp: z.string().min(6, t("otp-required")),
   });
 
 // reset password schema
-export const resetPasswordStepSchema = (t: ReturnType<typeof import("use-intl").useTranslations>) =>
+export const resetPasswordStepSchema = (
+  t: ReturnType<typeof import("use-intl").useTranslations>,
+) =>
   z
     .object({
-      password: z.string().regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/, {
-        message: t("password-required"),
-      }),
+      password: z
+        .string()
+        .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/, {
+          message: t("password-required"),
+        }),
       rePassword: z.string().min(1, { message: t("re-password-required") }),
     })
     .refine((values) => values.password === values.rePassword, {

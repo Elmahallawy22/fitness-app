@@ -1,5 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { getMealCategories, getMealDetails, getMealsBySpecialCategory } from "../services/meal-details.service";
+import {
+  getMealCategories,
+  getMealDetails,
+  getMealsBySpecialCategory,
+} from "../services/meal-details.service";
 
 // Get Meal Categories
 export const useMealCategories = () => {

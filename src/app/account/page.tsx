@@ -10,10 +10,10 @@ import {
 import { useGetUser } from "./hooks/use-get-user";
 import ThemeToggle from "@/components/layout/navbar/theme-toggle";
 import { useTheme } from "next-themes";
-import { EditGoalDialog } from "./compoonents/edit-goal-dialog";
+import { EditGoalDialog } from "./components/edit-goal-dialog";
 import type { RegisterSchema } from "@/lib/schemas/auth.schema";
-import { EditLevelDialog } from "./compoonents/edit-level-dialog";
-import { EditWeightDialog } from "./compoonents/edit-weight-dialog";
+import { EditLevelDialog } from "./components/edit-level-dialog";
+import { EditWeightDialog } from "./components/edit-weight-dialog";
 import { useTranslations } from "use-intl";
 import { getLevels } from "@/lib/constants/levels";
 import { logoutService } from "@/lib/services/logout.service";
