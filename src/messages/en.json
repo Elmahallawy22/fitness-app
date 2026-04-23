@@ -248,42 +248,43 @@
     "level": "Level",
     "weight": "Weight",
     "dark": "dark",
-    "light": "light"
-  "meal-details": {
-    "title": "Healthy",
-    "energy": "Energy",
-    "protein": "Protein",
-    "carbs": "Carbs",
-    "fat": "Fat",
-    "ingredients": "ingredients "
-  },
-  "classes-home": {
-    "workouts": {
-      "titleLineOne": "Transform Your Body with Our",
-      "titleLineTwo": "Dynamic Upcoming Workouts",
-      "title-text": "Workouts",
-      "title-background": "Fitness Class"
-    }
-  },
-  "ExerciseDetails": {
-    "preview": {
-      "movement": "Movement",
-      "posture": "Posture",
-      "laterality": "Laterality",
-      "general": "General",
-      "playVideo": "Play {exercise}"
+    "light": "light",
+    "meal-details": {
+      "title": "Healthy",
+      "energy": "Energy",
+      "protein": "Protein",
+      "carbs": "Carbs",
+      "fat": "Fat",
+      "ingredients": "ingredients "
     },
-    "content": {
-      "chooseLevel": "Choose a level to display exercises.",
-      "noExercises": "No exercises found for this level.",
-      "recommendationTitle": "Recommendation For You"
+    "classes-home": {
+      "workouts": {
+        "titleLineOne": "Transform Your Body with Our",
+        "titleLineTwo": "Dynamic Upcoming Workouts",
+        "title-text": "Workouts",
+        "title-background": "Fitness Class"
+      }
     },
-    "sidebar": {
-      "noExercises": "No exercises found for this level.",
-      "bodyweight": "Bodyweight",
-      "exercise": "Exercise",
-      "general": "General",
-      "watchOnYoutube": "Watch {exercise} on YouTube"
+    "ExerciseDetails": {
+      "preview": {
+        "movement": "Movement",
+        "posture": "Posture",
+        "laterality": "Laterality",
+        "general": "General",
+        "playVideo": "Play {exercise}"
+      },
+      "content": {
+        "chooseLevel": "Choose a level to display exercises.",
+        "noExercises": "No exercises found for this level.",
+        "recommendationTitle": "Recommendation For You"
+      },
+      "sidebar": {
+        "noExercises": "No exercises found for this level.",
+        "bodyweight": "Bodyweight",
+        "exercise": "Exercise",
+        "general": "General",
+        "watchOnYoutube": "Watch {exercise} on YouTube"
+      }
     }
   }
 }

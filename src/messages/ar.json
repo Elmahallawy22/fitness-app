@@ -247,42 +247,43 @@
     "your-goal": "هدفك",
     "level": "مستوى",
     "light": "ضوء",
-    "dark": "مظلم"
-  "meal-details": {
-    "title": "صحي",
-    "energy": "السعرات",
-    "protein": "البروتين",
-    "carbs": "الكربوهيدرات",
-    "fat": "الدهون",
-    "ingredients": "المكونات"
-  },
-  "classes-home": {
-    "workouts": {
-      "titleLineOne": "حوّل جسمك مع تماريننا",
-      "titleLineTwo": "الديناميكية القادمة",
-      "title-text": "التدريبات",
-      "title-background": "لياقة بدنية"
-    }
-  },
-  "ExerciseDetails": {
-    "preview": {
-      "movement": "الحركة",
-      "posture": "الوضعية",
-      "laterality": "الجانبية",
-      "general": "عام",
-      "playVideo": "تشغيل {exercise}"
+    "dark": "مظلم",
+    "meal-details": {
+      "title": "صحي",
+      "energy": "السعرات",
+      "protein": "البروتين",
+      "carbs": "الكربوهيدرات",
+      "fat": "الدهون",
+      "ingredients": "المكونات"
     },
-    "content": {
-      "chooseLevel": "اختر مستوى لعرض التمارين.",
-      "noExercises": "لا توجد تمارين لهذا المستوى.",
-      "recommendationTitle": "اقتراحات لك"
+    "classes-home": {
+      "workouts": {
+        "titleLineOne": "حوّل جسمك مع تماريننا",
+        "titleLineTwo": "الديناميكية القادمة",
+        "title-text": "التدريبات",
+        "title-background": "لياقة بدنية"
+      }
     },
-    "sidebar": {
-      "noExercises": "لا توجد تمارين لهذا المستوى.",
-      "bodyweight": "وزن الجسم",
-      "exercise": "تمرين",
-      "general": "عام",
-      "watchOnYoutube": "شاهد {exercise} على يوتيوب"
+    "ExerciseDetails": {
+      "preview": {
+        "movement": "الحركة",
+        "posture": "الوضعية",
+        "laterality": "الجانبية",
+        "general": "عام",
+        "playVideo": "تشغيل {exercise}"
+      },
+      "content": {
+        "chooseLevel": "اختر مستوى لعرض التمارين.",
+        "noExercises": "لا توجد تمارين لهذا المستوى.",
+        "recommendationTitle": "اقتراحات لك"
+      },
+      "sidebar": {
+        "noExercises": "لا توجد تمارين لهذا المستوى.",
+        "bodyweight": "وزن الجسم",
+        "exercise": "تمرين",
+        "general": "عام",
+        "watchOnYoutube": "شاهد {exercise} على يوتيوب"
+      }
     }
   }
 }
