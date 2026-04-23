@@ -12,7 +12,7 @@ import { useClickOutside } from "./hooks/use-click-outside";
 
 /**
  * SmartCoach Component - Main chat widget component
- * 
+ *
  * Features:
  * - Toggle open/close chat modal
  * - Send and receive messages
@@ -21,7 +21,7 @@ import { useClickOutside } from "./hooks/use-click-outside";
  * - Loading states during message send
  * - Memoized callbacks for performance
  * - Responsive design with smooth animations
- * 
+ *
  * @component
  * @example
  * <SmartCoach />
@@ -39,7 +39,8 @@ export default function SmartCoach() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
-  const [showPreviousConversations, setShowPreviousConversations] = useState(false);
+  const [showPreviousConversations, setShowPreviousConversations] =
+    useState(false);
 
   const modalRef = useRef<HTMLDivElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -48,10 +49,8 @@ export default function SmartCoach() {
 
   // CUSTOM HOOKS
   /** Chat state management including messages and loading state */
-  const { messages, isLoading, sendMessage } = useChat(
-    t("initialMessage"),
-    t("errorMessage")
-  );
+  const { messages, isLoading, sendMessage, loadChatSession, startNewChat } =
+    useChat("Hello!");
 
   // HANDLERS
   /**
@@ -77,7 +76,7 @@ export default function SmartCoach() {
     }
   }, [isOpen]);
 
-  // Auto scroll when new message arrive 
+  // Auto scroll when new message arrive
   useEffect(() => {
     if (messages.length > 0 && isOpen) {
       requestAnimationFrame(scrollToBottom);
@@ -98,7 +97,7 @@ export default function SmartCoach() {
   const handleSend = useCallback(async () => {
     if (!input.trim()) return;
     setInput("");
-    await sendMessage(input, t("initialMessage"));
+    await sendMessage(input || t("initialMessage"));
   }, [input, sendMessage, t]);
 
   /**
@@ -127,7 +126,7 @@ export default function SmartCoach() {
           "bg-chat bg-position-[70%_center] bg-cover fixed bottom-0 right-20 z-50 w-93.75 h-188.25 flex flex-col overflow-hidden border-2 border-primary rounded-3xl transition-all duration-500 origin-bottom-right",
           isOpen
             ? "scale-100 opacity-100"
-            : "scale-0 opacity-0 pointer-events-none"
+            : "scale-0 opacity-0 pointer-events-none",
         )}
       >
         {/*  blur */}
@@ -149,16 +148,16 @@ export default function SmartCoach() {
         {/* Previous Conversations Menu - Positioned at top-left */}
         {showPreviousConversations && (
           <>
-            <div 
+            <div
               className="absolute inset-0 z-10 bg-black/50 rounded-3xl cursor-pointer"
               onClick={handleMenuToggle}
             />
             {/* Menu Container */}
-            <div 
-              ref={menuRef}
-              className="absolute top-0 left-0 z-20"
-            >
-              <PreviousConversations />
+            <div ref={menuRef} className="absolute top-0 left-0 z-20">
+              <PreviousConversations
+                onLoadSession={loadChatSession}
+                onNewChat={startNewChat}
+              />
             </div>
           </>
         )}

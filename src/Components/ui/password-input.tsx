@@ -25,7 +25,7 @@ export const PasswordInput = React.forwardRef<
         variant="link"
         size="sm"
         onClick={() => setShow(!show)}
-        className="absolute w-fit top-1/2 right-3 -translate-y-1/2 p-1"
+        className="absolute w-fit top-1/2 inset-e-3 -translate-y-1/2 p-1"
       >
         {show ? (
           <EyeOff className="w-5 h-5 text-foreground/70" />
