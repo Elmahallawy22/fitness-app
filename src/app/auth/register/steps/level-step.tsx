@@ -68,22 +68,15 @@ export default function ActivityLevelStep({
             </Field>
           </FieldLabel>
         ))}
-                id={level.value}
-                className="peer"
-              />
-            </Field>
-          </FieldLabel>
-        ))}
       </RadioGroup>
 
       <Button
-        type={!isEdit ? `submit` : "button"}
-        onClick={isEdit ? handleAction : null}
+        type={!isEdit ? "submit" : "button"}
+        onClick={isEdit ? handleAction : undefined}
         disabled={!activityLevel}
         className="w-9/12"
       >
         {isPending ? <Spinner /> : isEdit ? t("save") : t("finish")}
->>>>>>> 0271e946ae1495d44fab907382d28a568a3932c8
       </Button>
     </div>
   );
