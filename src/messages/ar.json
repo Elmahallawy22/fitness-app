@@ -1,5 +1,4 @@
 {
-
   "Chat": {
     "initialMessage": "أهلاً بك! أنا مدربك الذكي، كيف يمكنني مساعدتك في رحلة لياقتك اليوم؟",
     "openButton": "هيا اسأل",
@@ -9,7 +8,8 @@
     "loading": "المدرب الذكي يفكر...",
     "errorMessage": "عذراً، حدث خطأ ما. يرجى المحاولة مرة أخرى.",
     "previousConversations": "المحادثات السابقة",
-    "menuLabel": "قائمة المحادثة"},
+    "menuLabel": "قائمة المحادثة"
+  },
   "Index": {
     "title": "أهلاً"
   },
@@ -258,44 +258,43 @@
     "your-goal": "هدفك",
     "level": "مستوى",
     "light": "ضوء",
-    "dark": "مظلم",
-    "meal-details": {
-      "title": "صحي",
-      "energy": "السعرات",
-      "protein": "البروتين",
-      "carbs": "الكربوهيدرات",
-      "fat": "الدهون",
-      "ingredients": "المكونات"
+    "dark": "مظلم"
+  },
+  "meal-details": {
+    "title": "صحي",
+    "energy": "السعرات",
+    "protein": "البروتين",
+    "carbs": "الكربوهيدرات",
+    "fat": "الدهون",
+    "ingredients": "المكونات"
+  },
+  "classes-home": {
+    "workouts": {
+      "titleLineOne": "حوّل جسمك مع تماريننا",
+      "titleLineTwo": "الديناميكية القادمة",
+      "title-text": "التدريبات",
+      "title-background": "لياقة بدنية"
     }
   },
-    "classes-home": {
-      "workouts": {
-        "titleLineOne": "حوّل جسمك مع تماريننا",
-        "titleLineTwo": "الديناميكية القادمة",
-        "title-text": "التدريبات",
-        "title-background": "لياقة بدنية"
-      }
+  "ExerciseDetails": {
+    "preview": {
+      "movement": "الحركة",
+      "posture": "الوضعية",
+      "laterality": "الجانبية",
+      "general": "عام",
+      "playVideo": "تشغيل {exercise}"
     },
-    "ExerciseDetails": {
-      "preview": {
-        "movement": "الحركة",
-        "posture": "الوضعية",
-        "laterality": "الجانبية",
-        "general": "عام",
-        "playVideo": "تشغيل {exercise}"
-      },
-      "content": {
-        "chooseLevel": "اختر مستوى لعرض التمارين.",
-        "noExercises": "لا توجد تمارين لهذا المستوى.",
-        "recommendationTitle": "اقتراحات لك"
-      },
-      "sidebar": {
-        "noExercises": "لا توجد تمارين لهذا المستوى.",
-        "bodyweight": "وزن الجسم",
-        "exercise": "تمرين",
-        "general": "عام",
-        "watchOnYoutube": "شاهد {exercise} على يوتيوب"
-      }
+    "content": {
+      "chooseLevel": "اختر مستوى لعرض التمارين.",
+      "noExercises": "لا توجد تمارين لهذا المستوى.",
+      "recommendationTitle": "اقتراحات لك"
+    },
+    "sidebar": {
+      "noExercises": "لا توجد تمارين لهذا المستوى.",
+      "bodyweight": "وزن الجسم",
+      "exercise": "تمرين",
+      "general": "عام",
+      "watchOnYoutube": "شاهد {exercise} على يوتيوب"
+    }
   }
 }
-

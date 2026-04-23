@@ -1,5 +1,4 @@
 {
-  
   "Chat": {
     "initialMessage": "Hello, How can I assist you today?",
     "openButton": "Hey Ask Me",
@@ -9,7 +8,8 @@
     "loading": "Smart Coach is thinking...",
     "errorMessage": "Sorry, something went wrong. Please try again.",
     "previousConversations": "Previous Conversations",
-    "menuLabel": "Chat menu"},
+    "menuLabel": "Chat menu"
+  },
   "Index": {
     "title": "Hello"
   },
@@ -259,44 +259,43 @@
     "level": "Level",
     "weight": "Weight",
     "dark": "dark",
-    "light": "light",
-    "meal-details": {
-      "title": "Healthy",
-      "energy": "Energy",
-      "protein": "Protein",
-      "carbs": "Carbs",
-      "fat": "Fat",
-      "ingredients": "ingredients "
+    "light": "light"
+  },
+  "meal-details": {
+    "title": "Healthy",
+    "energy": "Energy",
+    "protein": "Protein",
+    "carbs": "Carbs",
+    "fat": "Fat",
+    "ingredients": "ingredients "
+  },
+  "classes-home": {
+    "workouts": {
+      "titleLineOne": "Transform Your Body with Our",
+      "titleLineTwo": "Dynamic Upcoming Workouts",
+      "title-text": "Workouts",
+      "title-background": "Fitness Class"
     }
   },
-    "classes-home": {
-      "workouts": {
-        "titleLineOne": "Transform Your Body with Our",
-        "titleLineTwo": "Dynamic Upcoming Workouts",
-        "title-text": "Workouts",
-        "title-background": "Fitness Class"
-      }
+  "ExerciseDetails": {
+    "preview": {
+      "movement": "Movement",
+      "posture": "Posture",
+      "laterality": "Laterality",
+      "general": "General",
+      "playVideo": "Play {exercise}"
     },
-    "ExerciseDetails": {
-      "preview": {
-        "movement": "Movement",
-        "posture": "Posture",
-        "laterality": "Laterality",
-        "general": "General",
-        "playVideo": "Play {exercise}"
-      },
-      "content": {
-        "chooseLevel": "Choose a level to display exercises.",
-        "noExercises": "No exercises found for this level.",
-        "recommendationTitle": "Recommendation For You"
-      },
-      "sidebar": {
-        "noExercises": "No exercises found for this level.",
-        "bodyweight": "Bodyweight",
-        "exercise": "Exercise",
-        "general": "General",
-        "watchOnYoutube": "Watch {exercise} on YouTube"
-      }
+    "content": {
+      "chooseLevel": "Choose a level to display exercises.",
+      "noExercises": "No exercises found for this level.",
+      "recommendationTitle": "Recommendation For You"
+    },
+    "sidebar": {
+      "noExercises": "No exercises found for this level.",
+      "bodyweight": "Bodyweight",
+      "exercise": "Exercise",
+      "general": "General",
+      "watchOnYoutube": "Watch {exercise} on YouTube"
     }
+  }
 }
-
