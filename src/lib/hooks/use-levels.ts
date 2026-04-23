@@ -1,17 +1,13 @@
-import { useQuery } from "@tanstack/react-query";
-import type { Level } from "../types/levels";
-import { getAllLevels } from "../services/levels.service";
+import { useTranslations } from "use-intl";
+import { getLevels, type LevelType } from "../constants/levels";
 
-export function useLevels(locale: string) {
-  return useQuery<Level[], Error>({
-    queryKey: ["levels", locale],
-    queryFn: async () => {
-      const response = await getAllLevels(locale);
-      return response.levels;
-    },
-    staleTime: 1000 * 60 * 5,
-    gcTime: 1000 * 60 * 10,
-    retry: 1,
-    refetchOnWindowFocus: false,
-  });
+export function useLevels() {
+  const t = useTranslations("Register");
+  const LEVELS = getLevels(t);
+
+  const getLevelLabel = (value?: LevelType | string) => {
+    return LEVELS.find((l) => l.value === value)?.label ?? value;
+  };
+
+  return { LEVELS, getLevelLabel };
 }

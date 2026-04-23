@@ -88,7 +88,8 @@
       "learn-the-basic": "Learn the basic"
     },
     "forgot-password": "Forget Password ?",
-    "register": "Register"
+    "register": "Register",
+    "save": "Save"
   },
   "WhyUs": {
     "title": "Why Us?",
@@ -232,6 +233,22 @@
     "first-line": "Push harder, go further. Your",
     "second-line": "fitness journey starts today!"
   },
+  "account": {
+    "change-password": "Change Password",
+    "select-language": "Select language",
+    "english": "English",
+    "arabic": "Arabic",
+    "mode": "Mode",
+    "security": "Security",
+    "privacy": "Privacy",
+    "help": "Help",
+    "logout": "Logout",
+    "tap-to-change": "Tap to change",
+    "your-goal": "Your Goal",
+    "level": "Level",
+    "weight": "Weight",
+    "dark": "dark",
+    "light": "light"
   "meal-details": {
     "title": "Healthy",
     "energy": "Energy",

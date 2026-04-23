@@ -13,7 +13,7 @@ import logo from "../../../assets/images/fit 1.png";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-export default function Navbar() {
+export default function Navbar({ account }: { account?: boolean }) {
   // Router
   const navigate = useNavigate();
   const { locale } = useParams();
@@ -39,7 +39,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-background fixed overflow-x-hidden py-4 px-8 top-0 left-0 right-0 z-50 w-full">
+    <nav
+      className={`${account ? "bg-transparent" : " bg-background"} fixed overflow-x-hidden py-4 px-8 top-0 left-0 right-0 z-50 w-full`}
+    >
       <div className="flex items-center justify-between gap-2 sm:gap-4">
         {/*  Logo */}
         <img

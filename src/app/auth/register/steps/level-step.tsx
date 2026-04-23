@@ -11,28 +11,29 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/ui/spinner";
 import { useTranslations } from "use-intl";
+import { getLevels } from "@/lib/constants/levels";
+
+type Props = {
+  isPending?: boolean;
+  isEdit?: boolean;
+  onSubmit?: (value: RegisterSchema["activityLevel"]) => void;
+};
 
 export default function ActivityLevelStep({
   isPending,
-}: {
-  isPending: boolean;
-}) {
-  // Translation
+  isEdit = false,
+  onSubmit,
+}: Props) {
   const t = useTranslations("Register");
-
-  // Form context
   const form = useFormContext<RegisterSchema>();
-
-  // Constants
-  const LEVELS = [
-    { label: t("rookie"), value: "level1" },
-    { label: t("beginner"), value: "level2" },
-    { label: t("intermediate"), value: "level3" },
-    { label: t("advanced"), value: "level4" },
-    { label: t("true-beast"), value: "level5" },
-  ] as const;
-
+  const LEVELS = getLevels(t);
   const activityLevel = form.watch("activityLevel") ?? "";
+
+  const handleAction = async () => {
+    if (isEdit && onSubmit) {
+      onSubmit(form.getValues("activityLevel"));
+    }
+  };
 
   return (
     <div className="text-center space-y-6">
@@ -48,33 +49,35 @@ export default function ActivityLevelStep({
         }
         className="flex flex-col gap-4 mt-6 w-full max-w-md mx-auto"
       >
-        {LEVELS.map((level) => {
-          return (
-            <FieldLabel htmlFor={level.value} key={level.value}>
-              <Field
-                orientation="horizontal"
-                className="
-                rounded-2xl px-2 py-1 transition-all
-                peer-data-[state=checked]:border-orange-500
-                peer-data-[state=checked]:text-primary"
-              >
-                <FieldContent>
-                  <FieldTitle>{level.label}</FieldTitle>
-                </FieldContent>
+        {LEVELS.map((level) => (
+          <FieldLabel htmlFor={level.value} key={level.value}>
+            <Field
+              orientation="horizontal"
+              className="rounded-2xl px-2 py-1 transition-all
+              peer-data-[state=checked]:border-orange-500
+              peer-data-[state=checked]:text-primary"
+            >
+              <FieldContent>
+                <FieldTitle>{level.label}</FieldTitle>
+              </FieldContent>
 
-                <RadioGroupItem
-                  value={level.value}
-                  id={level.value}
-                  className="peer"
-                />
-              </Field>
-            </FieldLabel>
-          );
-        })}
+              <RadioGroupItem
+                value={level.value}
+                id={level.value}
+                className="peer"
+              />
+            </Field>
+          </FieldLabel>
+        ))}
       </RadioGroup>
 
-      <Button type="submit" disabled={!activityLevel} className="w-9/12">
-        {isPending ? <Spinner /> : t("finish")}
+      <Button
+        type={!isEdit ? `submit` : "button"}
+        onClick={isEdit ? handleAction : null}
+        disabled={!activityLevel}
+        className="w-9/12"
+      >
+        {isPending ? <Spinner /> : isEdit ? t("save") : t("finish")}
       </Button>
     </div>
   );
