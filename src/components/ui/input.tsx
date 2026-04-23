@@ -9,7 +9,11 @@ function Input({ className, type, icon, ...props }: InputProps) {
   return (
     <div className={cn("relative flex items-center w-full", className)}>
       {icon && (
-        <div className={cn("absolute inset-s-4 flex items-center pointer-events-none text-foreground/70")}>
+        <div
+          className={cn(
+            "absolute inset-s-4 flex items-center pointer-events-none text-foreground/70",
+          )}
+        >
           {/* icon */}
           {icon}
         </div>

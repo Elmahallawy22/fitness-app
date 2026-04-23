@@ -157,6 +157,21 @@
     "re-password-valid": "كلمتا المرور غير متطابقتين",
     "create-new-password": "إنشاء كلمة مرور جديدة"
   },
+  "about": {
+    "title": "من نحن",
+    "title-bg": "من نحن",
+    "sub-title": "نُمكّنك من تحقيق <span>أهدافك الرياضية</span>",
+    "description": "نؤمن أن اللياقة البدنية ليست مجرد تمرين، بل أسلوب حياة. مع أحدث المرافق، ومدربين معتمدين، ومجتمع داعم، نحن هنا لإلهامك ومساعدتك في كل خطوة من رحلتك.",
+    "info-one-title": "مدرب شخصي",
+    "info-one-description": "حقق أهدافك الرياضية بمساعدة مدربينا المعتمدين.",
+    "info-two-title": "برامج الكارديو",
+    "info-two-description": "من الجري الثابت إلى تمارين السرعات، نقدم برامج متنوعة على أجهزة المشي.",
+    "info-three-title": "معدات عالية الجودة",
+    "info-three-description": "صالتنا مجهزة بأحدث أجهزة الكارديو وتمارين القوة.",
+    "info-four-title": "تغذية صحية",
+    "info-four-description": "ادعم رحلتك الرياضية بخطط غذائية مخصصة لك.",
+    "get-started": "ابدأ الآن"
+  },
   "Navbar": {
     "home": "الرئيسية",
     "about": "عن النادي",
@@ -190,6 +205,24 @@
     "second-line": "التدريب الشخصي",
     "third-line": "التوجيه الغذائي"
   },
+  "workout-page": {
+    "workout-title": " تمارين رياضيه",
+    "workout-small-title": "تمارين لياقه بدنيه",
+    "workout-first-line": "حول جسمك معنا  ",
+    "workout-second-line": "تماريننا الديناميكيه ",
+    "workout-special-workout": "القادمه"
+  },
+  "slide-button": {
+    "buttton-title": "استكشف"
+  },
+  "meal-page": {
+    "title": "وجبات صحية",
+    "small-title": "التغذية الصحية",
+    "first-line": "زود رحلتك نحو اللياقة البدنية ب",
+    "customized": "تخصيص",
+    "special-meal": "الخطط الغذائية",
+    "for-you": "المخصصة لك"
+  },
   "Footer": {
     "contact-us": "تواصل معنا",
     "start-time": "الاثنين - الجمعه : 08:00 مساء - 10:00 صباحا",
@@ -215,5 +248,41 @@
     "level": "مستوى",
     "light": "ضوء",
     "dark": "مظلم"
+  "meal-details": {
+    "title": "صحي",
+    "energy": "السعرات",
+    "protein": "البروتين",
+    "carbs": "الكربوهيدرات",
+    "fat": "الدهون",
+    "ingredients": "المكونات"
+  },
+  "classes-home": {
+    "workouts": {
+      "titleLineOne": "حوّل جسمك مع تماريننا",
+      "titleLineTwo": "الديناميكية القادمة",
+      "title-text": "التدريبات",
+      "title-background": "لياقة بدنية"
+    }
+  },
+  "ExerciseDetails": {
+    "preview": {
+      "movement": "الحركة",
+      "posture": "الوضعية",
+      "laterality": "الجانبية",
+      "general": "عام",
+      "playVideo": "تشغيل {exercise}"
+    },
+    "content": {
+      "chooseLevel": "اختر مستوى لعرض التمارين.",
+      "noExercises": "لا توجد تمارين لهذا المستوى.",
+      "recommendationTitle": "اقتراحات لك"
+    },
+    "sidebar": {
+      "noExercises": "لا توجد تمارين لهذا المستوى.",
+      "bodyweight": "وزن الجسم",
+      "exercise": "تمرين",
+      "general": "عام",
+      "watchOnYoutube": "شاهد {exercise} على يوتيوب"
+    }
   }
 }

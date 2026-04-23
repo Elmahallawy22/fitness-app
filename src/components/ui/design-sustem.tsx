@@ -10,7 +10,6 @@ import { NumberPicker } from "./number-picker";
 import { useForm, Controller } from "react-hook-form";
 
 export default function DesignSystemComponents() {
-    
   const { control, handleSubmit } = useForm({
     defaultValues: { age: 20 },
   });
@@ -20,11 +19,8 @@ export default function DesignSystemComponents() {
 
   return (
     <>
-          {/* How to use number Picker */}
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="space-y-10  mx-96"
-      >
+      {/* How to use number Picker */}
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-10  mx-96">
         <Controller
           name="age"
           control={control}
@@ -69,7 +65,6 @@ export default function DesignSystemComponents() {
           </Field>
         </FieldLabel>
       </RadioGroup>
-
 
       <div className="p-10 text-center font-sans">
         <h1 className="text-6xl font-extrabold tracking-tight font-baloo">
