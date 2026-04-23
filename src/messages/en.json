@@ -157,6 +157,21 @@
     "re-password-valid": "Passwords do not match",
     "create-new-password": "Create New Password"
   },
+  "about": {
+    "title": "About Us",
+    "title-bg": "About Us",
+    "sub-title": "EMPOWERING YOU TO ACHIEVE <span>YOUR FITNESS</span> GOALS",
+    "description": "We believe fitness is more than just a workout—it's a lifestyle. With top-of-the-line facilities, certified trainers, and a supportive community, we're here to inspire and guide you every step of the way.",
+    "info-one-title": "Personal Trainer",
+    "info-one-description": "Achieve your fitness goals with the guidance of our certified trainers.",
+    "info-two-title": "Cardio Programs",
+    "info-two-description": "From steady-state runs to interval sprints, our treadmill programs.",
+    "info-three-title": "Quality Equipment",
+    "info-three-description": "Our gym is equipped with the latest cardio & strength machines.",
+    "info-four-title": "Healthy Nutritions",
+    "info-four-description": "Fuel your fitness journey with customized meal plans for you.",
+    "get-started": "Get Started"
+  },
   "Navbar": {
     "home": "Home",
     "about": "About",
