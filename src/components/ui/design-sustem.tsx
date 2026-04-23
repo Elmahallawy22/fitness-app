@@ -20,7 +20,6 @@ export default function DesignSystemComponents() {
 
   return (
     <>
-    <SmartCoach /> 
       {/* How to use number Picker */}
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-10  mx-96">
         <Controller

@@ -1,12 +1,9 @@
-import { useLocaleNavigation } from "@/lib/hooks/use-navigation";
+import AboutUs from "@/components/shared/about-us";
 
 export default function About() {
-  const { localeNavigate } = useLocaleNavigation();
-
   return (
     <>
-      <h1>About</h1>
-      <div onClick={() => localeNavigate("/")}>go home </div>
+      <AboutUs />
     </>
   );
 }
