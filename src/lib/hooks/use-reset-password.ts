@@ -16,8 +16,8 @@ export default function useResetPassword() {
         newPassword: fields.password,
       });
 
-      if ("code" in payload) {
-        throw new Error(payload.message);
+      if ("error" in payload) {
+        throw new Error(payload.error);
       }
 
       return payload;

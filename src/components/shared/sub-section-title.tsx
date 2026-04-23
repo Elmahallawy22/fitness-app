@@ -11,7 +11,7 @@ export default function SubSectionTitle({ assetSrc, subTitle }: SubSectionTitleP
 
   return (
     <div>
-      <div className="text-xl md:text-3xl lg:text-[40px] font-bold relative font-baloo">
+      <div className="text-xl md:text-3xl lg:text-[40px] font-bold relative font-baloo text-main dark:text-zinc-100">
         <img
           src={assetSrc}
           alt="Our story"

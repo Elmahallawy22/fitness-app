@@ -1,6 +1,12 @@
-import Feedback from "@/components/shared/feadback";
+import Feedback from "@/components/shared/feedback";
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
 import { PasswordInput } from "@/components/ui/password-input";
 import useResetPassword from "@/lib/hooks/use-reset-password";
 import { resetPasswordStepSchema } from "@/lib/schemas/auth.schema";
@@ -10,7 +16,7 @@ import { Lock } from "lucide-react";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { useTranslations } from "use-intl";
 
-export default function NewPassword({ email }: { email: string }) {
+export default function NewPasswordStep({ email }: { email: string }) {
   //translation
   const t = useTranslations("forgot-password-step");
 
@@ -32,7 +38,10 @@ export default function NewPassword({ email }: { email: string }) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-2 w-80 mt-2">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex flex-col gap-2 w-80 mt-2"
+      >
         {/* new password */}
         <FormField
           control={form.control}
@@ -76,7 +85,10 @@ export default function NewPassword({ email }: { email: string }) {
         {/* feedback */}
         <Feedback className="mt-3">{error?.message}</Feedback>
         {/* submit button */}
-        <Button disabled={isPending || (!form.formState.isValid && form.formState.isSubmitted)} className="mt-4">
+        <Button
+          disabled={isPending || form.formState.isSubmitting}
+          className="mt-4"
+        >
           {t("create-new-password")}
         </Button>
       </form>
