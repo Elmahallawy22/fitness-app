@@ -5,20 +5,29 @@ import type { RegisterSchema } from "@/lib/schemas/auth.schema";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "use-intl";
 
-export default function WeightStep({ nextStep }: RegisterFormProps) {
-  // Translation
-  const t = useTranslations("Register");
+type Props = {
+  nextStep?: () => void;
+  isEdit?: boolean;
+  onSubmit?: (value: RegisterSchema["weight"]) => void;
+};
 
-  // Form context
+export default function WeightStep({
+  nextStep,
+  isEdit = false,
+  onSubmit,
+}: Props) {
+  const t = useTranslations("Register");
   const form = useFormContext<RegisterSchema>();
 
-  // constants
   const weight = form.watch("weight");
 
-  // Handle next step
-  const handleNext = async () => {
+  const handleAction = async () => {
     const isValid = await form.trigger(["weight"]);
-    if (isValid) {
+    if (!isValid) return;
+
+    if (isEdit && onSubmit) {
+      onSubmit(form.getValues("weight"));
+    } else {
       nextStep?.();
     }
   };
@@ -47,10 +56,10 @@ export default function WeightStep({ nextStep }: RegisterFormProps) {
 
       <Button
         disabled={weight == undefined}
-        onClick={handleNext}
+        onClick={handleAction}
         className="w-2/3"
       >
-        {t("next")}
+        {isEdit ? t("save") : t("next")}
       </Button>
     </div>
   );

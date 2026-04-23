@@ -1,6 +1,10 @@
-import Feedback from "@/components/shared/feedback";
-import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
 import { PasswordInput } from "@/components/ui/password-input";
 import useResetPassword from "@/lib/hooks/use-reset-password";
 import { resetPasswordStepSchema } from "@/lib/schemas/auth.schema";
@@ -32,7 +36,11 @@ export default function NewPasswordStep({ email }: { email: string }) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-2 w-80 mt-2">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex flex-col gap-2 w-80 mt-2"
+      >
+>>>>>>> 0271e946ae1495d44fab907382d28a568a3932c8
         {/* new password */}
         <FormField
           control={form.control}
@@ -76,7 +84,10 @@ export default function NewPasswordStep({ email }: { email: string }) {
         {/* feedback */}
         <Feedback className="mt-3">{error?.message}</Feedback>
         {/* submit button */}
-        <Button disabled={isPending || form.formState.isSubmitting} className="mt-4">
+        <Button
+          disabled={isPending || form.formState.isSubmitting}
+          className="mt-4"
+        >
           {t("create-new-password")}
         </Button>
       </form>

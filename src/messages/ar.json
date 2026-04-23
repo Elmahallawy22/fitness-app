@@ -1,5 +1,5 @@
 {
-  "Index": { "title": "أهلاً" },
+
   "Chat": {
     "initialMessage": "أهلاً بك! أنا مدربك الذكي، كيف يمكنني مساعدتك في رحلة لياقتك اليوم؟",
     "openButton": "هيا اسأل",
@@ -9,9 +9,17 @@
     "loading": "المدرب الذكي يفكر...",
     "errorMessage": "عذراً، حدث خطأ ما. يرجى المحاولة مرة أخرى.",
     "previousConversations": "المحادثات السابقة",
-    "menuLabel": "قائمة المحادثة"
+    "menuLabel": "قائمة المحادثة"},
+  "Index": {
+    "title": "أهلاً"
   },
-
+  "home": {
+    "workouts": {
+      "title": "حوّل جسمك مع <br></br> تماريننا <highlight>الديناميكية القادمة</highlight>",
+      "title-background": "لياقة بدنية",
+      "title-text": "التدريبات"
+    }
+  },
   "Register": {
     "create-account": "إنشاء حساب",
     "firstname": "الاسم الأول",
@@ -91,7 +99,54 @@
       "learn-the-basic": "تعلم الأساسيات"
     },
     "forgot-password": "هل نسيت كلمة السر ؟",
-    "register": "إنشاء حساب"
+    "register": "إنشاء حساب",
+    "save": "تعديل"
+  },
+  "WhyUs": {
+    "title": "لماذا نحن؟",
+    "description": {
+      "before": "ارتقِ بلياقتك البدنية بأفضل ",
+      "highlight": "طريقة ممكنة",
+      "after": ""
+    },
+    "paragraph": "نقدم لك رحلة لياقة بدنية مصممة خصيصًا وفق أهدافك، بدعم من مدربين محترفين ومجتمع مرحب. سواء كان هدفك فقدان الوزن، بناء القوة، أو تحسين صحتك العامة، طرقنا المجربة تضمن لك النتائج.",
+    "items": {
+      "personalized": {
+        "title": "خطط لياقة شخصية",
+        "description": "نخصص كل برنامج تدريب وفق أهدافك ومستوى لياقتك لضمان تحقيق أفضل تقدم."
+      },
+      "results": {
+        "title": "التركيز على النتائج",
+        "description": "كل ما نقدمه مصمم لمساعدتك على تحقيق نتائج قابلة للقياس، سواء كان هدفك فقدان الوزن."
+      },
+      "support": {
+        "title": "معدات متطورة",
+        "description": "نوفر أحدث المعدات الرياضية، من أجهزة الكارديو إلى الأثقال الحرة، لدعم جميع احتياجات التدريب."
+      }
+    }
+  },
+  "HealthySection": {
+    "title": "التغذية الصحية",
+    "background": "صحي",
+    "description": {
+      "before": "دع رحلتك في اللياقة البدنية تبدأ مع ",
+      "highlight": "خطط وجبات",
+      "after": " مصممة خصيصًا لك"
+    },
+    "cards": {
+      "breakfast": {
+        "title": "الإفطار",
+        "buttonText": "اقرأ المزيد"
+      },
+      "lunch": {
+        "title": "الغداء",
+        "buttonText": "اقرأ المزيد"
+      },
+      "dinner": {
+        "title": "العشاء",
+        "buttonText": "اقرأ المزيد"
+      }
+    }
   },
   "forgot-password-step": {
     "step-one-title": "نسيت كلمة المرور",
@@ -113,7 +168,21 @@
     "re-password-valid": "كلمتا المرور غير متطابقتين",
     "create-new-password": "إنشاء كلمة مرور جديدة"
   },
-
+  "about": {
+    "title": "من نحن",
+    "title-bg": "من نحن",
+    "sub-title": "نُمكّنك من تحقيق <span>أهدافك الرياضية</span>",
+    "description": "نؤمن أن اللياقة البدنية ليست مجرد تمرين، بل أسلوب حياة. مع أحدث المرافق، ومدربين معتمدين، ومجتمع داعم، نحن هنا لإلهامك ومساعدتك في كل خطوة من رحلتك.",
+    "info-one-title": "مدرب شخصي",
+    "info-one-description": "حقق أهدافك الرياضية بمساعدة مدربينا المعتمدين.",
+    "info-two-title": "برامج الكارديو",
+    "info-two-description": "من الجري الثابت إلى تمارين السرعات، نقدم برامج متنوعة على أجهزة المشي.",
+    "info-three-title": "معدات عالية الجودة",
+    "info-three-description": "صالتنا مجهزة بأحدث أجهزة الكارديو وتمارين القوة.",
+    "info-four-title": "تغذية صحية",
+    "info-four-description": "ادعم رحلتك الرياضية بخطط غذائية مخصصة لك.",
+    "get-started": "ابدأ الآن"
+  },
   "Navbar": {
     "home": "الرئيسية",
     "about": "عن النادي",
@@ -147,6 +216,24 @@
     "second-line": "التدريب الشخصي",
     "third-line": "التوجيه الغذائي"
   },
+  "workout-page": {
+    "workout-title": " تمارين رياضيه",
+    "workout-small-title": "تمارين لياقه بدنيه",
+    "workout-first-line": "حول جسمك معنا  ",
+    "workout-second-line": "تماريننا الديناميكيه ",
+    "workout-special-workout": "القادمه"
+  },
+  "slide-button": {
+    "buttton-title": "استكشف"
+  },
+  "meal-page": {
+    "title": "وجبات صحية",
+    "small-title": "التغذية الصحية",
+    "first-line": "زود رحلتك نحو اللياقة البدنية ب",
+    "customized": "تخصيص",
+    "special-meal": "الخطط الغذائية",
+    "for-you": "المخصصة لك"
+  },
   "Footer": {
     "contact-us": "تواصل معنا",
     "start-time": "الاثنين - الجمعه : 08:00 مساء - 10:00 صباحا",
@@ -155,5 +242,59 @@
     "location": " الموقع الجغرافي",
     "first-line": " ادفع نفسك أكثر، وتقدّم أبعد",
     "second-line": "رحلتك نحو اللياقة تبدأ اليوم!"
+  },
+  "account": {
+    "change-password": "تغيير كلمة المرور",
+    "select-language": "اختر اللغة",
+    "arabic": "عربي",
+    "english": "إنجليزي",
+    "mode": "وضع",
+    "help": "يساعد",
+    "privacy": "خصوصية",
+    "security": "حماية",
+    "logout": "تسجيل الخروج",
+    "tap-to-change": "انقر للتغيير",
+    "weight": "وزن",
+    "your-goal": "هدفك",
+    "level": "مستوى",
+    "light": "ضوء",
+    "dark": "مظلم",
+    "meal-details": {
+      "title": "صحي",
+      "energy": "السعرات",
+      "protein": "البروتين",
+      "carbs": "الكربوهيدرات",
+      "fat": "الدهون",
+      "ingredients": "المكونات"
+    },
+    "classes-home": {
+      "workouts": {
+        "titleLineOne": "حوّل جسمك مع تماريننا",
+        "titleLineTwo": "الديناميكية القادمة",
+        "title-text": "التدريبات",
+        "title-background": "لياقة بدنية"
+      }
+    },
+    "ExerciseDetails": {
+      "preview": {
+        "movement": "الحركة",
+        "posture": "الوضعية",
+        "laterality": "الجانبية",
+        "general": "عام",
+        "playVideo": "تشغيل {exercise}"
+      },
+      "content": {
+        "chooseLevel": "اختر مستوى لعرض التمارين.",
+        "noExercises": "لا توجد تمارين لهذا المستوى.",
+        "recommendationTitle": "اقتراحات لك"
+      },
+      "sidebar": {
+        "noExercises": "لا توجد تمارين لهذا المستوى.",
+        "bodyweight": "وزن الجسم",
+        "exercise": "تمرين",
+        "general": "عام",
+        "watchOnYoutube": "شاهد {exercise} على يوتيوب"
+      }
+    }
   }
 }
