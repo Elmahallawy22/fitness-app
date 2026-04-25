@@ -13,11 +13,7 @@ import CarouselDots from "./carousel-dots";
 
 // ui carousel
 import type { EmblaCarouselType } from "embla-carousel";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 
 // images
 import vector from "../../../assets/images/Vector.png";
@@ -70,25 +66,21 @@ export default function Healthy() {
   }, [selectedCategory]);
 
   return (
-    <div className="w-full mt-48 bg-gradient-to-b from-main/20 via-main/5 to-main/90">
+    <div className="w-full mt-48 bg-linear-to-b from-main/20 via-main/5 to-main/90">
       {/* healthy LAYER */}
       <h2
-        className={`relative inline-block text-center -z-1 text-6xl font-bold bg-gradient-to-b from-white to-[#232425] bg-clip-text text-transparent ${
-          locale === "ar"
-            ? "right-1/2 translate-x-1/2 bottom-16"
-            : "left-1/2 -translate-x-1/2 bottom-12"
+        className={`relative inline-block text-center -z-1 text-6xl font-bold bg-linear-to-b from-white to-[#232425] bg-clip-text text-transparent ${
+          locale === "ar" ? "right-1/2 translate-x-1/2 bottom-16" : "left-1/2 -translate-x-1/2 bottom-12"
         }`}
       >
         {t("title")}
       </h2>
-
       {/* header */}
       <div>
         <div className="flex justify-center items-center max-w-5xl mx-auto px-4 gap-2 mb-4">
           <img src={dumble} alt="img-dumble" className="w-9" />
           <h4 className="text-orange-600">{t("small-title")}</h4>
         </div>
-
         <h2 className="text-4xl text-center font-bold uppercase leading-16 mb-10">
           <p> {t("first-line")} </p>
           <p>
@@ -98,7 +90,6 @@ export default function Healthy() {
           </p>
         </h2>
       </div>
-
       <div className="p-6">
         <Carousel
           setApi={setApi}
@@ -117,50 +108,29 @@ export default function Healthy() {
                       key={cat.idCategory}
                       onClick={() => setSelectedCategory(cat.strCategory)}
                       className={`text-lg font-medium transition ${
-                        selectedCategory === cat.strCategory
-                          ? "text-orange-600"
-                          : "text-gray-500"
+                        selectedCategory === cat.strCategory ? "text-orange-600" : "text-gray-500"
                       }`}
                     >
                       {cat.strCategory}
                     </button>
                   ))}
                 </div>
-
                 {/* meals */}
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
                   {meals.map((meal) => (
-                    <div key={meal.idMeal} className="border p-1">
-                      <img
-                        src={meal.strMealThumb}
-                        alt={meal.strMeal}
-                        className="w-full rounded-md object-cover"
-                      />
-
-                      <div className="relative bg-gradient-to-r from-[#171E2E00] via-[#171E2E80] to-[#171E2ECC] backdrop-blur-[3.75rem] p-4">
-                        <h3 className="mb-2 text-main dark:text-zinc-100 text-xl font-bold uppercase tracking-[0.14rem] leading-8">
-                          {meal.strMeal}
-                        </h3>
-
-                        <div className="flex">
-                          <button
-                            onClick={() =>
-                              navigate(
-                                `/${locale}/healthy/meals/${meal.idMeal}`,
-                              )
-                            }
-                            className="text-orange-600"
-                          >
-                            Explore
-                          </button>
-                          <div className="p-2 w-6 h-6 ms-2 bg-orange-600 rounded-full">
-                            <img
-                              src={vector}
-                              alt="img-button"
-                              className="w-full h-full"
-                            />
+                    <div key={meal.idMeal} className="border p-1 bg-[#171E2ECC] overflow-hdden">
+                      <img src={meal.strMealThumb} alt={meal.strMeal} className="w-full rounded-md" loading="lazy" />
+                      <div className="p-4 flex flex-col justify-between">
+                        <h3 className="mb-2 text-zinc-100 text-xl font-bold uppercase">{meal.strMeal}</h3>
+                        <button
+                          onClick={() => navigate(`/${locale}/healthy/meals/${meal.idMeal}`)}
+                          className="text-orange-600 flex cursor-pointer"
+                        >
+                          Explore
+                          <div className="p-2 size-6 mx-2 bg-orange-600 rounded-full">
+                            <img src={vector} alt="img-button" className="w-full h-full" />
                           </div>
-                        </div>
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -169,7 +139,6 @@ export default function Healthy() {
             ))}
           </CarouselContent>
         </Carousel>
-
         <CarouselDots api={api} count={chunkedCategories.length} />
       </div>
     </div>
